@@ -1,0 +1,1001 @@
+patient_id,age,gender,chief_complaint,symptom_severity,symptom_duration_hours,symptom_onset,heart_rate,systolic_bp,diastolic_bp,temperature,oxygen_saturation,has_red_flag,red_flag_type,chronic_condition,previous_visits,urgency_level,arrival_time,age_risk,hr_abnormal,bp_abnormal,temp_abnormal,spo2_abnormal,vital_abnormalities,symptom_acuity,duration_category,has_chronic_condition,high_risk_chronic,frequent_visitor,risk_score,priority_category
+P0001,45,Male,Moderate abdominal pain,7,3.4,Gradual,77,132,85,99.5,94,0,None,Heart disease,1,3,19:57,Moderate,0,0,0,1,1,7.0,Acute,1,1,0,6.449999999999999,Medium
+P0002,29,Female,Moderate abdominal pain,7,23.6,Gradual,89,139,89,99.8,95,0,None,Heart disease,2,3,22:59,Low,0,0,0,0,0,7.0,Recent,1,1,0,3.9699999999999998,Low
+P0003,26,Female,Cold or flu symptoms,5,22.9,Gradual,76,117,89,98.4,97,0,None,Asthma,1,4,21:30,Low,0,0,0,0,0,5.0,Recent,1,0,0,3.2800000000000002,Low
+P0004,64,Female,Severe difficulty breathing,10,0.7,Sudden,120,114,67,100.5,80,1,difficulty_breathing,None,2,1,20:21,High,1,0,1,1,3,15.0,Acute,0,0,0,15.92,Critical
+P0005,26,Female,Possible broken bone,7,17.8,Gradual,82,110,86,99.2,96,0,None,Asthma,0,3,20:39,Low,0,0,0,0,0,7.0,Recent,1,0,0,3.88,Low
+P0006,43,Male,Severe asthma attack,8,2.4,Sudden,91,122,88,100.4,90,0,None,None,4,2,19:23,Moderate,0,0,0,1,1,12.0,Acute,0,0,1,5.69,Medium
+P0007,27,Female,Ankle sprain,2,44.4,Gradual,68,113,88,98.3,97,0,None,None,5,4,19:39,Low,0,0,0,0,0,2.0,Chronic,0,0,1,1.4100000000000001,Low
+P0008,74,Female,Severe back pain,5,16.6,Sudden,89,142,81,100.4,98,0,None,None,1,3,21:22,High,0,1,0,0,1,7.5,Recent,0,0,0,5.72,Medium
+P0009,53,Female,Moderate abdominal pain,6,23.2,Sudden,80,133,83,99.4,98,0,None,Diabetes,1,3,19:22,Moderate,0,0,0,0,0,9.0,Recent,1,0,0,4.39,Low
+P0010,39,Female,Ear pain,4,52.3,Gradual,69,121,84,99.6,98,0,None,Asthma,2,4,21:45,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.37,Low
+P0011,70,Male,Mild rash,4,25.2,Gradual,75,135,87,99.4,98,0,None,Asthma,2,4,22:59,High,0,0,0,0,0,4.0,Chronic,1,0,0,4.3,Low
+P0012,24,Male,Moderate abdominal pain,6,23.6,Gradual,83,127,84,99.1,95,0,None,None,4,3,20:20,Low,0,0,0,0,0,6.0,Recent,0,0,1,2.5199999999999996,Low
+P0013,74,Female,Ankle sprain,3,52.1,Gradual,77,139,85,99.5,98,0,None,Hypertension,3,4,20:27,High,0,0,0,0,0,3.0,Chronic,1,0,0,4.119999999999999,Low
+P0014,20,Male,Moderate abdominal pain,5,9.5,Gradual,88,130,90,100.1,96,0,None,Diabetes,2,3,23:08,Low,0,0,0,0,0,5.0,Recent,1,0,0,3.1,Low
+P0015,36,Female,Possible broken bone,5,3.9,Gradual,75,114,90,99.2,96,0,None,Diabetes,4,3,21:26,Moderate,0,0,0,0,0,5.0,Acute,1,0,1,3.58,Low
+P0016,18,Male,Minor cut or scrape,3,67.8,Gradual,67,127,83,98.7,98,0,None,None,2,4,20:14,Low,0,0,0,0,0,3.0,Chronic,0,0,0,1.44,Low
+P0017,34,Female,Severe back pain,6,21.2,Gradual,81,138,84,100.2,96,0,None,Diabetes,5,3,20:34,Low,0,0,0,0,0,6.0,Recent,1,0,1,3.82,Low
+P0018,19,Female,Severe back pain,5,14.0,Gradual,80,135,91,98.7,96,0,None,None,1,3,19:26,Low,0,1,0,0,1,5.0,Recent,0,0,0,4.07,Low
+P0019,32,Male,Moderate abdominal pain,7,12.1,Gradual,76,137,84,99.2,98,0,None,None,1,3,20:56,Low,0,0,0,0,0,7.0,Recent,0,0,0,3.06,Low
+P0020,18,Female,Ear pain,2,56.3,Gradual,73,117,87,98.5,98,0,None,Hypertension,2,4,20:39,Low,0,0,0,0,0,2.0,Chronic,1,0,0,2.14,Low
+P0021,31,Female,Minor cut or scrape,5,60.4,Gradual,68,114,86,98.1,98,0,None,None,2,4,23:01,Low,0,0,0,0,0,5.0,Chronic,0,0,0,2.4299999999999997,Low
+P0022,53,Female,Follow-up visit,5,50.2,Gradual,72,125,81,99.5,98,0,None,Heart disease,2,5,22:28,Moderate,0,0,0,0,0,5.0,Chronic,1,1,0,4.09,Low
+P0023,55,Female,Mild rash,2,17.7,Gradual,76,122,86,98.3,98,0,None,Hypertension,0,4,20:30,Moderate,0,0,0,0,0,2.0,Recent,1,0,0,3.25,Low
+P0024,53,Female,Minor cut or scrape,2,60.2,Gradual,66,122,85,99.4,98,0,None,None,1,4,22:27,Moderate,0,0,0,0,0,2.0,Chronic,0,0,0,2.19,Low
+P0025,33,Female,Mild headache,4,57.3,Gradual,71,114,86,98.7,97,0,None,None,3,5,22:48,Low,0,0,0,0,0,4.0,Chronic,0,0,0,2.19,Low
+P0026,29,Male,Severe back pain,5,9.2,Sudden,88,129,93,99.6,94,0,None,Hypertension,3,3,21:12,Low,0,1,0,1,2,7.5,Recent,1,0,0,7.37,Medium
+P0027,37,Female,High fever with severe headache,7,1.5,Sudden,99,111,73,100.8,90,0,None,Asthma,0,2,22:31,Moderate,0,0,1,1,2,10.5,Acute,1,0,0,8.209999999999999,Medium
+P0028,60,Male,Ankle sprain,2,57.2,Gradual,65,129,75,99.5,97,0,None,None,0,4,22:20,High,0,0,0,0,0,2.0,Chronic,0,0,0,2.4,Low
+P0029,53,Male,Minor cut or scrape,2,56.7,Gradual,66,129,86,99.3,97,0,None,Hypertension,1,4,21:08,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,3.19,Low
+P0030,75,Male,Severe abdominal pain,7,5.6,Sudden,102,156,85,98.3,89,0,None,Hypertension,0,2,19:53,High,1,1,0,1,3,10.5,Acute,1,0,0,11.35,High
+P0031,35,Male,Deep cut requiring stitches,5,8.8,Sudden,81,134,85,99.2,95,0,None,Diabetes,2,3,23:07,Low,0,0,0,0,0,7.5,Recent,1,0,0,3.55,Low
+P0032,43,Female,Minor skin irritation,3,37.0,Gradual,77,122,88,98.2,98,0,None,Hypertension,1,5,22:44,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.19,Low
+P0033,76,Female,Minor cut or scrape,3,61.7,Gradual,70,130,79,99.2,97,0,None,Hypertension,0,4,19:22,High,0,0,0,0,0,3.0,Chronic,1,0,0,4.18,Low
+P0034,40,Female,Severe asthma attack,7,3.3,Sudden,87,122,74,101.1,93,0,None,Kidney disease,2,2,21:42,Moderate,0,0,1,1,2,10.5,Acute,1,1,0,8.3,Medium
+P0035,41,Female,Deep cut requiring stitches,6,21.4,Gradual,76,121,75,99.7,94,0,None,None,0,3,22:15,Moderate,0,0,0,1,1,6.0,Recent,0,0,0,5.029999999999999,Medium
+P0036,73,Female,Ankle sprain,4,38.2,Gradual,71,125,76,99.0,98,0,None,COPD,3,4,21:43,High,0,0,0,0,0,4.0,Chronic,1,1,0,4.39,Low
+P0037,64,Female,Medication refill,2,32.8,Gradual,81,139,82,98.2,98,0,None,None,2,5,21:04,High,0,0,0,0,0,2.0,Chronic,0,0,0,2.52,Low
+P0038,28,Female,Mild rash,3,48.1,Gradual,73,112,77,98.9,98,0,None,None,2,4,19:21,Low,0,0,0,0,0,3.0,Chronic,0,0,0,1.74,Low
+P0039,22,Male,Moderate abdominal pain,5,13.1,Gradual,88,135,87,99.2,97,0,None,Diabetes,1,3,19:14,Low,0,0,0,0,0,5.0,Recent,1,0,0,3.16,Low
+P0040,25,Male,Minor skin irritation,5,55.2,Gradual,79,123,84,99.2,98,0,None,None,1,5,21:58,Low,0,0,0,0,0,5.0,Chronic,0,0,0,2.25,Low
+P0041,67,Male,Cold or flu symptoms,3,45.8,Gradual,72,134,83,99.2,98,0,None,Heart disease,0,4,21:22,High,0,0,0,0,0,3.0,Chronic,1,1,0,3.91,Low
+P0042,54,Female,Severe back pain,7,18.7,Gradual,87,127,89,99.8,97,0,None,None,1,3,21:48,Moderate,0,0,0,0,0,7.0,Recent,0,0,0,3.72,Low
+P0043,59,Male,Cold or flu symptoms,3,23.2,Gradual,69,115,80,98.5,98,0,None,None,2,4,21:19,High,0,0,0,0,0,3.0,Recent,0,0,0,2.67,Low
+P0044,40,Female,Moderate abdominal pain,6,22.5,Gradual,89,115,91,99.6,96,0,None,Hypertension,2,3,20:31,Moderate,0,1,0,0,1,6.0,Recent,1,0,0,6.0,Medium
+P0045,54,Female,High fever (over 103°F),5,14.2,Sudden,88,115,79,99.6,95,0,None,None,0,3,19:29,Moderate,0,0,0,0,0,7.5,Recent,0,0,0,3.12,Low
+P0046,30,Male,Follow-up visit,3,36.7,Gradual,73,126,83,99.0,98,0,None,None,3,5,22:09,Low,0,0,0,0,0,3.0,Chronic,0,0,0,1.7999999999999998,Low
+P0047,57,Female,Medication refill,5,21.8,Gradual,76,117,85,99.3,98,0,None,None,3,5,22:44,High,0,0,0,0,0,5.0,Recent,0,0,0,3.21,Low
+P0048,61,Female,High fever (over 103°F),5,10.5,Sudden,92,125,75,100.1,98,0,None,Diabetes,0,3,20:08,High,0,0,0,0,0,7.5,Recent,1,0,0,4.33,Low
+P0049,40,Male,Moderate abdominal pain,6,21.8,Gradual,78,124,89,99.8,95,0,None,None,1,3,22:12,Moderate,0,0,0,0,0,6.0,Recent,0,0,0,3.0,Low
+P0050,59,Male,Suspected stroke symptoms,10,0.8,Sudden,105,102,90,99.5,81,1,stroke_symptoms,Asthma,1,1,22:07,High,1,0,0,1,2,15.0,Acute,1,0,0,14.77,High
+P0051,38,Female,Cold or flu symptoms,4,39.7,Gradual,78,119,82,99.0,98,0,None,COPD,1,4,21:15,Moderate,0,0,0,0,0,4.0,Chronic,1,1,0,3.34,Low
+P0052,65,Female,Ear pain,3,58.3,Gradual,73,124,82,98.1,97,0,None,None,0,4,19:32,High,0,0,0,0,0,3.0,Chronic,0,0,0,2.85,Low
+P0053,26,Male,High fever with severe headache,8,4.0,Sudden,94,145,87,101.3,91,0,None,Asthma,2,2,19:41,Low,0,1,1,1,3,12.0,Acute,1,0,0,10.18,High
+P0054,40,Female,Severe back pain,7,8.2,Gradual,85,126,85,98.7,96,0,None,None,0,3,20:28,Moderate,0,0,0,0,0,7.0,Recent,0,0,0,3.3000000000000003,Low
+P0055,52,Female,Minor cut or scrape,4,71.8,Gradual,73,126,78,98.7,98,0,None,Diabetes,1,4,22:13,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.76,Low
+P0056,47,Male,Moderate abdominal pain,5,11.4,Gradual,88,128,89,99.7,95,0,None,None,3,3,20:18,Moderate,0,0,0,0,0,5.0,Recent,0,0,0,2.91,Low
+P0057,52,Male,Ankle sprain,2,47.7,Gradual,71,112,82,98.4,97,0,None,None,6,4,22:27,Moderate,0,0,0,0,0,2.0,Chronic,0,0,1,2.16,Low
+P0058,77,Male,Routine check-up,2,64.6,Gradual,76,120,81,99.4,98,0,None,Hypertension,3,5,22:31,High,0,0,0,0,0,2.0,Chronic,1,0,0,3.91,Low
+P0059,54,Female,Deep cut requiring stitches,6,19.4,Sudden,83,111,86,99.0,97,0,None,Hypertension,2,3,21:10,Moderate,0,0,0,0,0,9.0,Recent,1,0,0,4.42,Low
+P0060,42,Male,Moderate abdominal pain,6,21.9,Gradual,80,131,85,99.4,97,0,None,Hypertension,4,3,20:51,Moderate,0,0,0,0,0,6.0,Recent,1,0,1,4.06,Low
+P0061,29,Female,Possible broken bone,5,13.4,Gradual,80,136,82,99.1,94,0,None,Heart disease,2,3,20:38,Low,0,0,0,1,1,5.0,Recent,1,1,0,5.37,Medium
+P0062,53,Male,Medication refill,2,55.3,Gradual,69,120,82,98.8,98,0,None,Hypertension,3,5,21:09,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,3.19,Low
+P0063,54,Male,High fever (over 103°F),6,13.0,Sudden,88,136,87,98.9,98,0,None,None,3,3,19:32,Moderate,0,0,0,0,0,9.0,Recent,0,0,0,3.42,Low
+P0064,29,Female,High fever with severe headache,7,1.4,Gradual,87,136,81,101.4,93,0,None,Asthma,6,2,22:00,Low,0,0,1,1,2,7.0,Acute,1,0,1,7.97,Medium
+P0065,70,Male,Severe abdominal pain,7,2.5,Gradual,94,131,71,98.2,89,0,None,Kidney disease,4,2,22:32,High,0,0,0,1,1,7.0,Acute,1,1,1,7.199999999999999,Medium
+P0066,20,Female,Unresponsive or confused,9,1.1,Sudden,107,144,82,97.9,81,1,altered_mental_status,Hypertension,4,1,21:04,Low,1,1,0,1,3,13.5,Acute,1,0,1,15.299999999999999,Critical
+P0067,72,Female,Routine check-up,2,14.3,Gradual,76,133,78,98.2,97,0,None,Diabetes,2,5,19:35,High,0,0,0,0,0,2.0,Recent,1,0,0,3.7600000000000002,Low
+P0068,22,Male,Deep cut requiring stitches,5,8.8,Gradual,88,127,78,100.0,94,0,None,None,0,3,20:47,Low,0,0,0,1,1,5.0,Recent,0,0,0,4.16,Low
+P0069,39,Female,High fever with severe headache,8,1.8,Gradual,99,145,88,99.7,89,0,None,None,4,2,19:56,Moderate,0,1,0,1,2,8.0,Acute,0,0,1,7.57,Medium
+P0070,37,Male,Possible broken bone,6,14.0,Sudden,89,132,91,99.6,95,0,None,Diabetes,4,3,22:13,Moderate,0,1,0,0,1,9.0,Recent,1,0,1,5.91,Medium
+P0071,21,Female,Unresponsive or confused,10,0.1,Sudden,102,118,68,97.8,87,1,altered_mental_status,None,3,1,19:15,Low,1,0,0,1,2,15.0,Acute,0,0,0,12.63,High
+P0072,60,Male,Ankle sprain,2,40.8,Gradual,76,114,87,99.4,98,0,None,Hypertension,3,4,20:17,High,0,0,0,0,0,2.0,Chronic,1,0,0,3.4,Low
+P0073,33,Male,Follow-up visit,5,49.1,Gradual,77,120,87,99.1,98,0,None,Asthma,2,5,19:20,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.49,Low
+P0074,75,Male,Minor cut or scrape,4,23.6,Gradual,73,121,88,99.2,98,0,None,None,2,4,20:44,High,0,0,0,0,0,4.0,Recent,0,0,0,3.45,Low
+P0075,30,Female,Suspected stroke symptoms,9,1.6,Sudden,109,152,87,100.8,84,1,stroke_symptoms,None,2,1,22:18,Low,1,1,1,1,4,13.5,Acute,0,0,0,16.599999999999998,Critical
+P0076,72,Female,Minor cut or scrape,5,13.5,Gradual,81,123,85,98.3,97,0,None,None,2,4,21:57,High,0,0,0,0,0,5.0,Recent,0,0,0,3.66,Low
+P0077,36,Male,Possible broken bone,7,17.3,Gradual,81,124,85,99.0,97,0,None,None,2,3,23:00,Moderate,0,0,0,0,0,7.0,Recent,0,0,0,3.18,Low
+P0078,53,Male,High fever (over 103°F),7,3.7,Gradual,84,137,80,99.1,94,0,None,None,3,3,22:42,Moderate,0,0,0,1,1,7.0,Acute,0,0,0,5.6899999999999995,Medium
+P0079,72,Female,Mild rash,3,19.0,Gradual,81,122,78,99.3,97,0,None,None,2,4,21:11,High,0,0,0,0,0,3.0,Recent,0,0,0,3.06,Low
+P0080,65,Male,High fever with severe headache,7,4.8,Gradual,94,127,94,99.5,91,0,None,COPD,2,2,19:38,High,0,1,0,1,2,7.0,Acute,1,1,0,9.05,Medium
+P0081,50,Female,Ear pain,2,17.3,Gradual,74,117,76,98.6,98,0,None,None,0,4,19:32,Moderate,0,0,0,0,0,2.0,Recent,0,0,0,2.1,Low
+P0082,19,Female,Possible broken bone,7,5.6,Gradual,89,111,84,98.9,98,0,None,Hypertension,2,3,22:58,Low,0,0,0,0,0,7.0,Acute,1,0,0,3.67,Low
+P0083,65,Female,Minor skin irritation,3,16.9,Gradual,79,122,89,98.9,98,0,None,None,1,5,22:43,High,0,0,0,0,0,3.0,Recent,0,0,0,2.85,Low
+P0084,31,Female,Moderate abdominal pain,7,7.8,Gradual,81,128,86,99.7,97,0,None,Kidney disease,1,3,21:57,Low,0,0,0,0,0,7.0,Recent,1,1,0,4.03,Low
+P0085,35,Female,Severe asthma attack,8,4.8,Sudden,99,123,84,100.3,90,0,None,Diabetes,2,2,20:48,Low,0,0,0,1,1,12.0,Acute,1,0,0,6.45,Medium
+P0086,36,Male,Ankle sprain,2,56.0,Gradual,67,121,77,99.0,98,0,None,None,2,4,20:10,Moderate,0,0,0,0,0,2.0,Chronic,0,0,0,1.6800000000000002,Low
+P0087,39,Male,Minor skin irritation,5,47.6,Gradual,76,124,88,98.9,97,0,None,None,2,5,21:51,Moderate,0,0,0,0,0,5.0,Chronic,0,0,0,2.67,Low
+P0088,46,Male,High fever (over 103°F),5,10.1,Gradual,89,120,84,98.7,97,0,None,Diabetes,2,3,19:53,Moderate,0,0,0,0,0,5.0,Recent,1,0,0,3.88,Low
+P0089,39,Male,High fever with severe headache,7,1.6,Sudden,85,143,92,101.1,90,0,None,None,2,2,19:43,Moderate,0,1,1,1,3,10.5,Acute,0,0,0,9.27,Medium
+P0090,35,Female,Moderate abdominal pain,6,23.0,Gradual,78,130,92,100.5,96,0,None,Heart disease,2,3,21:53,Low,0,1,1,0,2,6.0,Recent,1,1,0,7.85,Medium
+P0091,70,Female,Severe asthma attack,8,2.2,Gradual,97,159,85,98.4,89,0,None,None,3,2,20:12,High,0,1,0,1,2,8.0,Acute,0,0,0,8.5,Medium
+P0092,32,Female,Ear pain,5,61.6,Gradual,78,113,75,99.0,97,0,None,Hypertension,2,4,21:39,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.46,Low
+P0093,79,Female,Deep cut requiring stitches,6,9.9,Gradual,92,128,85,100.4,94,0,None,Heart disease,4,3,21:24,High,0,0,0,1,1,6.0,Recent,1,1,1,7.17,Medium
+P0094,35,Female,Severe difficulty breathing,10,0.7,Sudden,118,149,88,99.8,88,1,difficulty_breathing,None,0,1,21:38,Low,1,1,0,1,3,15.0,Acute,0,0,0,15.05,Critical
+P0095,36,Female,Mild rash,2,32.5,Gradual,72,125,76,98.8,97,0,None,None,2,4,21:39,Moderate,0,0,0,0,0,2.0,Chronic,0,0,0,1.6800000000000002,Low
+P0096,72,Female,Mild rash,5,69.3,Gradual,74,130,81,99.4,97,0,None,Hypertension,1,4,21:08,High,0,0,0,0,0,5.0,Chronic,1,0,0,4.66,Low
+P0097,38,Female,Severe abdominal pain,8,4.6,Sudden,97,146,92,100.0,92,0,None,Kidney disease,2,2,22:40,Moderate,0,1,0,1,2,12.0,Acute,1,1,0,8.540000000000001,Medium
+P0098,24,Female,Minor cut or scrape,5,14.6,Gradual,68,113,80,99.3,97,0,None,Hypertension,4,4,20:04,Low,0,0,0,0,0,5.0,Recent,1,0,1,3.2199999999999998,Low
+P0099,42,Male,Cold or flu symptoms,5,52.3,Gradual,69,113,76,99.2,98,0,None,Heart disease,1,4,20:55,Moderate,0,0,0,0,0,5.0,Chronic,1,1,0,3.76,Low
+P0100,66,Male,Severe asthma attack,8,2.3,Gradual,90,131,79,98.9,91,0,None,None,1,2,21:37,High,0,0,0,1,1,8.0,Acute,0,0,0,6.380000000000001,Medium
+P0101,41,Female,Minor cut or scrape,3,66.3,Gradual,76,123,77,99.0,98,0,None,Asthma,2,4,20:50,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.13,Low
+P0102,23,Female,Severe back pain,6,15.4,Gradual,76,137,79,98.7,94,0,None,None,1,3,19:26,Low,0,0,0,1,1,6.0,Recent,0,0,0,4.49,Low
+P0103,57,Male,Severe back pain,5,16.3,Gradual,82,131,86,98.8,94,0,None,None,3,3,20:26,High,0,0,0,1,1,5.0,Recent,0,0,0,5.21,Medium
+P0104,20,Female,Minor skin irritation,2,62.5,Gradual,70,114,78,99.5,98,0,None,Diabetes,1,5,22:15,Low,0,0,0,0,0,2.0,Chronic,1,0,0,2.2,Low
+P0105,33,Male,Head injury with loss of consciousness,7,1.4,Gradual,88,132,87,99.0,92,0,None,Hypertension,1,2,21:01,Low,0,0,0,1,1,7.0,Acute,1,0,0,6.09,Medium
+P0106,37,Female,Mild rash,3,44.4,Gradual,69,129,84,98.9,97,0,None,Hypertension,3,4,20:04,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.01,Low
+P0107,32,Male,Ear pain,3,20.0,Gradual,78,129,76,99.1,97,0,None,Heart disease,4,4,21:14,Low,0,0,0,0,0,3.0,Recent,1,1,1,2.86,Low
+P0108,36,Female,High fever (over 103°F),5,22.7,Gradual,89,113,87,99.7,95,0,None,None,1,3,19:18,Moderate,0,0,0,0,0,5.0,Recent,0,0,0,2.58,Low
+P0109,53,Male,Cold or flu symptoms,2,37.8,Gradual,75,127,87,99.0,97,0,None,None,0,4,22:21,Moderate,0,0,0,0,0,2.0,Chronic,0,0,0,2.19,Low
+P0110,24,Female,Possible broken bone,5,16.1,Gradual,81,117,91,99.1,95,0,None,Diabetes,0,3,22:46,Low,0,1,0,0,1,5.0,Recent,1,0,0,5.22,Medium
+P0111,76,Female,Possible broken bone,6,19.6,Gradual,85,124,76,98.9,94,0,None,Hypertension,1,3,20:31,High,0,0,0,1,1,6.0,Recent,1,0,0,7.08,Medium
+P0112,59,Female,Ear pain,5,28.0,Gradual,67,126,86,99.1,97,0,None,None,0,4,22:41,High,0,0,0,0,0,5.0,Chronic,0,0,0,3.27,Low
+P0113,37,Female,High fever (over 103°F),5,16.8,Gradual,84,130,84,100.4,98,0,None,Heart disease,0,3,20:20,Moderate,0,0,0,0,0,5.0,Recent,1,1,0,3.61,Low
+P0114,45,Female,Medication refill,5,64.9,Gradual,72,126,89,99.4,97,0,None,None,2,5,19:22,Moderate,0,0,0,0,0,5.0,Chronic,0,0,0,2.85,Low
+P0115,18,Male,Ankle sprain,3,71.5,Gradual,69,129,79,98.7,97,0,None,Kidney disease,3,4,21:25,Low,0,0,0,0,0,3.0,Chronic,1,1,0,2.44,Low
+P0116,25,Female,Ankle sprain,4,24.3,Gradual,65,117,82,99.0,98,0,None,None,4,4,23:06,Low,0,0,0,0,0,4.0,Chronic,0,0,1,1.95,Low
+P0117,42,Female,Minor cut or scrape,4,18.6,Gradual,79,125,86,98.3,98,0,None,Hypertension,0,4,20:44,Moderate,0,0,0,0,0,4.0,Recent,1,0,0,3.46,Low
+P0118,29,Female,Minor cut or scrape,3,50.2,Gradual,74,116,75,98.5,97,0,None,None,3,4,19:26,Low,0,0,0,0,0,3.0,Chronic,0,0,0,1.7699999999999998,Low
+P0119,28,Female,High fever (over 103°F),7,20.7,Gradual,78,136,92,99.0,96,0,None,Diabetes,2,3,21:29,Low,0,1,0,0,1,7.0,Recent,1,0,0,5.9399999999999995,Medium
+P0120,69,Male,Ear pain,5,55.6,Gradual,77,129,84,98.1,97,0,None,Kidney disease,0,4,20:50,High,0,0,0,0,0,5.0,Chronic,1,1,0,4.57,Low
+P0121,75,Female,Ankle sprain,5,43.4,Gradual,80,121,83,98.7,97,0,None,Heart disease,2,4,22:13,High,0,0,0,0,0,5.0,Chronic,1,1,0,4.75,Low
+P0122,73,Male,Mild rash,5,55.3,Gradual,72,124,84,98.7,97,0,None,Heart disease,2,4,22:00,High,0,0,0,0,0,5.0,Chronic,1,1,0,4.6899999999999995,Low
+P0123,23,Male,Severe bleeding that won't stop,9,1.2,Sudden,116,93,88,100.8,81,1,severe_bleeding,Hypertension,4,1,22:31,Low,1,0,1,1,3,13.5,Acute,1,0,1,15.389999999999999,Critical
+P0124,53,Female,Severe back pain,6,9.9,Gradual,84,115,78,99.6,94,0,None,None,1,3,22:10,Moderate,0,0,0,1,1,6.0,Recent,0,0,0,5.39,Medium
+P0125,35,Female,Mild headache,4,56.4,Gradual,79,124,80,99.6,98,0,None,Kidney disease,1,5,23:08,Low,0,0,0,0,0,4.0,Chronic,1,1,0,3.25,Low
+P0126,28,Female,Head injury with loss of consciousness,7,5.2,Sudden,97,118,99,99.6,91,0,None,Heart disease,2,2,19:33,Low,0,1,0,1,2,10.5,Acute,1,1,0,7.9399999999999995,Medium
+P0127,78,Female,Cold or flu symptoms,4,67.4,Gradual,75,133,86,98.3,97,0,None,Diabetes,0,4,20:21,High,0,0,0,0,0,4.0,Chronic,1,0,0,4.54,Low
+P0128,77,Male,Suspected stroke symptoms,10,0.3,Sudden,120,115,90,99.8,83,1,stroke_symptoms,Heart disease,0,1,21:42,High,1,0,0,1,2,15.0,Acute,1,1,0,15.31,Critical
+P0129,55,Male,Ankle sprain,4,64.9,Gradual,79,127,82,98.9,98,0,None,None,5,4,22:07,Moderate,0,0,0,0,0,4.0,Chronic,0,0,1,2.85,Low
+P0130,73,Female,Chest pain,7,2.3,Gradual,98,150,97,98.6,90,1,chest_pain,Hypertension,1,2,22:40,High,0,1,0,1,2,7.0,Acute,1,0,0,14.29,High
+P0131,41,Female,Ear pain,2,68.7,Gradual,78,115,76,98.8,97,0,None,Heart disease,2,4,21:50,Moderate,0,0,0,0,0,2.0,Chronic,1,1,0,2.83,Low
+P0132,60,Male,Deep cut requiring stitches,7,18.9,Gradual,77,126,81,100.3,97,0,None,None,0,3,21:52,High,0,0,0,0,0,7.0,Recent,0,0,0,3.9,Low
+P0133,62,Female,High fever with severe headache,8,2.4,Sudden,104,111,89,98.4,91,0,None,Asthma,2,2,19:36,High,1,0,0,1,2,12.0,Acute,1,0,0,9.26,Medium
+P0134,28,Male,Moderate abdominal pain,7,7.1,Gradual,83,113,79,99.9,98,0,None,Diabetes,2,3,21:41,Low,0,0,0,0,0,7.0,Recent,1,0,0,3.9400000000000004,Low
+P0135,28,Male,Deep cut requiring stitches,6,15.9,Sudden,82,114,90,98.9,95,0,None,Heart disease,5,3,21:46,Low,0,0,0,0,0,9.0,Recent,1,1,1,3.6399999999999997,Low
+P0136,23,Male,Severe abdominal pain,7,1.9,Gradual,88,133,90,98.4,89,0,None,Heart disease,2,2,21:06,Low,0,0,0,1,1,7.0,Acute,1,1,0,5.79,Medium
+P0137,29,Female,Minor cut or scrape,3,55.1,Gradual,76,125,79,98.3,98,0,None,Diabetes,2,4,21:41,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.7699999999999996,Low
+P0138,39,Female,High fever (over 103°F),6,9.6,Sudden,77,110,94,100.1,97,0,None,Hypertension,1,3,23:11,Moderate,0,1,0,0,1,9.0,Recent,1,0,0,5.97,Medium
+P0139,20,Male,Chest pain,7,5.0,Sudden,89,134,78,101.3,93,1,chest_pain,Heart disease,2,2,19:54,Low,0,0,1,1,2,10.5,Acute,1,1,0,12.7,High
+P0140,68,Female,Deep cut requiring stitches,5,11.9,Sudden,82,138,88,99.6,98,0,None,Kidney disease,0,3,22:03,High,0,0,0,0,0,7.5,Recent,1,1,0,4.54,Low
+P0141,73,Male,Follow-up visit,4,44.0,Gradual,76,133,89,98.9,98,0,None,Hypertension,1,5,19:42,High,0,0,0,0,0,4.0,Chronic,1,0,0,4.39,Low
+P0142,43,Male,Severe asthma attack,7,5.5,Gradual,95,134,78,100.7,90,0,None,Hypertension,2,2,19:32,Moderate,0,0,1,1,2,7.0,Acute,1,0,0,8.39,Medium
+P0143,50,Female,Severe back pain,7,13.3,Gradual,76,130,79,99.1,94,0,None,Diabetes,0,3,22:42,Moderate,0,0,0,1,1,7.0,Recent,1,0,0,6.6,Medium
+P0144,42,Male,Chest pain,8,3.2,Gradual,90,111,79,100.2,92,1,chest_pain,Hypertension,2,2,21:16,Moderate,0,0,0,1,1,8.0,Acute,1,0,0,11.66,High
+P0145,47,Female,High fever with severe headache,8,2.8,Sudden,86,126,65,99.0,93,0,None,None,1,2,23:07,Moderate,0,0,0,1,1,12.0,Acute,0,0,0,5.8100000000000005,Medium
+P0146,37,Male,Severe back pain,6,4.0,Gradual,78,133,91,99.6,98,0,None,Heart disease,1,3,20:59,Moderate,0,1,0,0,1,6.0,Acute,1,1,0,5.91,Medium
+P0147,76,Male,Severe back pain,7,21.5,Gradual,84,136,83,100.2,94,0,None,None,1,3,21:01,High,0,0,0,1,1,7.0,Recent,0,0,0,6.38,Medium
+P0148,35,Male,Routine check-up,2,55.1,Gradual,72,122,86,99.1,97,0,None,Kidney disease,2,5,22:06,Low,0,0,0,0,0,2.0,Chronic,1,1,0,2.65,Low
+P0149,49,Male,Minor cut or scrape,4,47.8,Gradual,78,110,89,99.1,97,0,None,Diabetes,2,4,22:13,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.67,Low
+P0150,56,Female,Deep cut requiring stitches,7,21.3,Gradual,88,127,93,100.4,98,0,None,None,1,3,21:21,High,0,1,0,0,1,7.0,Recent,0,0,0,5.779999999999999,Medium
+P0151,34,Female,Severe asthma attack,7,2.7,Gradual,97,114,90,101.3,93,0,None,Hypertension,4,2,20:27,Low,0,0,1,1,2,7.0,Acute,1,0,1,8.12,Medium
+P0152,36,Female,Ear pain,4,48.1,Gradual,73,117,85,99.0,98,0,None,Asthma,2,4,20:57,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.2800000000000002,Low
+P0153,18,Male,Head injury with loss of consciousness,8,4.0,Sudden,96,117,92,98.1,91,0,None,Heart disease,4,2,19:54,Low,0,1,0,1,2,12.0,Acute,1,1,1,7.94,Medium
+P0154,45,Male,Medication refill,3,57.4,Gradual,70,120,85,98.3,98,0,None,Diabetes,2,5,23:03,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.25,Low
+P0155,72,Female,Severe back pain,5,23.4,Gradual,92,146,89,98.9,98,0,None,Kidney disease,2,3,20:13,High,0,1,0,0,1,5.0,Recent,1,1,0,6.66,Medium
+P0156,20,Male,Cold or flu symptoms,4,45.5,Gradual,65,123,89,98.5,98,0,None,None,1,4,21:00,Low,0,0,0,0,0,4.0,Chronic,0,0,0,1.8,Low
+P0157,73,Female,Mild rash,4,24.1,Gradual,71,127,80,99.0,98,0,None,None,0,4,21:07,High,0,0,0,0,0,4.0,Chronic,0,0,0,3.3899999999999997,Low
+P0158,45,Female,Moderate abdominal pain,5,17.3,Gradual,79,131,85,99.7,94,0,None,None,3,3,22:14,Moderate,0,0,0,1,1,5.0,Recent,0,0,0,4.85,Low
+P0159,21,Female,Moderate abdominal pain,6,18.2,Gradual,89,136,85,100.4,96,0,None,Diabetes,3,3,21:08,Low,0,0,0,0,0,6.0,Recent,1,0,0,3.4299999999999997,Low
+P0160,54,Female,Minor skin irritation,2,42.6,Gradual,72,128,89,99.4,97,0,None,Hypertension,1,5,21:08,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,3.22,Low
+P0161,37,Female,Cold or flu symptoms,4,24.6,Gradual,69,125,86,99.3,98,0,None,Kidney disease,0,4,23:13,Moderate,0,0,0,0,0,4.0,Chronic,1,1,0,3.3099999999999996,Low
+P0162,34,Male,Minor cut or scrape,5,68.2,Gradual,68,114,75,98.2,97,0,None,Heart disease,3,4,20:49,Low,0,0,0,0,0,5.0,Chronic,1,1,0,3.52,Low
+P0163,38,Female,Ankle sprain,2,18.1,Gradual,78,122,87,99.1,97,0,None,Heart disease,1,4,22:35,Moderate,0,0,0,0,0,2.0,Recent,1,1,0,2.74,Low
+P0164,56,Female,Possible broken bone,6,9.8,Gradual,89,137,76,99.2,96,0,None,None,4,3,19:43,High,0,0,0,0,0,6.0,Recent,0,0,1,3.48,Low
+P0165,44,Male,Follow-up visit,2,60.2,Gradual,66,123,76,99.2,98,0,None,Hypertension,1,5,22:19,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,2.92,Low
+P0166,72,Female,Moderate abdominal pain,6,19.4,Gradual,88,131,91,99.2,98,0,None,Hypertension,3,3,22:59,High,0,1,0,0,1,6.0,Recent,1,0,0,6.96,Medium
+P0167,28,Female,Chest pain,7,5.5,Sudden,96,103,82,101.2,89,1,chest_pain,Kidney disease,0,2,21:58,Low,0,0,1,1,2,10.5,Acute,1,1,0,12.94,High
+P0168,18,Female,High fever (over 103°F),5,17.2,Gradual,87,114,75,99.2,96,0,None,None,3,3,21:13,Low,0,0,0,0,0,5.0,Recent,0,0,0,2.04,Low
+P0169,26,Female,Moderate abdominal pain,5,11.7,Gradual,77,121,83,98.7,98,0,None,Heart disease,2,3,22:45,Low,0,0,0,0,0,5.0,Recent,1,1,0,3.2800000000000002,Low
+P0170,30,Male,Severe back pain,5,17.3,Gradual,81,113,92,100.1,95,0,None,Hypertension,0,3,19:24,Low,0,1,0,0,1,5.0,Recent,1,0,0,5.4,Medium
+P0171,34,Female,Minor cut or scrape,3,54.6,Gradual,78,122,79,99.5,98,0,None,COPD,0,4,22:10,Low,0,0,0,0,0,3.0,Chronic,1,1,0,2.92,Low
+P0172,78,Female,Possible broken bone,7,7.6,Sudden,89,147,80,100.1,95,0,None,Heart disease,1,3,20:45,High,0,1,0,0,1,10.5,Recent,1,1,0,7.4399999999999995,Medium
+P0173,22,Male,High fever (over 103°F),7,16.9,Gradual,75,132,81,99.3,95,0,None,Heart disease,4,3,20:03,Low,0,0,0,0,0,7.0,Recent,1,1,1,3.7600000000000002,Low
+P0174,63,Female,Head injury with loss of consciousness,8,6.0,Sudden,102,124,87,100.5,90,0,None,Diabetes,4,2,22:07,High,1,0,1,1,3,12.0,Acute,1,0,1,11.290000000000001,High
+P0175,27,Female,Minor cut or scrape,4,60.6,Gradual,72,113,89,98.3,97,0,None,COPD,2,4,19:28,Low,0,0,0,0,0,4.0,Chronic,1,1,0,3.01,Low
+P0176,52,Male,Cold or flu symptoms,4,33.3,Gradual,72,110,76,98.6,98,0,None,COPD,5,4,21:03,Moderate,0,0,0,0,0,4.0,Chronic,1,1,1,3.76,Low
+P0177,66,Female,Ear pain,4,26.5,Gradual,70,135,85,99.3,97,0,None,Kidney disease,3,4,23:09,High,0,0,0,0,0,4.0,Chronic,1,1,0,4.18,Low
+P0178,79,Male,Ear pain,4,55.9,Gradual,75,137,84,98.1,98,0,None,None,4,4,22:38,High,0,0,0,0,0,4.0,Chronic,0,0,1,3.5700000000000003,Low
+P0179,49,Female,Mild rash,2,62.1,Gradual,68,127,80,99.4,98,0,None,Asthma,3,4,22:27,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,3.07,Low
+P0180,50,Male,Severe asthma attack,7,1.8,Gradual,87,143,77,98.1,90,0,None,Kidney disease,2,2,21:46,Moderate,0,1,0,1,2,7.0,Acute,1,1,0,8.6,Medium
+P0181,37,Male,Head injury with loss of consciousness,8,4.3,Sudden,85,117,93,100.1,91,0,None,None,1,2,21:15,Moderate,0,1,0,1,2,12.0,Acute,0,0,0,7.51,Medium
+P0182,26,Female,Possible broken bone,7,12.0,Sudden,87,118,78,99.8,96,0,None,Heart disease,1,3,22:50,Low,0,0,0,0,0,10.5,Recent,1,1,0,3.88,Low
+P0183,58,Female,Cold or flu symptoms,5,31.9,Gradual,66,129,87,99.0,97,0,None,Heart disease,1,4,19:30,High,0,0,0,0,0,5.0,Chronic,1,1,0,4.24,Low
+P0184,22,Female,Mild headache,3,61.5,Gradual,79,113,76,99.3,98,0,None,Diabetes,1,5,20:23,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.56,Low
+P0185,59,Male,Minor skin irritation,5,12.1,Gradual,71,115,79,98.6,97,0,None,Asthma,3,5,22:37,High,0,0,0,0,0,5.0,Recent,1,0,0,4.27,Low
+P0186,22,Male,High fever (over 103°F),6,15.4,Gradual,85,124,78,100.6,94,0,None,None,2,3,22:21,Low,0,0,1,1,2,6.0,Recent,0,0,0,6.46,Medium
+P0187,28,Female,Ear pain,3,58.8,Gradual,68,124,83,98.3,97,0,None,Asthma,2,4,19:52,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.74,Low
+P0188,24,Male,Severe abdominal pain,7,2.7,Sudden,97,116,98,100.9,89,0,None,Kidney disease,5,2,20:45,Low,0,1,1,1,3,10.5,Acute,1,1,1,9.82,Medium
+P0189,21,Female,Chest pain,7,2.2,Gradual,92,113,97,101.5,89,1,chest_pain,Heart disease,2,2,21:14,Low,0,1,1,1,3,7.0,Acute,1,1,0,14.73,High
+P0190,67,Female,Minor cut or scrape,5,52.6,Gradual,72,131,85,99.4,97,0,None,Hypertension,2,4,19:30,High,0,0,0,0,0,5.0,Chronic,1,0,0,4.51,Low
+P0191,70,Female,Possible broken bone,6,11.2,Sudden,83,135,82,98.7,98,0,None,Diabetes,4,3,20:39,High,0,0,0,0,0,9.0,Recent,1,0,1,4.8999999999999995,Low
+P0192,53,Male,Chest pain,8,4.7,Sudden,99,138,68,101.5,90,1,chest_pain,Asthma,5,2,19:16,Moderate,0,0,1,1,2,12.0,Acute,1,0,1,13.99,High
+P0193,56,Male,Deep cut requiring stitches,5,7.3,Gradual,88,118,79,99.0,95,0,None,None,4,3,21:59,High,0,0,0,0,0,5.0,Recent,0,0,1,3.18,Low
+P0194,24,Male,Chest pain,8,4.2,Gradual,88,143,83,100.3,92,1,chest_pain,None,3,2,21:20,Low,0,1,0,1,2,8.0,Acute,0,0,0,12.120000000000001,High
+P0195,19,Male,Severe back pain,6,16.1,Sudden,79,124,93,100.4,96,0,None,None,3,3,22:59,Low,0,1,0,0,1,9.0,Recent,0,0,0,4.37,Low
+P0196,26,Female,Severe back pain,7,21.7,Sudden,80,126,84,98.6,97,0,None,Heart disease,5,3,21:25,Low,0,0,0,0,0,10.5,Recent,1,1,1,3.88,Low
+P0197,30,Female,Minor cut or scrape,2,16.6,Gradual,68,124,89,98.6,98,0,None,COPD,2,4,21:37,Low,0,0,0,0,0,2.0,Recent,1,1,0,2.5,Low
+P0198,72,Female,Ear pain,3,56.6,Gradual,80,132,82,98.4,98,0,None,Asthma,1,4,20:42,High,0,0,0,0,0,3.0,Chronic,1,0,0,4.0600000000000005,Low
+P0199,45,Female,Routine check-up,2,36.7,Gradual,65,114,83,98.2,97,0,None,Heart disease,4,5,22:21,Moderate,0,0,0,0,0,2.0,Chronic,1,1,1,2.95,Low
+P0200,47,Male,Moderate abdominal pain,7,18.0,Sudden,85,131,78,99.0,98,0,None,Diabetes,1,3,21:17,Moderate,0,0,0,0,0,10.5,Recent,1,0,0,4.51,Low
+P0201,67,Male,Ankle sprain,4,42.9,Gradual,73,124,75,98.6,98,0,None,Diabetes,1,4,22:32,High,0,0,0,0,0,4.0,Chronic,1,0,0,4.21,Low
+P0202,39,Male,Ankle sprain,2,16.7,Gradual,74,116,75,98.6,97,0,None,Heart disease,3,4,20:36,Moderate,0,0,0,0,0,2.0,Recent,1,1,0,2.77,Low
+P0203,49,Female,Possible broken bone,7,3.0,Gradual,78,124,90,98.8,98,0,None,Asthma,1,3,19:33,Moderate,0,0,0,0,0,7.0,Acute,1,0,0,4.57,Low
+P0204,28,Male,Chest pain with difficulty breathing,9,0.5,Sudden,118,125,93,100.2,82,1,"chest_pain,difficulty_breathing",None,4,1,22:14,Low,1,1,0,1,3,13.5,Acute,0,0,1,14.54,High
+P0205,62,Male,Medication refill,3,13.3,Gradual,71,121,77,98.9,97,0,None,COPD,5,5,19:41,High,0,0,0,0,0,3.0,Recent,1,1,1,3.76,Low
+P0206,71,Female,Cold or flu symptoms,4,45.6,Gradual,83,136,85,98.2,97,0,None,Hypertension,2,4,22:07,High,0,0,0,0,0,4.0,Chronic,1,0,0,4.33,Low
+P0207,50,Male,Moderate abdominal pain,6,11.5,Gradual,83,116,88,99.6,96,0,None,None,2,3,20:21,Moderate,0,0,0,0,0,6.0,Recent,0,0,0,3.3,Low
+P0208,25,Female,Severe back pain,6,10.9,Gradual,89,137,94,99.9,94,0,None,Diabetes,3,3,20:37,Low,0,1,0,1,2,6.0,Recent,1,0,0,7.55,Medium
+P0209,54,Female,Possible broken bone,5,3.1,Gradual,85,139,85,100.3,98,0,None,Asthma,1,3,22:17,Moderate,0,0,0,0,0,5.0,Acute,1,0,0,4.12,Low
+P0210,50,Female,Cold or flu symptoms,5,56.5,Gradual,68,126,77,99.1,98,0,None,None,2,4,22:51,Moderate,0,0,0,0,0,5.0,Chronic,0,0,0,3.0,Low
+P0211,38,Female,Mild rash,3,35.2,Gradual,74,121,84,98.7,97,0,None,Hypertension,1,4,22:40,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.04,Low
+P0212,27,Male,Routine check-up,3,69.5,Gradual,66,127,86,98.8,97,0,None,Diabetes,4,5,21:20,Low,0,0,0,0,0,3.0,Chronic,1,0,1,2.71,Low
+P0213,58,Male,Ear pain,4,23.3,Gradual,69,124,89,99.3,97,0,None,None,2,4,19:21,High,0,0,0,0,0,4.0,Recent,0,0,0,2.9399999999999995,Low
+P0214,37,Male,Possible broken bone,7,21.9,Gradual,76,125,80,99.5,96,0,None,Heart disease,2,3,19:29,Moderate,0,0,0,0,0,7.0,Recent,1,1,0,4.21,Low
+P0215,29,Male,Head injury with loss of consciousness,7,1.1,Sudden,99,114,80,99.5,93,0,None,Asthma,2,2,20:09,Low,0,0,0,1,1,10.5,Acute,1,0,0,5.97,Medium
+P0216,71,Male,Suspected stroke symptoms,9,0.8,Sudden,119,157,94,102.3,84,1,stroke_symptoms,None,0,1,21:47,High,1,1,1,1,4,13.5,Acute,0,0,0,17.83,Critical
+P0217,44,Female,Mild rash,2,50.0,Gradual,71,120,88,98.7,98,0,None,Diabetes,3,4,22:59,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,2.92,Low
+P0218,77,Male,Possible broken bone,7,17.6,Gradual,90,140,86,99.6,98,0,None,None,1,3,21:37,High,0,0,0,0,0,7.0,Recent,0,0,0,4.41,Low
+P0219,52,Female,Severe abdominal pain,7,5.2,Gradual,86,119,97,100.2,91,0,None,Kidney disease,2,2,19:50,Moderate,0,1,0,1,2,7.0,Acute,1,1,0,8.66,Medium
+P0220,23,Female,Mild rash,2,37.4,Gradual,76,117,85,98.2,98,0,None,None,4,4,22:40,Low,0,0,0,0,0,2.0,Chronic,0,0,1,1.29,Low
+P0221,33,Male,Routine check-up,4,62.8,Gradual,65,124,89,99.6,98,0,None,None,1,5,23:07,Low,0,0,0,0,0,4.0,Chronic,0,0,0,2.19,Low
+P0222,53,Male,Ankle sprain,5,18.1,Gradual,76,111,85,98.8,98,0,None,None,2,4,23:06,Moderate,0,0,0,0,0,5.0,Recent,0,0,0,3.09,Low
+P0223,45,Male,Moderate abdominal pain,5,9.4,Gradual,82,137,84,99.1,98,0,None,None,2,3,23:10,Moderate,0,0,0,0,0,5.0,Recent,0,0,0,2.85,Low
+P0224,68,Male,High fever (over 103°F),6,21.4,Gradual,85,129,82,99.2,96,0,None,Kidney disease,2,3,20:41,High,0,0,0,0,0,6.0,Recent,1,1,0,4.84,Low
+P0225,73,Female,High fever with severe headache,7,4.8,Gradual,99,124,79,100.0,89,0,None,None,3,2,21:58,High,0,0,0,1,1,7.0,Acute,0,0,0,6.289999999999999,Medium
+P0226,20,Female,Mild rash,2,42.6,Gradual,75,117,87,99.4,97,0,None,Asthma,5,4,20:20,Low,0,0,0,0,0,2.0,Chronic,1,0,1,2.2,Low
+P0227,37,Female,Severe abdominal pain,8,2.9,Gradual,97,137,72,100.1,93,0,None,None,0,2,21:27,Moderate,0,0,0,1,1,8.0,Acute,0,0,0,5.51,Medium
+P0228,22,Male,Mild rash,2,49.4,Gradual,69,129,81,99.0,98,0,None,Hypertension,0,4,20:44,Low,0,0,0,0,0,2.0,Chronic,1,0,0,2.26,Low
+P0229,35,Male,Moderate abdominal pain,6,19.5,Gradual,84,117,92,100.5,96,0,None,None,4,3,22:02,Low,0,1,1,0,2,6.0,Recent,0,0,1,6.85,Medium
+P0230,52,Female,Medication refill,2,40.1,Gradual,71,126,82,98.4,97,0,None,Asthma,0,5,21:44,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,3.16,Low
+P0231,55,Female,Moderate abdominal pain,5,7.0,Gradual,83,124,86,100.0,98,0,None,Hypertension,1,3,19:27,Moderate,0,0,0,0,0,5.0,Recent,1,0,0,4.15,Low
+P0232,35,Female,Mild rash,4,43.5,Gradual,70,127,80,98.1,98,0,None,Asthma,1,4,19:21,Low,0,0,0,0,0,4.0,Chronic,1,0,0,3.25,Low
+P0233,25,Female,Minor skin irritation,2,65.1,Gradual,67,115,86,99.4,97,0,None,Asthma,1,5,23:05,Low,0,0,0,0,0,2.0,Chronic,1,0,0,2.35,Low
+P0234,43,Female,Chest pain with difficulty breathing,10,1.7,Sudden,102,145,87,98.9,87,1,"chest_pain,difficulty_breathing",COPD,1,1,22:56,Moderate,1,1,0,1,3,15.0,Acute,1,1,0,16.29,Critical
+P0235,70,Male,Severe asthma attack,8,1.0,Sudden,96,123,89,101.3,91,0,None,COPD,2,2,20:24,High,0,0,1,1,2,12.0,Acute,1,1,0,9.5,Medium
+P0236,51,Female,Severe asthma attack,8,4.8,Sudden,96,125,98,101.1,92,0,None,None,0,2,20:59,Moderate,0,1,1,1,3,12.0,Acute,0,0,0,9.93,Medium
+P0237,71,Male,Minor cut or scrape,3,30.0,Gradual,82,120,78,98.5,97,0,None,Hypertension,1,4,19:41,High,0,0,0,0,0,3.0,Chronic,1,0,0,4.029999999999999,Low
+P0238,34,Male,Severe back pain,6,14.8,Gradual,85,127,77,99.7,96,0,None,None,2,3,19:32,Low,0,0,0,0,0,6.0,Recent,0,0,0,2.82,Low
+P0239,30,Female,High fever (over 103°F),7,6.6,Gradual,75,117,93,99.9,95,0,None,None,5,3,20:37,Low,0,1,0,0,1,7.0,Recent,0,0,1,5.0,Low
+P0240,29,Female,Severe asthma attack,7,5.0,Sudden,85,100,85,100.7,91,0,None,None,1,2,22:34,Low,0,0,1,1,2,10.5,Acute,0,0,0,6.97,Medium
+P0241,30,Male,High fever (over 103°F),7,3.4,Gradual,87,124,87,99.5,94,0,None,None,3,3,20:13,Low,0,0,0,1,1,7.0,Acute,0,0,0,5.0,Low
+P0242,79,Male,Minor cut or scrape,5,53.6,Gradual,81,134,77,99.3,97,0,None,Hypertension,3,4,20:30,High,0,0,0,0,0,5.0,Chronic,1,0,0,4.87,Low
+P0243,24,Male,Deep cut requiring stitches,7,3.6,Gradual,87,115,88,99.2,95,0,None,None,1,3,22:04,Low,0,0,0,0,0,7.0,Acute,0,0,0,2.8200000000000003,Low
+P0244,25,Male,Severe abdominal pain,7,4.2,Gradual,86,107,71,101.4,91,0,None,Diabetes,3,2,22:09,Low,0,0,1,1,2,7.0,Acute,1,0,0,7.85,Medium
+P0245,60,Male,Minor cut or scrape,3,62.7,Gradual,76,113,87,99.5,98,0,None,Diabetes,2,4,20:31,High,0,0,0,0,0,3.0,Chronic,1,0,0,3.6999999999999997,Low
+P0246,65,Female,Chest pain with difficulty breathing,10,1.6,Sudden,108,140,78,99.3,83,1,"chest_pain,difficulty_breathing",COPD,2,1,23:11,High,1,0,0,1,2,15.0,Acute,1,1,0,14.95,High
+P0247,48,Male,Severe bleeding that won't stop,9,1.0,Sudden,108,112,69,100.7,84,1,severe_bleeding,COPD,1,1,21:29,Moderate,1,0,1,1,3,13.5,Acute,1,1,0,16.14,Critical
+P0248,27,Male,Severe back pain,6,7.9,Sudden,81,118,88,98.9,97,0,None,Heart disease,1,3,20:09,Low,0,0,0,0,0,9.0,Recent,1,1,0,3.61,Low
+P0249,29,Male,Medication refill,3,68.8,Gradual,65,128,76,99.4,97,0,None,Asthma,1,5,22:01,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.7699999999999996,Low
+P0250,41,Male,Moderate abdominal pain,5,20.5,Gradual,85,124,82,100.4,95,0,None,None,3,3,21:01,Moderate,0,0,0,0,0,5.0,Recent,0,0,0,2.73,Low
+P0251,29,Female,Severe back pain,7,14.1,Sudden,87,129,79,100.1,95,0,None,Hypertension,2,3,19:49,Low,0,0,0,0,0,10.5,Recent,1,0,0,3.9699999999999998,Low
+P0252,21,Male,Moderate abdominal pain,5,8.2,Gradual,80,113,87,99.3,97,0,None,None,1,3,19:43,Low,0,0,0,0,0,5.0,Recent,0,0,0,2.13,Low
+P0253,40,Female,Chest pain,8,4.3,Sudden,93,131,68,98.5,89,1,chest_pain,None,0,2,23:11,Moderate,0,0,0,1,1,12.0,Acute,0,0,0,10.600000000000001,High
+P0254,26,Male,Severe difficulty breathing,9,0.9,Sudden,102,146,80,101.9,86,1,difficulty_breathing,Hypertension,2,1,21:29,Low,1,1,1,1,4,13.5,Acute,1,0,0,17.48,Critical
+P0255,41,Male,Routine check-up,5,14.4,Gradual,75,113,81,98.1,98,0,None,Heart disease,2,5,22:17,Moderate,0,0,0,0,0,5.0,Recent,1,1,0,3.73,Low
+P0256,21,Female,High fever (over 103°F),6,21.7,Gradual,85,120,87,98.9,96,0,None,Asthma,0,3,19:14,Low,0,0,0,0,0,6.0,Recent,1,0,0,3.4299999999999997,Low
+P0257,44,Female,High fever (over 103°F),6,5.6,Gradual,80,119,89,98.7,94,0,None,None,2,3,20:52,Moderate,0,0,0,1,1,6.0,Acute,0,0,0,5.12,Medium
+P0258,26,Male,Severe abdominal pain,8,3.5,Gradual,96,101,65,100.5,90,0,None,Heart disease,3,2,19:19,Low,0,0,1,1,2,8.0,Acute,1,1,0,8.18,Medium
+P0259,48,Male,Possible broken bone,6,14.0,Gradual,84,121,80,100.0,95,0,None,COPD,4,3,19:14,Moderate,0,0,0,0,0,6.0,Recent,1,1,1,4.24,Low
+P0260,38,Female,High fever (over 103°F),5,20.6,Sudden,89,123,80,100.0,98,0,None,None,4,3,22:48,Moderate,0,0,0,0,0,7.5,Recent,0,0,1,2.64,Low
+P0261,31,Female,Ankle sprain,5,63.1,Gradual,65,128,88,98.1,97,0,None,Kidney disease,2,4,21:25,Low,0,0,0,0,0,5.0,Chronic,1,1,0,3.4299999999999997,Low
+P0262,39,Female,Possible broken bone,5,4.8,Sudden,86,132,85,100.3,96,0,None,Heart disease,2,3,20:30,Moderate,0,0,0,0,0,7.5,Acute,1,1,0,3.67,Low
+P0263,23,Female,High fever (over 103°F),5,19.9,Gradual,77,114,86,100.0,94,0,None,Kidney disease,0,3,22:21,Low,0,0,0,1,1,5.0,Recent,1,1,0,5.19,Medium
+P0264,32,Male,Ankle sprain,4,47.1,Gradual,72,119,84,98.3,98,0,None,Diabetes,0,4,19:27,Low,0,0,0,0,0,4.0,Chronic,1,0,0,3.16,Low
+P0265,29,Female,Severe abdominal pain,8,4.3,Sudden,95,110,98,99.8,90,0,None,Kidney disease,1,2,22:48,Low,0,1,0,1,2,12.0,Acute,1,1,0,8.27,Medium
+P0266,79,Female,High fever with severe headache,7,5.2,Sudden,101,152,88,101.3,89,0,None,Kidney disease,3,2,20:42,High,1,1,1,1,4,10.5,Acute,1,1,0,13.469999999999999,High
+P0267,65,Male,Mild rash,4,51.5,Gradual,75,138,75,98.9,98,0,None,Kidney disease,2,4,19:41,High,0,0,0,0,0,4.0,Chronic,1,1,0,4.15,Low
+P0268,44,Male,Minor skin irritation,3,20.1,Gradual,74,115,81,98.7,97,0,None,None,1,5,21:19,Moderate,0,0,0,0,0,3.0,Recent,0,0,0,2.2199999999999998,Low
+P0269,35,Male,Severe abdominal pain,7,1.5,Sudden,85,103,90,98.9,92,0,None,None,2,2,21:36,Low,0,0,0,1,1,10.5,Acute,0,0,0,5.1499999999999995,Medium
+P0270,69,Male,Head injury with loss of consciousness,8,2.0,Sudden,94,126,90,99.7,93,0,None,Asthma,2,2,20:00,High,0,0,0,1,1,12.0,Acute,1,0,0,7.470000000000001,Medium
+P0271,40,Female,Mild rash,3,52.3,Gradual,67,114,76,99.0,97,0,None,Diabetes,2,4,23:09,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.1,Low
+P0272,45,Female,Severe asthma attack,8,2.9,Sudden,89,143,82,100.2,91,0,None,Diabetes,0,2,22:30,Moderate,0,1,0,1,2,12.0,Acute,1,0,0,8.75,Medium
+P0273,56,Female,Minor cut or scrape,2,36.8,Gradual,76,115,84,99.3,97,0,None,Kidney disease,2,4,21:43,High,0,0,0,0,0,2.0,Chronic,1,1,0,3.2800000000000002,Low
+P0274,77,Male,Cold or flu symptoms,4,38.5,Gradual,80,129,85,99.1,97,0,None,None,1,4,20:46,High,0,0,0,0,0,4.0,Chronic,0,0,0,3.51,Low
+P0275,67,Female,Severe asthma attack,7,3.8,Sudden,97,129,68,98.1,91,0,None,Kidney disease,1,2,19:41,High,0,0,0,1,1,10.5,Acute,1,1,0,7.109999999999999,Medium
+P0276,24,Female,Medication refill,3,39.3,Gradual,69,121,75,98.6,98,0,None,Diabetes,5,5,19:28,Low,0,0,0,0,0,3.0,Chronic,1,0,1,2.62,Low
+P0277,22,Male,Ear pain,5,50.5,Gradual,78,127,85,98.1,97,0,None,Diabetes,2,4,20:34,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.16,Low
+P0278,57,Female,Head injury with loss of consciousness,7,1.3,Gradual,92,147,94,99.8,89,0,None,None,1,2,20:33,High,0,1,0,1,2,7.0,Acute,0,0,0,7.81,Medium
+P0279,52,Female,Ankle sprain,3,55.8,Gradual,67,116,79,99.1,98,0,None,Diabetes,3,4,20:00,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.46,Low
+P0280,74,Male,Cold or flu symptoms,5,52.5,Gradual,79,122,76,99.1,98,0,None,Hypertension,1,4,21:45,High,0,0,0,0,0,5.0,Chronic,1,0,0,4.72,Low
+P0281,30,Female,Ankle sprain,3,33.3,Gradual,69,117,79,99.6,97,0,None,Hypertension,2,4,21:36,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.8,Low
+P0282,41,Male,Ankle sprain,4,58.8,Gradual,72,128,89,98.1,98,0,None,Hypertension,2,4,22:24,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.4299999999999997,Low
+P0283,47,Male,Ear pain,3,12.4,Gradual,70,126,86,98.9,97,0,None,Diabetes,2,4,21:34,Moderate,0,0,0,0,0,3.0,Recent,1,0,0,3.3099999999999996,Low
+P0284,20,Female,Mild headache,2,13.4,Gradual,68,122,77,99.4,98,0,None,Heart disease,4,5,22:13,Low,0,0,0,0,0,2.0,Recent,1,1,1,2.2,Low
+P0285,18,Male,Follow-up visit,3,47.4,Gradual,72,127,76,98.8,97,0,None,None,2,5,22:19,Low,0,0,0,0,0,3.0,Chronic,0,0,0,1.44,Low
+P0286,49,Female,Ear pain,2,65.2,Gradual,73,113,75,98.1,97,0,None,Diabetes,6,4,22:44,Moderate,0,0,0,0,0,2.0,Chronic,1,0,1,3.07,Low
+P0287,31,Female,Severe difficulty breathing,10,1.8,Sudden,109,102,95,100.1,84,1,difficulty_breathing,None,5,1,20:46,Low,1,1,0,1,3,15.0,Acute,0,0,1,14.93,High
+P0288,52,Male,Moderate abdominal pain,6,18.2,Sudden,76,134,87,99.5,95,0,None,None,1,3,21:46,Moderate,0,0,0,0,0,9.0,Recent,0,0,0,3.36,Low
+P0289,78,Female,Severe back pain,7,23.1,Sudden,91,142,77,100.3,98,0,None,None,0,3,21:10,High,0,1,0,0,1,10.5,Recent,0,0,0,6.4399999999999995,Medium
+P0290,70,Female,Chest pain,8,2.4,Gradual,104,154,77,101.1,92,1,chest_pain,None,2,2,21:54,High,1,1,1,1,4,8.0,Acute,0,0,0,17.5,Critical
+P0291,65,Male,Possible broken bone,6,21.0,Sudden,89,135,81,100.1,96,0,None,Asthma,2,3,22:43,High,0,0,0,0,0,9.0,Recent,1,0,0,4.75,Low
+P0292,41,Female,Chest pain,8,3.0,Sudden,96,122,75,100.5,93,1,chest_pain,None,5,2,21:06,Moderate,0,0,1,1,2,12.0,Acute,0,0,1,12.63,High
+P0293,54,Male,Ear pain,3,49.9,Gradual,66,124,89,99.5,97,0,None,None,2,4,22:19,Moderate,0,0,0,0,0,3.0,Chronic,0,0,0,2.52,Low
+P0294,34,Male,Moderate abdominal pain,7,13.6,Gradual,88,134,76,98.9,94,0,None,None,2,3,21:52,Low,0,0,0,1,1,7.0,Recent,0,0,0,5.119999999999999,Medium
+P0295,70,Female,Minor cut or scrape,2,51.6,Gradual,80,136,84,98.2,98,0,None,Asthma,2,4,19:14,High,0,0,0,0,0,2.0,Chronic,1,0,0,3.6999999999999997,Low
+P0296,42,Male,High fever (over 103°F),7,18.8,Gradual,83,120,78,99.6,97,0,None,Heart disease,2,3,20:27,Moderate,0,0,0,0,0,7.0,Recent,1,1,0,4.36,Low
+P0297,28,Male,Moderate abdominal pain,6,8.8,Gradual,80,139,90,99.1,97,0,None,None,5,3,21:55,Low,0,0,0,0,0,6.0,Recent,0,0,1,2.6399999999999997,Low
+P0298,57,Male,Suspected stroke symptoms,10,2.0,Sudden,106,129,65,98.8,88,1,stroke_symptoms,Heart disease,0,1,22:03,High,1,0,0,1,2,15.0,Acute,1,1,0,14.71,High
+P0299,32,Female,Possible broken bone,5,7.9,Sudden,78,133,80,100.6,98,0,None,None,2,3,20:44,Low,0,0,1,0,1,7.5,Recent,0,0,0,4.46,Low
+P0300,56,Male,Follow-up visit,4,59.0,Gradual,66,126,80,98.6,97,0,None,None,1,5,19:30,High,0,0,0,0,0,4.0,Chronic,0,0,0,2.88,Low
+P0301,54,Male,Follow-up visit,5,38.4,Gradual,67,110,85,99.2,98,0,None,Diabetes,1,5,22:34,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,4.12,Low
+P0302,41,Female,Moderate abdominal pain,6,6.5,Sudden,76,123,87,99.4,96,0,None,Diabetes,3,3,21:25,Moderate,0,0,0,0,0,9.0,Recent,1,0,0,4.029999999999999,Low
+P0303,23,Male,Head injury with loss of consciousness,7,5.3,Sudden,91,114,91,99.3,90,0,None,Asthma,3,2,21:08,Low,0,1,0,1,2,10.5,Acute,1,0,0,7.79,Medium
+P0304,20,Male,Moderate abdominal pain,7,4.4,Sudden,83,118,81,100.4,97,0,None,None,2,3,21:36,Low,0,0,0,0,0,10.5,Acute,0,0,0,2.7,Low
+P0305,64,Female,Mild rash,4,57.6,Gradual,72,131,82,99.0,98,0,None,Asthma,1,4,21:07,High,0,0,0,0,0,4.0,Chronic,1,0,0,4.12,Low
+P0306,24,Male,Severe back pain,5,10.6,Sudden,89,135,75,100.3,98,0,None,None,1,3,21:24,Low,0,0,0,0,0,7.5,Recent,0,0,0,2.2199999999999998,Low
+P0307,58,Male,Severe back pain,7,8.9,Sudden,88,117,85,99.1,97,0,None,Heart disease,2,3,20:02,High,0,0,0,0,0,10.5,Recent,1,1,0,4.84,Low
+P0308,52,Female,Follow-up visit,5,25.6,Gradual,76,118,87,98.5,97,0,None,Asthma,2,5,23:04,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,4.0600000000000005,Low
+P0309,55,Female,Deep cut requiring stitches,7,19.7,Gradual,75,121,91,99.2,96,0,None,Kidney disease,3,3,19:23,Moderate,0,1,0,0,1,7.0,Recent,1,1,0,6.75,Medium
+P0310,51,Female,Cold or flu symptoms,5,40.8,Gradual,74,117,87,98.8,98,0,None,Hypertension,1,4,21:36,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,4.03,Low
+P0311,57,Female,Possible broken bone,6,14.0,Gradual,85,111,88,100.2,98,0,None,None,1,3,20:03,High,0,0,0,0,0,6.0,Recent,0,0,0,3.51,Low
+P0312,44,Male,Unresponsive or confused,9,1.5,Sudden,116,137,61,98.4,86,1,altered_mental_status,Asthma,3,1,19:30,Moderate,1,0,0,1,2,13.5,Acute,1,0,0,14.02,High
+P0313,54,Male,Routine check-up,2,17.3,Gradual,71,125,77,98.6,97,0,None,Asthma,2,5,19:53,Moderate,0,0,0,0,0,2.0,Recent,1,0,0,3.22,Low
+P0314,22,Male,Cold or flu symptoms,5,67.7,Gradual,74,117,79,99.4,98,0,None,Asthma,1,4,22:00,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.16,Low
+P0315,63,Male,Severe abdominal pain,8,1.8,Sudden,92,140,65,100.1,90,0,None,Hypertension,5,2,21:53,High,0,0,0,1,1,12.0,Acute,1,0,1,7.290000000000001,Medium
+P0316,43,Male,Minor cut or scrape,5,58.5,Gradual,69,113,84,99.3,98,0,None,None,4,4,19:30,Moderate,0,0,0,0,0,5.0,Chronic,0,0,1,2.79,Low
+P0317,55,Female,Minor skin irritation,3,12.7,Gradual,77,121,80,98.6,97,0,None,Hypertension,2,5,23:07,Moderate,0,0,0,0,0,3.0,Recent,1,0,0,3.55,Low
+P0318,24,Male,High fever (over 103°F),6,4.3,Gradual,86,125,84,99.0,98,0,None,None,0,3,19:26,Low,0,0,0,0,0,6.0,Acute,0,0,0,2.5199999999999996,Low
+P0319,55,Male,Cold or flu symptoms,3,32.8,Gradual,65,114,76,99.0,97,0,None,Hypertension,3,4,20:50,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.55,Low
+P0320,38,Female,Medication refill,4,24.1,Gradual,68,119,77,99.1,98,0,None,None,1,5,20:54,Moderate,0,0,0,0,0,4.0,Chronic,0,0,0,2.34,Low
+P0321,33,Male,Chest pain,8,3.7,Gradual,94,139,76,101.3,90,1,chest_pain,Hypertension,0,2,20:48,Low,0,0,1,1,2,8.0,Acute,1,0,0,13.39,High
+P0322,50,Female,Mild headache,5,49.4,Gradual,79,114,87,99.1,98,0,None,None,1,5,22:51,Moderate,0,0,0,0,0,5.0,Chronic,0,0,0,3.0,Low
+P0323,20,Male,Ear pain,4,31.6,Gradual,68,120,86,99.0,97,0,None,Diabetes,2,4,19:45,Low,0,0,0,0,0,4.0,Chronic,1,0,0,2.8,Low
+P0324,70,Male,Severe back pain,5,14.3,Gradual,91,131,79,99.2,98,0,None,None,1,3,22:58,High,0,0,0,0,0,5.0,Recent,0,0,0,3.5999999999999996,Low
+P0325,70,Male,Ankle sprain,2,57.9,Gradual,75,123,79,98.6,98,0,None,COPD,2,4,19:29,High,0,0,0,0,0,2.0,Chronic,1,1,0,3.6999999999999997,Low
+P0326,76,Female,Moderate abdominal pain,7,16.4,Gradual,87,123,86,99.1,94,0,None,Asthma,2,3,21:36,High,0,0,0,1,1,7.0,Recent,1,0,0,7.38,Medium
+P0327,30,Female,Severe back pain,5,11.4,Sudden,78,114,76,99.5,97,0,None,Hypertension,1,3,21:37,Low,0,0,0,0,0,7.5,Recent,1,0,0,3.4,Low
+P0328,51,Male,Minor cut or scrape,4,57.0,Gradual,65,117,81,99.3,97,0,None,None,3,4,21:22,Moderate,0,0,0,0,0,4.0,Chronic,0,0,0,2.73,Low
+P0329,50,Female,Ear pain,2,18.7,Gradual,65,127,83,99.6,98,0,None,None,3,4,19:28,Moderate,0,0,0,0,0,2.0,Recent,0,0,0,2.1,Low
+P0330,33,Male,Cold or flu symptoms,3,42.8,Gradual,77,128,88,99.0,98,0,None,Asthma,2,4,19:31,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.8899999999999997,Low
+P0331,77,Female,Possible broken bone,6,10.4,Gradual,92,126,79,99.5,97,0,None,Diabetes,0,3,23:04,High,0,0,0,0,0,6.0,Recent,1,0,0,5.109999999999999,Medium
+P0332,71,Male,Cold or flu symptoms,4,29.4,Gradual,84,139,87,99.5,97,0,None,Hypertension,0,4,21:40,High,0,0,0,0,0,4.0,Chronic,1,0,0,4.33,Low
+P0333,51,Male,Ankle sprain,5,67.6,Gradual,70,110,81,98.6,97,0,None,Kidney disease,2,4,23:03,Moderate,0,0,0,0,0,5.0,Chronic,1,1,0,4.03,Low
+P0334,32,Male,Severe asthma attack,7,3.2,Gradual,85,144,67,101.0,91,0,None,None,0,2,19:31,Low,0,1,1,1,3,7.0,Acute,0,0,0,9.059999999999999,Medium
+P0335,50,Male,High fever with severe headache,7,5.7,Sudden,85,122,73,98.1,92,0,None,None,2,2,20:15,Moderate,0,0,0,1,1,10.5,Acute,0,0,0,5.6,Medium
+P0336,21,Female,Deep cut requiring stitches,5,4.2,Sudden,80,136,81,99.7,95,0,None,None,1,3,20:19,Low,0,0,0,0,0,7.5,Acute,0,0,0,2.13,Low
+P0337,64,Female,Severe asthma attack,7,2.7,Sudden,90,139,88,101.0,93,0,None,Asthma,3,2,22:28,High,0,0,1,1,2,10.5,Acute,1,0,0,9.02,Medium
+P0338,34,Male,High fever (over 103°F),6,16.7,Gradual,88,116,92,100.3,96,0,None,None,3,3,19:45,Low,0,1,0,0,1,6.0,Recent,0,0,0,4.82,Low
+P0339,26,Female,Severe back pain,7,23.3,Gradual,76,114,88,99.3,95,0,None,None,2,3,22:10,Low,0,0,0,0,0,7.0,Recent,0,0,0,2.88,Low
+P0340,21,Female,High fever with severe headache,8,4.8,Sudden,99,111,69,100.6,92,0,None,Asthma,3,2,19:14,Low,0,0,1,1,2,12.0,Acute,1,0,0,8.030000000000001,Medium
+P0341,36,Female,Ear pain,3,37.0,Gradual,67,111,86,99.1,98,0,None,None,2,4,19:30,Moderate,0,0,0,0,0,3.0,Chronic,0,0,0,1.98,Low
+P0342,41,Male,Severe back pain,5,18.2,Sudden,81,133,91,99.1,96,0,None,Diabetes,1,3,22:43,Moderate,0,1,0,0,1,7.5,Recent,1,0,0,5.73,Medium
+P0343,62,Male,Moderate abdominal pain,7,16.5,Sudden,87,131,82,98.8,94,0,None,None,3,3,19:56,High,0,0,0,1,1,10.5,Recent,0,0,0,5.959999999999999,Medium
+P0344,77,Female,Follow-up visit,2,18.3,Gradual,81,124,78,99.4,97,0,None,Hypertension,2,5,20:57,High,0,0,0,0,0,2.0,Recent,1,0,0,3.91,Low
+P0345,37,Female,Cold or flu symptoms,5,13.6,Gradual,71,119,84,99.2,97,0,None,Diabetes,2,4,21:50,Moderate,0,0,0,0,0,5.0,Recent,1,0,0,3.61,Low
+P0346,33,Male,Chest pain,8,4.8,Sudden,90,122,91,100.3,92,1,chest_pain,Hypertension,4,2,19:22,Low,0,1,0,1,2,12.0,Acute,1,0,1,13.39,High
+P0347,22,Male,Minor cut or scrape,3,20.7,Gradual,76,127,81,98.3,98,0,None,Heart disease,2,4,21:49,Low,0,0,0,0,0,3.0,Recent,1,1,0,2.56,Low
+P0348,54,Male,Minor skin irritation,3,35.2,Gradual,77,116,84,99.4,97,0,None,Heart disease,3,5,22:57,Moderate,0,0,0,0,0,3.0,Chronic,1,1,0,3.52,Low
+P0349,57,Female,Medication refill,2,62.2,Gradual,75,110,80,99.1,97,0,None,Kidney disease,1,5,22:31,High,0,0,0,0,0,2.0,Chronic,1,1,0,3.31,Low
+P0350,37,Female,Ankle sprain,4,17.8,Gradual,73,120,80,99.0,97,0,None,None,6,4,20:49,Moderate,0,0,0,0,0,4.0,Recent,0,0,1,2.3099999999999996,Low
+P0351,40,Male,Follow-up visit,3,30.9,Gradual,78,122,84,99.2,98,0,None,None,1,5,21:37,Moderate,0,0,0,0,0,3.0,Chronic,0,0,0,2.1,Low
+P0352,50,Female,Routine check-up,3,62.3,Gradual,75,115,84,98.5,97,0,None,Heart disease,1,5,20:00,Moderate,0,0,0,0,0,3.0,Chronic,1,1,0,3.4,Low
+P0353,48,Female,High fever with severe headache,8,1.9,Sudden,99,129,90,100.7,90,0,None,COPD,1,2,21:19,Moderate,0,0,1,1,2,12.0,Acute,1,1,0,8.84,Medium
+P0354,35,Female,High fever with severe headache,7,5.2,Gradual,92,112,90,99.6,93,0,None,Hypertension,3,2,20:27,Low,0,0,0,1,1,7.0,Acute,1,0,0,6.1499999999999995,Medium
+P0355,18,Male,Ear pain,3,16.2,Gradual,67,115,87,98.6,97,0,None,Hypertension,4,4,19:18,Low,0,0,0,0,0,3.0,Recent,1,0,1,2.44,Low
+P0356,69,Female,Possible broken bone,5,3.3,Gradual,87,141,86,98.7,94,0,None,Kidney disease,1,3,22:14,High,0,1,0,1,2,5.0,Acute,1,1,0,8.57,Medium
+P0357,50,Female,Deep cut requiring stitches,7,6.5,Sudden,89,135,93,100.4,94,0,None,Kidney disease,1,3,22:33,Moderate,0,1,0,1,2,10.5,Recent,1,1,0,8.6,Medium
+P0358,71,Male,Possible broken bone,6,17.4,Sudden,94,121,83,99.8,95,0,None,Diabetes,1,3,22:30,High,0,0,0,0,0,9.0,Recent,1,0,0,4.93,Low
+P0359,33,Male,Deep cut requiring stitches,5,6.5,Sudden,82,120,87,99.0,94,0,None,None,1,3,19:26,Low,0,0,0,1,1,7.5,Recent,0,0,0,4.49,Low
+P0360,73,Female,Suspected stroke symptoms,9,0.5,Sudden,109,101,107,101.0,88,1,stroke_symptoms,None,2,1,22:39,High,1,1,1,1,4,13.5,Acute,0,0,0,17.89,Critical
+P0361,21,Male,Mild rash,4,22.5,Gradual,69,126,84,99.5,98,0,None,Heart disease,2,4,20:18,Low,0,0,0,0,0,4.0,Recent,1,1,0,2.83,Low
+P0362,60,Male,Minor skin irritation,5,65.9,Gradual,77,113,76,98.8,97,0,None,COPD,3,5,21:32,High,0,0,0,0,0,5.0,Chronic,1,1,0,4.3,Low
+P0363,33,Female,Medication refill,5,49.8,Gradual,76,129,79,98.2,98,0,None,Kidney disease,1,5,22:10,Low,0,0,0,0,0,5.0,Chronic,1,1,0,3.49,Low
+P0364,29,Male,Moderate abdominal pain,7,6.5,Gradual,76,139,77,99.9,98,0,None,Heart disease,1,3,19:27,Low,0,0,0,0,0,7.0,Recent,1,1,0,3.9699999999999998,Low
+P0365,29,Male,Severe abdominal pain,7,2.8,Gradual,89,141,74,100.7,91,0,None,None,3,2,22:29,Low,0,1,1,1,3,7.0,Acute,0,0,0,8.969999999999999,Medium
+P0366,64,Female,Deep cut requiring stitches,6,16.5,Sudden,90,126,76,99.4,94,0,None,Diabetes,1,3,21:43,High,0,0,0,1,1,9.0,Recent,1,0,0,6.72,Medium
+P0367,73,Female,Medication refill,4,68.7,Gradual,74,130,89,98.1,97,0,None,Hypertension,2,5,22:13,High,0,0,0,0,0,4.0,Chronic,1,0,0,4.39,Low
+P0368,59,Male,Ankle sprain,2,38.4,Gradual,71,116,84,98.4,98,0,None,None,3,4,21:23,High,0,0,0,0,0,2.0,Chronic,0,0,0,2.37,Low
+P0369,47,Male,High fever with severe headache,8,1.0,Sudden,85,137,66,101.3,92,0,None,Asthma,1,2,20:06,Moderate,0,0,1,1,2,12.0,Acute,1,0,0,8.81,Medium
+P0370,61,Female,Possible broken bone,5,16.1,Gradual,82,142,90,99.4,97,0,None,Asthma,1,3,20:51,High,0,1,0,0,1,5.0,Recent,1,0,0,6.33,Medium
+P0371,37,Male,Minor skin irritation,4,18.6,Gradual,75,115,81,98.5,97,0,None,Kidney disease,1,5,20:12,Moderate,0,0,0,0,0,4.0,Recent,1,1,0,3.3099999999999996,Low
+P0372,22,Female,Minor cut or scrape,4,53.1,Gradual,69,122,82,98.7,98,0,None,None,1,4,20:52,Low,0,0,0,0,0,4.0,Chronic,0,0,0,1.8599999999999999,Low
+P0373,28,Female,High fever (over 103°F),6,23.6,Gradual,77,111,76,100.0,96,0,None,Asthma,0,3,19:43,Low,0,0,0,0,0,6.0,Recent,1,0,0,3.6399999999999997,Low
+P0374,26,Male,Ear pain,5,41.0,Gradual,75,119,85,98.7,98,0,None,Heart disease,1,4,22:58,Low,0,0,0,0,0,5.0,Chronic,1,1,0,3.2800000000000002,Low
+P0375,36,Female,Mild rash,4,21.0,Gradual,69,118,79,99.5,97,0,None,Diabetes,2,4,23:04,Moderate,0,0,0,0,0,4.0,Recent,1,0,0,3.2800000000000002,Low
+P0376,19,Male,Suspected stroke symptoms,9,1.4,Sudden,104,110,64,102.4,84,1,stroke_symptoms,Heart disease,1,1,22:17,Low,1,0,1,1,3,13.5,Acute,1,1,0,15.27,Critical
+P0377,37,Female,Moderate abdominal pain,7,13.9,Sudden,77,121,90,98.9,96,0,None,Hypertension,4,3,21:03,Moderate,0,0,0,0,0,10.5,Recent,1,0,1,4.21,Low
+P0378,52,Male,Ankle sprain,3,67.1,Gradual,76,122,87,98.1,97,0,None,Asthma,0,4,21:01,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.46,Low
+P0379,30,Female,Chest pain,8,5.3,Sudden,90,115,74,101.2,93,1,chest_pain,None,1,2,22:01,Low,0,0,1,1,2,12.0,Acute,0,0,0,12.3,High
+P0380,31,Male,Minor cut or scrape,5,47.1,Gradual,71,120,75,98.6,97,0,None,Asthma,2,4,19:27,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.4299999999999997,Low
+P0381,35,Male,Ear pain,3,26.3,Gradual,67,114,76,98.6,98,0,None,COPD,1,4,21:04,Low,0,0,0,0,0,3.0,Chronic,1,1,0,2.9499999999999997,Low
+P0382,70,Male,Moderate abdominal pain,7,10.9,Sudden,93,131,77,99.5,97,0,None,None,2,3,22:04,High,0,0,0,0,0,10.5,Recent,0,0,0,4.199999999999999,Low
+P0383,20,Female,Unresponsive or confused,9,0.4,Sudden,104,159,104,101.3,79,1,altered_mental_status,Heart disease,2,1,22:51,Low,1,1,1,1,4,13.5,Acute,1,1,0,17.3,Critical
+P0384,34,Male,Head injury with loss of consciousness,8,1.6,Gradual,92,144,91,99.4,90,0,None,Diabetes,1,2,22:08,Low,0,1,0,1,2,8.0,Acute,1,0,0,8.42,Medium
+P0385,65,Female,Severe back pain,5,7.2,Gradual,83,149,93,98.9,96,0,None,None,2,3,22:01,High,0,1,0,0,1,5.0,Recent,0,0,0,5.45,Medium
+P0386,62,Female,Severe asthma attack,7,5.7,Sudden,96,159,78,99.8,91,0,None,Diabetes,0,2,19:28,High,0,1,0,1,2,10.5,Acute,1,0,0,8.959999999999999,Medium
+P0387,65,Female,Severe abdominal pain,7,2.3,Sudden,94,153,96,99.0,89,0,None,Diabetes,1,2,19:47,High,0,1,0,1,2,10.5,Acute,1,0,0,9.05,Medium
+P0388,34,Female,Severe asthma attack,8,2.6,Sudden,98,102,76,98.7,89,0,None,None,0,2,23:06,Low,0,0,0,1,1,12.0,Acute,0,0,0,5.42,Medium
+P0389,34,Male,Chest pain with difficulty breathing,10,0.3,Sudden,117,113,97,101.5,83,1,"chest_pain,difficulty_breathing",COPD,0,1,23:03,Low,1,1,1,1,4,15.0,Acute,1,1,0,18.02,Critical
+P0390,36,Male,Cold or flu symptoms,3,59.3,Gradual,77,119,86,98.8,98,0,None,Hypertension,4,4,20:18,Moderate,0,0,0,0,0,3.0,Chronic,1,0,1,2.98,Low
+P0391,39,Male,Deep cut requiring stitches,6,23.1,Sudden,81,139,81,98.8,94,0,None,None,2,3,21:14,Moderate,0,0,0,1,1,9.0,Recent,0,0,0,4.97,Low
+P0392,62,Female,Moderate abdominal pain,6,13.5,Gradual,92,126,88,99.0,96,0,None,None,1,3,19:35,High,0,0,0,0,0,6.0,Recent,0,0,0,3.6599999999999997,Low
+P0393,49,Male,Cold or flu symptoms,4,62.2,Gradual,68,128,77,99.0,97,0,None,None,0,4,22:38,Moderate,0,0,0,0,0,4.0,Chronic,0,0,0,2.67,Low
+P0394,65,Male,Severe asthma attack,7,4.3,Sudden,95,152,93,101.4,92,0,None,Heart disease,5,2,22:26,High,0,1,1,1,3,10.5,Acute,1,1,1,11.05,High
+P0395,18,Female,Possible broken bone,5,6.0,Sudden,79,126,82,100.5,97,0,None,Kidney disease,3,3,19:33,Low,0,0,1,0,1,7.5,Acute,1,1,0,5.04,Medium
+P0396,45,Female,Ankle sprain,4,12.8,Gradual,65,123,80,98.9,97,0,None,None,5,4,20:35,Moderate,0,0,0,0,0,4.0,Recent,0,0,1,2.55,Low
+P0397,39,Female,High fever with severe headache,7,5.8,Sudden,97,100,84,99.4,92,0,None,Diabetes,0,2,19:22,Moderate,0,0,0,1,1,10.5,Acute,1,0,0,6.27,Medium
+P0398,21,Female,Ear pain,3,51.9,Gradual,72,110,82,99.2,97,0,None,None,5,4,22:01,Low,0,0,0,0,0,3.0,Chronic,0,0,1,1.5299999999999998,Low
+P0399,24,Female,High fever (over 103°F),5,22.3,Sudden,84,139,90,99.5,98,0,None,None,4,3,22:26,Low,0,0,0,0,0,7.5,Recent,0,0,1,2.2199999999999998,Low
+P0400,55,Female,Ear pain,4,56.5,Gradual,73,117,88,98.4,97,0,None,Heart disease,4,4,20:13,Moderate,0,0,0,0,0,4.0,Chronic,1,1,1,3.85,Low
+P0401,23,Female,Possible broken bone,5,17.6,Gradual,80,139,82,99.4,96,0,None,None,2,3,22:39,Low,0,0,0,0,0,5.0,Recent,0,0,0,2.19,Low
+P0402,70,Male,Minor cut or scrape,3,24.5,Gradual,75,125,79,98.5,98,0,None,None,1,4,20:28,High,0,0,0,0,0,3.0,Chronic,0,0,0,2.9999999999999996,Low
+P0403,52,Female,Routine check-up,3,18.2,Gradual,75,129,77,98.6,98,0,None,Asthma,3,5,22:10,Moderate,0,0,0,0,0,3.0,Recent,1,0,0,3.46,Low
+P0404,40,Male,Possible broken bone,7,7.2,Sudden,85,138,90,100.0,96,0,None,Kidney disease,2,3,21:38,Moderate,0,0,0,0,0,10.5,Recent,1,1,0,4.300000000000001,Low
+P0405,34,Female,Severe bleeding that won't stop,9,0.5,Sudden,102,127,79,99.3,88,1,severe_bleeding,Heart disease,0,1,21:22,Low,1,0,0,1,2,13.5,Acute,1,1,0,13.719999999999999,High
+P0406,34,Male,Chest pain,8,3.7,Gradual,90,140,98,100.7,93,1,chest_pain,Asthma,2,2,23:06,Low,0,1,1,1,3,8.0,Acute,1,0,0,15.42,Critical
+P0407,52,Male,Severe asthma attack,7,5.8,Sudden,85,148,76,98.3,93,0,None,None,0,2,20:07,Moderate,0,1,0,1,2,10.5,Acute,0,0,0,7.66,Medium
+P0408,35,Male,Cold or flu symptoms,2,28.8,Gradual,76,112,89,98.5,98,0,None,None,3,4,19:35,Low,0,0,0,0,0,2.0,Chronic,0,0,0,1.65,Low
+P0409,61,Male,Mild headache,5,52.6,Gradual,76,123,85,98.8,97,0,None,COPD,2,5,20:40,High,0,0,0,0,0,5.0,Chronic,1,1,0,4.33,Low
+P0410,45,Male,Routine check-up,4,39.6,Gradual,73,116,77,99.1,97,0,None,Hypertension,3,5,21:12,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.55,Low
+P0411,18,Male,High fever with severe headache,8,2.3,Sudden,85,100,77,99.8,93,0,None,None,1,2,20:21,Low,0,0,0,1,1,12.0,Acute,0,0,0,4.94,Low
+P0412,36,Male,Routine check-up,4,37.2,Gradual,70,129,79,98.9,97,0,None,Hypertension,0,5,19:32,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.2800000000000002,Low
+P0413,68,Male,Medication refill,2,66.8,Gradual,81,127,82,98.9,97,0,None,Heart disease,2,5,22:06,High,0,0,0,0,0,2.0,Chronic,1,1,0,3.64,Low
+P0414,48,Female,High fever (over 103°F),5,21.9,Gradual,75,139,77,99.1,95,0,None,Hypertension,2,3,21:07,Moderate,0,0,0,0,0,5.0,Recent,1,0,0,3.94,Low
+P0415,78,Male,Moderate abdominal pain,6,14.1,Gradual,90,145,87,98.7,98,0,None,Hypertension,1,3,20:27,High,0,1,0,0,1,6.0,Recent,1,0,0,7.14,Medium
+P0416,64,Female,High fever (over 103°F),6,17.7,Gradual,89,131,80,100.0,97,0,None,None,3,3,22:51,High,0,0,0,0,0,6.0,Recent,0,0,0,3.7199999999999998,Low
+P0417,56,Female,Minor cut or scrape,4,27.8,Gradual,79,115,77,98.2,97,0,None,Asthma,2,4,20:01,High,0,0,0,0,0,4.0,Chronic,1,0,0,3.88,Low
+P0418,36,Female,Possible broken bone,6,10.5,Gradual,81,115,84,100.1,98,0,None,None,2,3,22:57,Moderate,0,0,0,0,0,6.0,Recent,0,0,0,2.88,Low
+P0419,78,Male,High fever (over 103°F),6,14.7,Gradual,87,147,87,99.8,94,0,None,Hypertension,2,3,22:00,High,0,1,0,1,2,6.0,Recent,1,0,0,9.14,Medium
+P0420,24,Female,Unresponsive or confused,10,1.4,Sudden,109,103,71,101.0,79,1,altered_mental_status,None,2,1,19:19,Low,1,0,1,1,3,15.0,Acute,0,0,0,14.72,High
+P0421,68,Female,Unresponsive or confused,10,1.4,Sudden,123,139,104,98.1,80,1,altered_mental_status,Heart disease,2,1,20:58,High,1,1,0,1,3,15.0,Acute,1,1,0,17.04,Critical
+P0422,55,Female,Possible broken bone,5,23.2,Gradual,80,114,91,99.8,94,0,None,Diabetes,2,3,19:52,Moderate,0,1,0,1,2,5.0,Recent,1,0,0,8.15,Medium
+P0423,78,Male,Minor cut or scrape,2,56.2,Gradual,72,128,86,99.1,97,0,None,Heart disease,4,4,21:18,High,0,0,0,0,0,2.0,Chronic,1,1,1,3.94,Low
+P0424,43,Female,Ankle sprain,2,29.1,Gradual,76,126,75,98.3,98,0,None,Asthma,4,4,19:40,Moderate,0,0,0,0,0,2.0,Chronic,1,0,1,2.89,Low
+P0425,70,Male,Routine check-up,2,40.9,Gradual,74,137,84,98.2,98,0,None,Diabetes,5,5,21:25,High,0,0,0,0,0,2.0,Chronic,1,0,1,3.6999999999999997,Low
+P0426,47,Male,Mild rash,3,15.4,Gradual,76,125,87,98.2,97,0,None,None,1,4,20:57,Moderate,0,0,0,0,0,3.0,Recent,0,0,0,2.3099999999999996,Low
+P0427,64,Female,Cold or flu symptoms,4,59.7,Gradual,71,124,80,98.2,97,0,None,Diabetes,0,4,20:10,High,0,0,0,0,0,4.0,Chronic,1,0,0,4.12,Low
+P0428,43,Female,Minor skin irritation,3,15.6,Gradual,75,119,88,99.2,98,0,None,Diabetes,0,5,23:04,Moderate,0,0,0,0,0,3.0,Recent,1,0,0,3.19,Low
+P0429,49,Female,Moderate abdominal pain,7,6.3,Gradual,79,127,93,99.3,96,0,None,COPD,1,3,19:34,Moderate,0,1,0,0,1,7.0,Recent,1,1,0,6.569999999999999,Medium
+P0430,27,Male,Minor skin irritation,3,31.6,Gradual,71,126,77,99.3,97,0,None,Hypertension,3,5,22:52,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.71,Low
+P0431,43,Male,Minor skin irritation,2,17.0,Gradual,66,111,83,99.5,97,0,None,Hypertension,2,5,20:00,Moderate,0,0,0,0,0,2.0,Recent,1,0,0,2.89,Low
+P0432,25,Male,Head injury with loss of consciousness,7,5.2,Sudden,88,134,74,98.1,90,0,None,Hypertension,4,2,19:40,Low,0,0,0,1,1,10.5,Acute,1,0,1,5.85,Medium
+P0433,25,Male,Severe abdominal pain,8,5.5,Sudden,85,135,81,100.9,93,0,None,None,4,2,21:21,Low,0,0,1,1,2,12.0,Acute,0,0,1,7.15,Medium
+P0434,29,Female,Head injury with loss of consciousness,8,4.2,Gradual,96,103,75,98.2,93,0,None,Hypertension,1,2,20:56,Low,0,0,0,1,1,8.0,Acute,1,0,0,6.2700000000000005,Medium
+P0435,47,Female,High fever with severe headache,8,4.4,Sudden,94,121,77,100.9,93,0,None,Hypertension,1,2,20:08,Moderate,0,0,1,1,2,12.0,Acute,1,0,0,8.81,Medium
+P0436,33,Female,Medication refill,3,44.4,Gradual,68,112,87,99.3,98,0,None,Hypertension,5,5,20:25,Low,0,0,0,0,0,3.0,Chronic,1,0,1,2.8899999999999997,Low
+P0437,35,Male,Chest pain,8,4.9,Sudden,88,141,75,98.7,93,1,chest_pain,None,4,2,20:56,Low,0,1,0,1,2,12.0,Acute,0,0,1,12.45,High
+P0438,67,Male,Deep cut requiring stitches,6,11.5,Gradual,85,122,80,98.9,95,0,None,Asthma,2,3,20:47,High,0,0,0,0,0,6.0,Recent,1,0,0,4.8100000000000005,Low
+P0439,32,Male,Possible broken bone,7,15.7,Gradual,78,114,77,98.6,98,0,None,None,0,3,22:50,Low,0,0,0,0,0,7.0,Recent,0,0,0,3.06,Low
+P0440,58,Female,Head injury with loss of consciousness,7,1.0,Sudden,93,112,79,98.2,90,0,None,Heart disease,2,2,22:41,High,0,0,0,1,1,10.5,Acute,1,1,0,6.84,Medium
+P0441,59,Male,Minor skin irritation,4,35.0,Gradual,69,120,83,98.3,98,0,None,Asthma,0,5,20:03,High,0,0,0,0,0,4.0,Chronic,1,0,0,3.9699999999999998,Low
+P0442,39,Male,Moderate abdominal pain,6,14.7,Gradual,83,131,92,100.4,97,0,None,Diabetes,0,3,20:21,Moderate,0,1,0,0,1,6.0,Recent,1,0,0,5.97,Medium
+P0443,49,Male,Moderate abdominal pain,6,4.6,Gradual,84,112,91,98.6,95,0,None,None,4,3,22:17,Moderate,0,1,0,0,1,6.0,Acute,0,0,1,5.27,Medium
+P0444,53,Female,Severe back pain,5,22.4,Gradual,80,124,84,98.8,95,0,None,None,3,3,20:10,Moderate,0,0,0,0,0,5.0,Recent,0,0,0,3.09,Low
+P0445,75,Female,Mild headache,2,26.7,Gradual,75,139,89,98.2,98,0,None,Heart disease,3,5,19:59,High,0,0,0,0,0,2.0,Chronic,1,1,0,3.85,Low
+P0446,29,Female,Deep cut requiring stitches,6,21.5,Gradual,86,132,87,98.8,95,0,None,Diabetes,0,3,20:20,Low,0,0,0,0,0,6.0,Recent,1,0,0,3.67,Low
+P0447,61,Female,Deep cut requiring stitches,5,23.7,Gradual,93,126,84,100.4,94,0,None,Asthma,3,3,21:43,High,0,0,0,1,1,5.0,Recent,1,0,0,6.33,Medium
+P0448,47,Female,Mild rash,3,39.7,Gradual,65,111,89,99.3,97,0,None,None,3,4,22:01,Moderate,0,0,0,0,0,3.0,Chronic,0,0,0,2.3099999999999996,Low
+P0449,78,Female,Ear pain,5,40.6,Gradual,72,138,79,99.2,97,0,None,Kidney disease,2,4,20:09,High,0,0,0,0,0,5.0,Chronic,1,1,0,4.84,Low
+P0450,79,Female,Severe back pain,7,13.2,Gradual,88,144,91,99.1,96,0,None,None,2,3,22:17,High,0,1,0,0,1,7.0,Recent,0,0,0,6.47,Medium
+P0451,32,Female,Medication refill,4,37.2,Gradual,67,114,81,98.8,97,0,None,COPD,2,5,22:38,Low,0,0,0,0,0,4.0,Chronic,1,1,0,3.16,Low
+P0452,28,Male,Mild rash,2,70.1,Gradual,79,124,88,98.8,98,0,None,None,3,4,21:28,Low,0,0,0,0,0,2.0,Chronic,0,0,0,1.44,Low
+P0453,63,Male,Head injury with loss of consciousness,8,4.9,Sudden,98,112,78,100.4,92,0,None,Hypertension,2,2,21:09,High,0,0,0,1,1,12.0,Acute,1,0,0,7.290000000000001,Medium
+P0454,79,Male,Possible broken bone,7,23.6,Gradual,85,130,84,99.4,98,0,None,Asthma,2,3,20:32,High,0,0,0,0,0,7.0,Recent,1,0,0,5.470000000000001,Medium
+P0455,49,Male,Cold or flu symptoms,5,13.4,Gradual,74,114,84,99.5,98,0,None,Diabetes,2,4,22:15,Moderate,0,0,0,0,0,5.0,Recent,1,0,0,3.9699999999999998,Low
+P0456,47,Female,Ankle sprain,2,32.5,Gradual,73,126,82,99.5,98,0,None,Kidney disease,1,4,21:48,Moderate,0,0,0,0,0,2.0,Chronic,1,1,0,3.01,Low
+P0457,51,Male,Mild rash,5,34.4,Gradual,66,118,82,99.0,98,0,None,Hypertension,0,4,20:15,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,4.03,Low
+P0458,21,Male,Ankle sprain,5,71.4,Gradual,65,125,85,98.6,98,0,None,None,3,4,21:21,Low,0,0,0,0,0,5.0,Chronic,0,0,0,2.13,Low
+P0459,32,Female,Severe back pain,7,22.8,Gradual,85,121,88,99.8,98,0,None,None,1,3,20:18,Low,0,0,0,0,0,7.0,Recent,0,0,0,3.06,Low
+P0460,50,Female,Ear pain,2,49.2,Gradual,79,126,87,98.3,97,0,None,Hypertension,3,4,19:52,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,3.1,Low
+P0461,71,Male,Routine check-up,3,40.8,Gradual,79,120,86,98.9,97,0,None,None,2,5,22:50,High,0,0,0,0,0,3.0,Chronic,0,0,0,3.03,Low
+P0462,42,Male,Cold or flu symptoms,2,47.3,Gradual,65,116,82,98.9,98,0,None,None,1,4,23:10,Moderate,0,0,0,0,0,2.0,Chronic,0,0,0,1.8599999999999999,Low
+P0463,68,Male,Mild rash,5,56.3,Gradual,76,135,88,99.0,98,0,None,Heart disease,0,4,19:18,High,0,0,0,0,0,5.0,Chronic,1,1,0,4.54,Low
+P0464,52,Female,Ankle sprain,4,70.2,Gradual,70,114,85,98.4,98,0,None,None,2,4,20:14,Moderate,0,0,0,0,0,4.0,Chronic,0,0,0,2.76,Low
+P0465,28,Male,Cold or flu symptoms,5,36.9,Gradual,74,117,89,99.1,98,0,None,Diabetes,1,4,20:28,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.34,Low
+P0466,37,Female,Ear pain,2,28.8,Gradual,65,112,77,98.4,97,0,None,None,1,4,19:46,Moderate,0,0,0,0,0,2.0,Chronic,0,0,0,1.71,Low
+P0467,37,Male,Cold or flu symptoms,2,39.5,Gradual,69,114,85,98.4,98,0,None,Hypertension,1,4,20:23,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,2.71,Low
+P0468,51,Female,Medication refill,5,51.0,Gradual,78,121,75,98.7,97,0,None,Hypertension,2,5,22:42,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,4.03,Low
+P0469,67,Male,Deep cut requiring stitches,6,18.2,Sudden,88,132,77,98.8,95,0,None,Asthma,6,3,22:00,High,0,0,0,0,0,9.0,Recent,1,0,1,4.8100000000000005,Low
+P0470,59,Female,Head injury with loss of consciousness,7,5.0,Sudden,99,103,98,101.5,93,0,None,Hypertension,2,2,19:58,High,0,1,1,1,3,10.5,Acute,1,0,0,10.87,High
+P0471,52,Female,Deep cut requiring stitches,7,23.1,Gradual,83,112,93,100.0,97,0,None,Asthma,3,3,20:19,Moderate,0,1,0,0,1,7.0,Recent,1,0,0,6.66,Medium
+P0472,55,Female,High fever (over 103°F),5,7.0,Sudden,81,129,82,99.4,98,0,None,Hypertension,2,3,22:20,Moderate,0,0,0,0,0,7.5,Recent,1,0,0,4.15,Low
+P0473,53,Female,Deep cut requiring stitches,7,13.7,Gradual,82,126,79,99.5,98,0,None,Heart disease,2,3,22:06,Moderate,0,0,0,0,0,7.0,Recent,1,1,0,4.69,Low
+P0474,78,Male,High fever (over 103°F),6,17.8,Sudden,91,141,76,99.3,95,0,None,Diabetes,2,3,21:45,High,0,1,0,0,1,9.0,Recent,1,0,0,7.14,Medium
+P0475,63,Female,Cold or flu symptoms,2,38.7,Gradual,82,127,76,99.3,97,0,None,COPD,0,4,22:37,High,0,0,0,0,0,2.0,Chronic,1,1,0,3.49,Low
+P0476,18,Male,Follow-up visit,3,46.8,Gradual,73,114,81,99.1,98,0,None,COPD,2,5,21:43,Low,0,0,0,0,0,3.0,Chronic,1,1,0,2.44,Low
+P0477,24,Female,Possible broken bone,5,22.5,Gradual,80,131,90,99.5,95,0,None,None,1,3,22:08,Low,0,0,0,0,0,5.0,Recent,0,0,0,2.2199999999999998,Low
+P0478,43,Male,Possible broken bone,6,23.7,Gradual,85,113,87,99.8,97,0,None,None,2,3,19:19,Moderate,0,0,0,0,0,6.0,Recent,0,0,0,3.09,Low
+P0479,43,Male,High fever (over 103°F),6,19.4,Sudden,80,126,78,99.6,95,0,None,Heart disease,3,3,19:40,Moderate,0,0,0,0,0,9.0,Recent,1,1,0,4.09,Low
+P0480,41,Female,Mild rash,2,53.6,Gradual,65,118,80,98.5,98,0,None,Heart disease,3,4,21:20,Moderate,0,0,0,0,0,2.0,Chronic,1,1,0,2.83,Low
+P0481,27,Male,Possible broken bone,5,13.5,Sudden,77,112,81,99.8,96,0,None,None,4,3,22:45,Low,0,0,0,0,0,7.5,Recent,0,0,1,2.31,Low
+P0482,43,Female,Ear pain,2,14.0,Gradual,68,110,78,99.2,97,0,None,Hypertension,3,4,21:08,Moderate,0,0,0,0,0,2.0,Recent,1,0,0,2.89,Low
+P0483,47,Male,Suspected stroke symptoms,10,0.9,Sudden,109,126,82,98.7,79,1,stroke_symptoms,Kidney disease,2,1,22:13,Moderate,1,0,0,1,2,15.0,Acute,1,1,0,14.41,High
+P0484,40,Female,Minor skin irritation,4,12.0,Gradual,67,120,86,98.9,98,0,None,Heart disease,0,5,21:45,Moderate,0,0,0,0,0,4.0,Recent,1,1,0,3.4000000000000004,Low
+P0485,48,Male,Mild headache,5,56.5,Gradual,74,128,76,99.0,97,0,None,None,1,5,21:58,Moderate,0,0,0,0,0,5.0,Chronic,0,0,0,2.94,Low
+P0486,64,Male,Head injury with loss of consciousness,7,5.7,Gradual,102,127,70,100.1,89,0,None,Kidney disease,4,2,21:06,High,1,0,0,1,2,7.0,Acute,1,1,1,9.02,Medium
+P0487,33,Male,Medication refill,3,49.9,Gradual,71,123,77,98.8,98,0,None,None,2,5,20:49,Low,0,0,0,0,0,3.0,Chronic,0,0,0,1.89,Low
+P0488,30,Female,Minor skin irritation,5,68.2,Gradual,74,112,85,99.2,97,0,None,None,1,5,19:22,Low,0,0,0,0,0,5.0,Chronic,0,0,0,2.4,Low
+P0489,44,Male,High fever with severe headache,7,1.1,Sudden,99,127,92,101.1,90,0,None,None,0,2,20:57,Moderate,0,1,1,1,3,10.5,Acute,0,0,0,9.42,Medium
+P0490,36,Male,Possible broken bone,6,12.5,Gradual,89,127,91,99.7,97,0,None,COPD,2,3,20:01,Moderate,0,1,0,0,1,6.0,Recent,1,1,0,5.88,Medium
+P0491,21,Male,High fever (over 103°F),6,8.0,Gradual,79,131,91,99.5,98,0,None,None,2,3,22:41,Low,0,1,0,0,1,6.0,Recent,0,0,0,4.43,Low
+P0492,38,Female,Suspected stroke symptoms,10,1.1,Sudden,114,149,99,100.2,84,1,stroke_symptoms,Diabetes,3,1,19:17,Moderate,1,1,0,1,3,15.0,Acute,1,0,0,16.14,Critical
+P0493,46,Female,Ear pain,4,68.4,Gradual,73,116,76,99.4,97,0,None,Heart disease,3,4,21:49,Moderate,0,0,0,0,0,4.0,Chronic,1,1,0,3.58,Low
+P0494,45,Female,Unresponsive or confused,9,1.0,Sudden,112,124,75,99.5,87,1,altered_mental_status,Hypertension,2,1,22:03,Moderate,1,0,0,1,2,13.5,Acute,1,0,0,14.049999999999999,High
+P0495,40,Male,High fever (over 103°F),7,3.9,Gradual,77,119,75,99.0,94,0,None,None,4,3,21:22,Moderate,0,0,0,1,1,7.0,Acute,0,0,1,5.3,Medium
+P0496,51,Male,Severe bleeding that won't stop,9,1.9,Sudden,110,101,90,98.5,85,1,severe_bleeding,None,3,1,22:31,Moderate,1,0,0,1,2,13.5,Acute,0,0,0,13.229999999999999,High
+P0497,49,Male,Mild rash,5,50.5,Gradual,77,115,89,98.8,97,0,None,COPD,1,4,19:47,Moderate,0,0,0,0,0,5.0,Chronic,1,1,0,3.9699999999999998,Low
+P0498,44,Male,Minor cut or scrape,3,65.6,Gradual,67,116,84,99.0,98,0,None,Diabetes,2,4,19:23,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.2199999999999998,Low
+P0499,24,Male,Follow-up visit,4,27.6,Gradual,78,128,84,98.5,98,0,None,None,0,5,22:53,Low,0,0,0,0,0,4.0,Chronic,0,0,0,1.92,Low
+P0500,26,Female,High fever (over 103°F),6,9.8,Gradual,79,138,77,100.0,95,0,None,None,1,3,21:58,Low,0,0,0,0,0,6.0,Recent,0,0,0,2.58,Low
+P0501,28,Male,Routine check-up,2,55.2,Gradual,67,113,81,99.5,98,0,None,Hypertension,0,5,22:55,Low,0,0,0,0,0,2.0,Chronic,1,0,0,2.44,Low
+P0502,33,Female,Ankle sprain,4,43.3,Gradual,66,123,78,99.4,98,0,None,Diabetes,2,4,22:07,Low,0,0,0,0,0,4.0,Chronic,1,0,0,3.19,Low
+P0503,54,Male,Deep cut requiring stitches,7,19.9,Sudden,88,111,79,98.6,94,0,None,Hypertension,1,3,22:24,Moderate,0,0,0,1,1,10.5,Recent,1,0,0,6.72,Medium
+P0504,40,Male,Head injury with loss of consciousness,7,1.5,Gradual,85,149,90,100.6,90,0,None,None,1,2,19:44,Moderate,0,1,1,1,3,7.0,Acute,0,0,0,9.3,Medium
+P0505,47,Male,Head injury with loss of consciousness,8,3.2,Sudden,89,124,86,100.0,90,0,None,COPD,1,2,20:10,Moderate,0,0,0,1,1,12.0,Acute,1,1,0,6.8100000000000005,Medium
+P0506,56,Male,Cold or flu symptoms,4,44.0,Gradual,79,118,80,98.9,98,0,None,COPD,5,4,21:21,High,0,0,0,0,0,4.0,Chronic,1,1,1,3.88,Low
+P0507,70,Female,Moderate abdominal pain,7,4.7,Sudden,83,149,80,98.9,94,0,None,Diabetes,4,3,22:26,High,0,1,0,1,2,10.5,Acute,1,0,1,9.2,Medium
+P0508,36,Male,Minor cut or scrape,5,28.8,Gradual,70,120,84,99.1,98,0,None,Asthma,1,4,21:21,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,3.58,Low
+P0509,28,Male,Deep cut requiring stitches,6,14.8,Gradual,88,122,78,99.1,98,0,None,Asthma,0,3,20:28,Low,0,0,0,0,0,6.0,Recent,1,0,0,3.6399999999999997,Low
+P0510,50,Male,Minor cut or scrape,3,30.2,Gradual,74,115,88,99.5,98,0,None,COPD,1,4,21:22,Moderate,0,0,0,0,0,3.0,Chronic,1,1,0,3.4,Low
+P0511,78,Female,Minor cut or scrape,4,69.8,Gradual,71,123,80,98.7,98,0,None,None,2,4,20:41,High,0,0,0,0,0,4.0,Chronic,0,0,0,3.54,Low
+P0512,35,Male,Severe asthma attack,7,1.2,Sudden,87,105,65,98.9,91,0,None,None,1,2,23:12,Low,0,0,0,1,1,10.5,Acute,0,0,0,5.1499999999999995,Medium
+P0513,71,Female,Moderate abdominal pain,6,7.4,Sudden,89,147,80,99.4,94,0,None,None,2,3,19:29,High,0,1,0,1,2,9.0,Recent,0,0,0,7.93,Medium
+P0514,20,Male,Chest pain,8,5.4,Gradual,94,145,81,98.5,93,1,chest_pain,Kidney disease,4,2,21:59,Low,0,1,0,1,2,8.0,Acute,1,1,1,13.0,High
+P0515,27,Male,Routine check-up,4,47.4,Gradual,74,112,83,98.6,97,0,None,Diabetes,1,5,22:25,Low,0,0,0,0,0,4.0,Chronic,1,0,0,3.01,Low
+P0516,22,Female,Mild rash,2,33.6,Gradual,66,111,87,98.8,97,0,None,Hypertension,0,4,20:47,Low,0,0,0,0,0,2.0,Chronic,1,0,0,2.26,Low
+P0517,21,Female,Ear pain,4,57.5,Gradual,73,117,79,98.2,97,0,None,None,1,4,21:51,Low,0,0,0,0,0,4.0,Chronic,0,0,0,1.83,Low
+P0518,33,Female,Moderate abdominal pain,6,13.7,Gradual,85,116,84,100.4,95,0,None,None,0,3,20:34,Low,0,0,0,0,0,6.0,Recent,0,0,0,2.79,Low
+P0519,61,Female,Mild headache,5,42.6,Gradual,82,131,87,98.1,97,0,None,Kidney disease,1,5,19:59,High,0,0,0,0,0,5.0,Chronic,1,1,0,4.33,Low
+P0520,37,Male,Mild rash,3,24.9,Gradual,77,116,84,98.5,98,0,None,None,1,4,20:34,Moderate,0,0,0,0,0,3.0,Chronic,0,0,0,2.01,Low
+P0521,44,Female,Severe back pain,6,21.0,Gradual,77,135,77,100.3,96,0,None,None,2,3,19:29,Moderate,0,0,0,0,0,6.0,Recent,0,0,0,3.12,Low
+P0522,75,Male,Minor cut or scrape,3,59.1,Gradual,83,125,79,99.3,97,0,None,Diabetes,5,4,19:56,High,0,0,0,0,0,3.0,Chronic,1,0,1,4.15,Low
+P0523,69,Female,High fever (over 103°F),5,13.3,Gradual,81,131,88,100.5,95,0,None,Heart disease,3,3,23:13,High,0,0,1,0,1,5.0,Recent,1,1,0,6.57,Medium
+P0524,54,Female,Mild rash,4,18.8,Gradual,66,115,83,99.3,98,0,None,None,2,4,21:33,Moderate,0,0,0,0,0,4.0,Recent,0,0,0,2.8200000000000003,Low
+P0525,45,Male,High fever (over 103°F),5,8.4,Gradual,76,122,87,99.8,95,0,None,Kidney disease,2,3,21:39,Moderate,0,0,0,0,0,5.0,Recent,1,1,0,3.85,Low
+P0526,21,Female,Severe asthma attack,7,2.6,Gradual,92,128,88,100.9,89,0,None,Heart disease,3,2,19:29,Low,0,0,1,1,2,7.0,Acute,1,1,0,7.7299999999999995,Medium
+P0527,73,Female,Severe difficulty breathing,10,1.1,Sudden,124,107,102,101.4,86,1,difficulty_breathing,None,1,1,19:45,High,1,1,1,1,4,15.0,Acute,0,0,0,18.19,Critical
+P0528,22,Male,Moderate abdominal pain,6,7.0,Sudden,85,130,82,99.1,95,0,None,Asthma,1,3,22:13,Low,0,0,0,0,0,9.0,Recent,1,0,0,3.46,Low
+P0529,27,Female,Chest pain,7,4.7,Gradual,98,100,80,99.1,93,1,chest_pain,COPD,2,2,20:02,Low,0,0,0,1,1,7.0,Acute,1,1,0,10.91,High
+P0530,42,Female,Mild rash,4,12.9,Gradual,69,116,89,98.9,98,0,None,None,1,4,19:54,Moderate,0,0,0,0,0,4.0,Recent,0,0,0,2.46,Low
+P0531,41,Female,Routine check-up,4,57.9,Gradual,76,118,82,99.5,97,0,None,None,1,5,19:57,Moderate,0,0,0,0,0,4.0,Chronic,0,0,0,2.4299999999999997,Low
+P0532,62,Female,Minor cut or scrape,2,22.2,Gradual,70,139,76,99.6,97,0,None,None,1,4,20:21,High,0,0,0,0,0,2.0,Recent,0,0,0,2.46,Low
+P0533,51,Female,Follow-up visit,3,14.9,Gradual,65,128,76,98.8,97,0,None,None,2,5,20:39,Moderate,0,0,0,0,0,3.0,Recent,0,0,0,2.4299999999999997,Low
+P0534,29,Female,Severe abdominal pain,8,5.8,Sudden,92,108,91,100.8,89,0,None,None,2,2,19:56,Low,0,1,1,1,3,12.0,Acute,0,0,0,9.27,Medium
+P0535,46,Female,Moderate abdominal pain,6,20.1,Gradual,88,133,85,99.8,95,0,None,Heart disease,0,3,23:06,Moderate,0,0,0,0,0,6.0,Recent,1,1,0,4.18,Low
+P0536,28,Female,Follow-up visit,2,51.8,Gradual,79,119,89,98.5,97,0,None,Diabetes,4,5,21:10,Low,0,0,0,0,0,2.0,Chronic,1,0,1,2.44,Low
+P0537,50,Male,Possible broken bone,5,6.6,Sudden,76,123,77,100.6,96,0,None,None,3,3,21:05,Moderate,0,0,1,0,1,7.5,Recent,0,0,0,5.0,Low
+P0538,43,Female,Moderate abdominal pain,7,3.2,Gradual,77,137,77,100.1,94,0,None,None,2,3,21:13,Moderate,0,0,0,1,1,7.0,Acute,0,0,0,5.39,Medium
+P0539,42,Female,Mild rash,2,37.1,Gradual,75,118,82,99.1,98,0,None,COPD,1,4,20:09,Moderate,0,0,0,0,0,2.0,Chronic,1,1,0,2.86,Low
+P0540,29,Female,Routine check-up,3,60.0,Gradual,75,112,77,99.1,98,0,None,None,1,5,21:05,Low,0,0,0,0,0,3.0,Chronic,0,0,0,1.7699999999999998,Low
+P0541,18,Female,High fever (over 103°F),7,10.5,Sudden,77,128,84,99.6,96,0,None,Diabetes,3,3,22:56,Low,0,0,0,0,0,10.5,Recent,1,0,0,3.64,Low
+P0542,45,Male,Ear pain,5,65.8,Gradual,78,111,76,98.8,98,0,None,None,3,4,22:49,Moderate,0,0,0,0,0,5.0,Chronic,0,0,0,2.85,Low
+P0543,57,Male,Follow-up visit,3,42.7,Gradual,71,127,88,98.2,98,0,None,Diabetes,0,5,19:54,High,0,0,0,0,0,3.0,Chronic,1,0,0,3.61,Low
+P0544,59,Female,Severe back pain,7,9.6,Sudden,85,120,90,99.8,97,0,None,None,1,3,21:51,High,0,0,0,0,0,10.5,Recent,0,0,0,3.87,Low
+P0545,27,Female,Deep cut requiring stitches,6,9.8,Sudden,86,112,91,100.5,97,0,None,None,3,3,22:07,Low,0,1,1,0,2,9.0,Recent,0,0,0,6.609999999999999,Medium
+P0546,75,Female,Mild rash,5,41.7,Gradual,76,120,86,99.1,97,0,None,None,2,4,22:41,High,0,0,0,0,0,5.0,Chronic,0,0,0,3.75,Low
+P0547,54,Male,Ear pain,5,35.2,Gradual,77,117,84,98.5,98,0,None,Kidney disease,1,4,19:35,Moderate,0,0,0,0,0,5.0,Chronic,1,1,0,4.12,Low
+P0548,20,Female,Ear pain,2,18.1,Gradual,73,129,78,98.3,97,0,None,Hypertension,1,4,19:55,Low,0,0,0,0,0,2.0,Recent,1,0,0,2.2,Low
+P0549,37,Female,Mild headache,3,43.4,Gradual,70,125,81,98.1,97,0,None,Heart disease,1,5,22:23,Moderate,0,0,0,0,0,3.0,Chronic,1,1,0,3.01,Low
+P0550,71,Female,Head injury with loss of consciousness,8,5.9,Sudden,100,131,76,100.0,89,0,None,Asthma,1,2,22:39,High,0,0,0,1,1,12.0,Acute,1,0,0,7.53,Medium
+P0551,53,Female,High fever (over 103°F),5,13.7,Gradual,77,130,77,99.9,94,0,None,None,1,3,21:13,Moderate,0,0,0,1,1,5.0,Recent,0,0,0,5.09,Medium
+P0552,42,Female,Possible broken bone,5,3.9,Sudden,88,117,94,99.4,94,0,None,None,2,3,21:50,Moderate,0,1,0,1,2,7.5,Acute,0,0,0,6.76,Medium
+P0553,38,Male,Mild rash,3,30.1,Gradual,77,115,82,98.2,98,0,None,Hypertension,1,4,20:16,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.04,Low
+P0554,72,Male,High fever (over 103°F),5,15.0,Gradual,86,132,82,100.4,98,0,None,None,1,3,22:09,High,0,0,0,0,0,5.0,Recent,0,0,0,3.66,Low
+P0555,39,Male,Minor skin irritation,2,15.9,Gradual,73,121,88,98.3,97,0,None,Hypertension,5,5,22:00,Moderate,0,0,0,0,0,2.0,Recent,1,0,1,2.77,Low
+P0556,57,Male,Possible broken bone,7,5.0,Sudden,76,114,81,100.4,96,0,None,None,1,3,21:00,High,0,0,0,0,0,10.5,Acute,0,0,0,3.81,Low
+P0557,50,Female,Unresponsive or confused,10,1.7,Sudden,111,104,63,98.1,85,1,altered_mental_status,Kidney disease,1,1,19:47,Moderate,1,0,0,1,2,15.0,Acute,1,1,0,14.5,High
+P0558,35,Male,Severe back pain,7,21.3,Gradual,76,122,78,100.1,96,0,None,None,1,3,20:00,Low,0,0,0,0,0,7.0,Recent,0,0,0,3.15,Low
+P0559,62,Male,Severe bleeding that won't stop,9,1.7,Sudden,116,112,78,98.2,80,1,severe_bleeding,Hypertension,2,1,21:36,High,1,0,0,1,2,13.5,Acute,1,0,0,14.559999999999999,High
+P0560,28,Male,Minor cut or scrape,5,65.6,Gradual,79,115,76,99.1,98,0,None,None,2,4,22:41,Low,0,0,0,0,0,5.0,Chronic,0,0,0,2.34,Low
+P0561,25,Female,Minor skin irritation,4,12.3,Gradual,77,129,75,98.5,97,0,None,Hypertension,1,5,21:48,Low,0,0,0,0,0,4.0,Recent,1,0,0,2.95,Low
+P0562,49,Female,Mild headache,3,37.5,Gradual,73,126,79,98.9,98,0,None,Diabetes,3,5,19:54,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.37,Low
+P0563,41,Female,Ankle sprain,5,53.8,Gradual,73,125,84,98.9,98,0,None,None,3,4,20:02,Moderate,0,0,0,0,0,5.0,Chronic,0,0,0,2.73,Low
+P0564,33,Female,Deep cut requiring stitches,5,17.5,Gradual,87,129,79,98.7,95,0,None,Hypertension,2,3,19:42,Low,0,0,0,0,0,5.0,Recent,1,0,0,3.49,Low
+P0565,51,Female,Minor cut or scrape,3,29.6,Gradual,78,115,85,99.0,98,0,None,Hypertension,1,4,21:21,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.4299999999999997,Low
+P0566,19,Female,High fever with severe headache,7,1.1,Sudden,97,106,90,99.0,91,0,None,None,4,2,20:56,Low,0,0,0,1,1,10.5,Acute,0,0,1,4.67,Low
+P0567,33,Male,Deep cut requiring stitches,7,5.3,Gradual,88,137,78,100.6,97,0,None,Kidney disease,1,3,22:59,Low,0,0,1,0,1,7.0,Acute,1,1,0,6.09,Medium
+P0568,61,Female,Cold or flu symptoms,3,42.3,Gradual,84,135,82,98.8,98,0,None,None,0,4,22:46,High,0,0,0,0,0,3.0,Chronic,0,0,0,2.73,Low
+P0569,45,Female,Ear pain,2,24.3,Gradual,66,125,86,99.2,97,0,None,None,2,4,20:32,Moderate,0,0,0,0,0,2.0,Chronic,0,0,0,1.9500000000000002,Low
+P0570,39,Male,Chest pain,7,3.3,Gradual,86,120,74,100.6,89,1,chest_pain,Heart disease,3,2,19:43,Moderate,0,0,1,1,2,7.0,Acute,1,1,0,13.27,High
+P0571,33,Female,Severe asthma attack,8,2.6,Sudden,89,144,93,100.9,91,0,None,Hypertension,7,2,23:04,Low,0,1,1,1,3,12.0,Acute,1,0,1,10.39,High
+P0572,58,Female,Possible broken bone,6,13.0,Gradual,78,119,88,99.8,96,0,None,None,3,3,19:54,High,0,0,0,0,0,6.0,Recent,0,0,0,3.5399999999999996,Low
+P0573,43,Female,Minor cut or scrape,2,50.5,Gradual,65,119,86,99.1,98,0,None,None,2,4,20:11,Moderate,0,0,0,0,0,2.0,Chronic,0,0,0,1.8900000000000001,Low
+P0574,68,Male,Mild rash,4,32.9,Gradual,81,122,87,98.5,97,0,None,None,1,4,19:21,High,0,0,0,0,0,4.0,Chronic,0,0,0,3.24,Low
+P0575,34,Male,Minor cut or scrape,2,23.5,Gradual,67,125,82,98.1,97,0,None,None,1,4,21:04,Low,0,0,0,0,0,2.0,Recent,0,0,0,1.62,Low
+P0576,63,Female,Routine check-up,5,40.9,Gradual,84,123,78,98.9,98,0,None,None,2,5,21:15,High,0,0,0,0,0,5.0,Chronic,0,0,0,3.39,Low
+P0577,41,Male,Moderate abdominal pain,7,15.2,Gradual,77,126,88,99.6,96,0,None,COPD,0,3,20:50,Moderate,0,0,0,0,0,7.0,Recent,1,1,0,4.33,Low
+P0578,40,Male,Severe bleeding that won't stop,9,0.5,Sudden,112,133,101,100.5,88,1,severe_bleeding,Heart disease,3,1,22:10,Moderate,1,1,1,1,4,13.5,Acute,1,1,0,17.9,Critical
+P0579,54,Female,High fever (over 103°F),7,17.5,Sudden,85,117,80,99.9,95,0,None,Hypertension,4,3,21:01,Moderate,0,0,0,0,0,10.5,Recent,1,0,1,4.720000000000001,Low
+P0580,69,Female,High fever with severe headache,7,4.9,Sudden,95,128,91,100.8,90,0,None,None,2,2,21:29,High,0,1,1,1,3,10.5,Acute,0,0,0,10.17,High
+P0581,52,Female,Follow-up visit,5,50.7,Gradual,71,123,79,99.3,98,0,None,None,8,5,21:06,Moderate,0,0,0,0,0,5.0,Chronic,0,0,1,3.06,Low
+P0582,47,Female,Mild rash,5,17.3,Gradual,79,114,87,98.1,97,0,None,None,2,4,19:29,Moderate,0,0,0,0,0,5.0,Recent,0,0,0,2.91,Low
+P0583,19,Male,Severe abdominal pain,8,3.8,Sudden,89,137,96,100.6,93,0,None,Heart disease,3,2,22:46,Low,0,1,1,1,3,12.0,Acute,1,1,0,9.97,Medium
+P0584,70,Male,Ankle sprain,5,66.4,Gradual,83,125,82,98.6,97,0,None,Diabetes,1,4,22:07,High,0,0,0,0,0,5.0,Chronic,1,0,0,4.6,Low
+P0585,36,Female,Severe asthma attack,8,6.0,Gradual,97,124,73,100.8,92,0,None,Heart disease,2,2,20:37,Moderate,0,0,1,1,2,8.0,Acute,1,1,0,8.48,Medium
+P0586,18,Female,Mild headache,5,15.0,Gradual,74,116,77,98.9,97,0,None,None,3,5,21:00,Low,0,0,0,0,0,5.0,Recent,0,0,0,2.04,Low
+P0587,62,Male,Mild rash,3,15.4,Gradual,79,131,85,99.1,97,0,None,None,2,4,21:41,High,0,0,0,0,0,3.0,Recent,0,0,0,2.76,Low
+P0588,24,Male,Suspected stroke symptoms,9,1.3,Sudden,106,142,96,101.2,80,1,stroke_symptoms,None,2,1,21:20,Low,1,1,1,1,4,13.5,Acute,0,0,0,16.419999999999998,Critical
+P0589,37,Male,Moderate abdominal pain,7,13.7,Sudden,88,139,91,99.7,94,0,None,Hypertension,1,3,21:06,Moderate,0,1,0,1,2,10.5,Recent,1,0,0,8.209999999999999,Medium
+P0590,20,Female,Head injury with loss of consciousness,7,5.7,Gradual,91,104,71,100.3,93,0,None,None,4,2,22:02,Low,0,0,0,1,1,7.0,Acute,0,0,1,4.699999999999999,Low
+P0591,50,Female,High fever (over 103°F),7,8.0,Sudden,86,131,90,99.5,97,0,None,Diabetes,0,3,23:06,Moderate,0,0,0,0,0,10.5,Recent,1,0,0,4.6,Low
+P0592,54,Female,Mild rash,5,52.4,Gradual,70,125,85,98.6,97,0,None,Heart disease,2,4,21:52,Moderate,0,0,0,0,0,5.0,Chronic,1,1,0,4.12,Low
+P0593,21,Female,Moderate abdominal pain,6,6.5,Sudden,87,113,79,99.6,94,0,None,Hypertension,2,3,20:43,Low,0,0,0,1,1,9.0,Recent,1,0,0,5.43,Medium
+P0594,63,Female,Cold or flu symptoms,5,42.2,Gradual,76,134,75,98.1,98,0,None,Hypertension,2,4,22:33,High,0,0,0,0,0,5.0,Chronic,1,0,0,4.390000000000001,Low
+P0595,41,Female,Cold or flu symptoms,5,70.8,Gradual,69,117,79,98.2,98,0,None,Diabetes,2,4,19:23,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,3.73,Low
+P0596,29,Male,Mild rash,2,55.2,Gradual,65,126,87,98.4,98,0,None,Diabetes,1,4,21:40,Low,0,0,0,0,0,2.0,Chronic,1,0,0,2.4699999999999998,Low
+P0597,30,Female,Mild headache,2,25.6,Gradual,73,111,81,99.5,98,0,None,None,0,5,21:38,Low,0,0,0,0,0,2.0,Chronic,0,0,0,1.5,Low
+P0598,41,Male,Ear pain,2,20.7,Gradual,71,121,88,98.6,97,0,None,None,2,4,23:00,Moderate,0,0,0,0,0,2.0,Recent,0,0,0,1.83,Low
+P0599,19,Female,Ear pain,5,46.9,Gradual,69,127,79,99.4,98,0,None,None,2,4,20:59,Low,0,0,0,0,0,5.0,Chronic,0,0,0,2.0700000000000003,Low
+P0600,72,Male,Ear pain,4,56.6,Gradual,70,131,80,98.6,98,0,None,None,1,4,21:25,High,0,0,0,0,0,4.0,Chronic,0,0,0,3.3600000000000003,Low
+P0601,30,Female,Severe asthma attack,8,1.6,Gradual,88,121,88,100.9,92,0,None,None,1,2,21:13,Low,0,0,1,1,2,8.0,Acute,0,0,0,7.300000000000001,Medium
+P0602,28,Female,High fever (over 103°F),5,20.4,Sudden,87,131,76,99.6,98,0,None,None,1,3,21:06,Low,0,0,0,0,0,7.5,Recent,0,0,0,2.34,Low
+P0603,56,Female,Possible broken bone,5,18.6,Sudden,80,135,81,99.4,96,0,None,None,2,3,20:46,High,0,0,0,0,0,7.5,Recent,0,0,0,3.18,Low
+P0604,22,Female,High fever with severe headache,8,3.2,Sudden,94,102,69,101.4,89,0,None,Diabetes,2,2,20:44,Low,0,0,1,1,2,12.0,Acute,1,0,0,8.06,Medium
+P0605,51,Female,Mild rash,4,43.2,Gradual,65,117,86,98.5,98,0,None,Hypertension,2,4,22:29,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.73,Low
+P0606,27,Male,Mild rash,5,35.6,Gradual,78,119,87,98.7,97,0,None,Hypertension,3,4,20:55,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.31,Low
+P0607,41,Female,Chest pain,7,3.3,Sudden,85,103,78,101.0,89,1,chest_pain,None,4,2,22:37,Moderate,0,0,1,1,2,10.5,Acute,0,0,1,12.33,High
+P0608,53,Male,High fever (over 103°F),7,22.1,Gradual,75,117,89,100.2,94,0,None,Kidney disease,3,3,20:06,Moderate,0,0,0,1,1,7.0,Recent,1,1,0,6.6899999999999995,Medium
+P0609,47,Male,Cold or flu symptoms,3,20.0,Gradual,68,116,78,99.0,98,0,None,Diabetes,2,4,20:34,Moderate,0,0,0,0,0,3.0,Recent,1,0,0,3.3099999999999996,Low
+P0610,23,Female,Mild rash,4,42.6,Gradual,76,114,80,98.7,98,0,None,Hypertension,2,4,21:03,Low,0,0,0,0,0,4.0,Chronic,1,0,0,2.89,Low
+P0611,44,Female,Possible broken bone,6,13.3,Gradual,83,116,86,99.3,95,0,None,None,1,3,23:11,Moderate,0,0,0,0,0,6.0,Recent,0,0,0,3.12,Low
+P0612,43,Female,Severe abdominal pain,8,2.3,Sudden,95,110,72,100.3,89,0,None,Heart disease,1,2,21:57,Moderate,0,0,0,1,1,12.0,Acute,1,1,0,6.69,Medium
+P0613,25,Male,Possible broken bone,5,4.1,Sudden,78,126,79,99.4,97,0,None,Hypertension,1,3,19:14,Low,0,0,0,0,0,7.5,Acute,1,0,0,3.25,Low
+P0614,36,Female,Head injury with loss of consciousness,7,4.9,Sudden,96,100,69,99.6,90,0,None,None,6,2,19:40,Moderate,0,0,0,1,1,10.5,Acute,0,0,1,5.18,Medium
+P0615,44,Female,Ear pain,2,57.1,Gradual,67,113,84,98.6,98,0,None,Hypertension,1,4,22:23,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,2.92,Low
+P0616,50,Male,Moderate abdominal pain,6,6.3,Gradual,81,137,75,99.8,94,0,None,None,0,3,23:12,Moderate,0,0,0,1,1,6.0,Recent,0,0,0,5.3,Medium
+P0617,64,Male,Mild rash,2,42.2,Gradual,70,136,83,98.7,97,0,None,Hypertension,1,4,21:31,High,0,0,0,0,0,2.0,Chronic,1,0,0,3.52,Low
+P0618,48,Male,Follow-up visit,2,51.9,Gradual,70,114,79,98.6,98,0,None,Kidney disease,3,5,20:22,Moderate,0,0,0,0,0,2.0,Chronic,1,1,0,3.04,Low
+P0619,36,Male,Ear pain,5,45.9,Gradual,75,110,82,98.9,97,0,None,None,1,4,21:55,Moderate,0,0,0,0,0,5.0,Chronic,0,0,0,2.58,Low
+P0620,24,Male,Medication refill,5,18.0,Gradual,72,127,85,99.2,98,0,None,Asthma,2,5,19:19,Low,0,0,0,0,0,5.0,Recent,1,0,0,3.2199999999999998,Low
+P0621,57,Male,Moderate abdominal pain,6,12.5,Gradual,88,129,91,98.9,96,0,None,None,1,3,20:57,High,0,1,0,0,1,6.0,Recent,0,0,0,5.51,Medium
+P0622,42,Female,High fever (over 103°F),7,9.5,Gradual,77,125,76,100.6,98,0,None,Kidney disease,5,3,22:31,Moderate,0,0,1,0,1,7.0,Recent,1,1,1,6.359999999999999,Medium
+P0623,29,Male,Minor cut or scrape,3,46.1,Gradual,69,113,80,99.5,98,0,None,COPD,3,4,20:30,Low,0,0,0,0,0,3.0,Chronic,1,1,0,2.7699999999999996,Low
+P0624,74,Female,Mild rash,5,45.9,Gradual,80,125,84,98.9,98,0,None,Asthma,0,4,22:13,High,0,0,0,0,0,5.0,Chronic,1,0,0,4.72,Low
+P0625,65,Female,Severe asthma attack,8,5.2,Gradual,98,146,71,98.8,91,0,None,Hypertension,2,2,22:52,High,0,1,0,1,2,8.0,Acute,1,0,0,9.350000000000001,Medium
+P0626,33,Male,Medication refill,3,41.1,Gradual,78,116,83,99.0,97,0,None,COPD,1,5,22:03,Low,0,0,0,0,0,3.0,Chronic,1,1,0,2.8899999999999997,Low
+P0627,77,Male,Deep cut requiring stitches,6,16.5,Gradual,93,146,93,100.3,98,0,None,Asthma,4,3,19:17,High,0,1,0,0,1,6.0,Recent,1,0,1,7.109999999999999,Medium
+P0628,23,Male,Severe bleeding that won't stop,9,1.8,Sudden,107,149,67,97.7,80,1,severe_bleeding,Hypertension,1,1,23:10,Low,1,1,0,1,3,13.5,Acute,1,0,0,15.389999999999999,Critical
+P0629,73,Male,Minor skin irritation,5,12.7,Gradual,83,132,82,98.9,97,0,None,None,2,5,20:42,High,0,0,0,0,0,5.0,Recent,0,0,0,3.69,Low
+P0630,50,Female,Severe difficulty breathing,9,0.4,Sudden,104,109,83,98.3,79,1,difficulty_breathing,Heart disease,3,1,21:39,Moderate,1,0,0,1,2,13.5,Acute,1,1,0,14.2,High
+P0631,47,Female,Mild rash,2,23.5,Gradual,66,112,89,99.3,97,0,None,None,1,4,21:19,Moderate,0,0,0,0,0,2.0,Recent,0,0,0,2.01,Low
+P0632,69,Female,Cold or flu symptoms,3,48.7,Gradual,78,134,82,98.8,98,0,None,Asthma,2,4,20:06,High,0,0,0,0,0,3.0,Chronic,1,0,0,3.9699999999999998,Low
+P0633,68,Male,High fever with severe headache,8,5.9,Sudden,104,126,81,100.0,92,0,None,Asthma,1,2,21:16,High,1,0,0,1,2,12.0,Acute,1,0,0,9.440000000000001,Medium
+P0634,48,Male,High fever (over 103°F),6,18.7,Gradual,89,136,88,99.1,98,0,None,Kidney disease,0,3,23:11,Moderate,0,0,0,0,0,6.0,Recent,1,1,0,4.24,Low
+P0635,28,Female,Cold or flu symptoms,3,25.9,Gradual,72,115,83,99.1,97,0,None,Hypertension,1,4,19:17,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.74,Low
+P0636,41,Female,Severe abdominal pain,8,3.6,Gradual,96,112,93,98.3,90,0,None,None,2,2,19:26,Moderate,0,1,0,1,2,8.0,Acute,0,0,0,7.630000000000001,Medium
+P0637,57,Female,Cold or flu symptoms,3,66.9,Gradual,68,116,76,98.8,98,0,None,None,2,4,21:03,High,0,0,0,0,0,3.0,Chronic,0,0,0,2.61,Low
+P0638,26,Male,Moderate abdominal pain,6,18.3,Gradual,79,124,92,100.0,96,0,None,Diabetes,2,3,21:12,Low,0,1,0,0,1,6.0,Recent,1,0,0,5.58,Medium
+P0639,43,Male,Mild rash,4,56.6,Gradual,68,127,82,98.2,97,0,None,Kidney disease,2,4,21:37,Moderate,0,0,0,0,0,4.0,Chronic,1,1,0,3.49,Low
+P0640,59,Female,Moderate abdominal pain,6,22.0,Gradual,81,124,94,100.6,97,0,None,Hypertension,2,3,21:56,High,0,1,1,0,2,6.0,Recent,1,0,0,8.57,Medium
+P0641,42,Male,Ear pain,5,35.0,Gradual,65,127,87,98.7,98,0,None,Hypertension,3,4,20:37,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,3.76,Low
+P0642,24,Male,Moderate abdominal pain,6,19.5,Gradual,78,128,80,99.6,98,0,None,None,2,3,20:50,Low,0,0,0,0,0,6.0,Recent,0,0,0,2.5199999999999996,Low
+P0643,19,Male,Minor skin irritation,3,17.3,Gradual,77,116,75,99.2,97,0,None,Kidney disease,1,5,20:40,Low,0,0,0,0,0,3.0,Recent,1,1,0,2.4699999999999998,Low
+P0644,59,Female,Minor cut or scrape,3,37.8,Gradual,76,129,75,99.3,97,0,None,Diabetes,3,4,19:39,High,0,0,0,0,0,3.0,Chronic,1,0,0,3.67,Low
+P0645,60,Female,Moderate abdominal pain,6,8.3,Gradual,80,111,77,100.2,98,0,None,Heart disease,1,3,19:32,High,0,0,0,0,0,6.0,Recent,1,1,0,4.6,Low
+P0646,26,Female,Ankle sprain,2,23.6,Gradual,74,121,86,98.5,97,0,None,None,3,4,22:23,Low,0,0,0,0,0,2.0,Recent,0,0,0,1.38,Low
+P0647,48,Female,Moderate abdominal pain,5,9.1,Gradual,86,116,75,99.1,95,0,None,None,1,3,19:49,Moderate,0,0,0,0,0,5.0,Recent,0,0,0,2.94,Low
+P0648,40,Female,Routine check-up,5,70.5,Gradual,70,118,88,98.8,98,0,None,Heart disease,1,5,21:11,Moderate,0,0,0,0,0,5.0,Chronic,1,1,0,3.7,Low
+P0649,68,Male,Possible broken bone,7,21.5,Gradual,82,124,80,99.9,95,0,None,Kidney disease,1,3,20:45,High,0,0,0,0,0,7.0,Recent,1,1,0,5.140000000000001,Medium
+P0650,60,Male,Ankle sprain,5,71.9,Gradual,79,110,80,98.9,97,0,None,Diabetes,1,4,22:29,High,0,0,0,0,0,5.0,Chronic,1,0,0,4.3,Low
+P0651,34,Female,Ear pain,2,30.6,Gradual,69,124,77,99.3,97,0,None,Hypertension,1,4,22:28,Low,0,0,0,0,0,2.0,Chronic,1,0,0,2.62,Low
+P0652,56,Female,Possible broken bone,7,7.1,Gradual,82,117,75,100.5,98,0,None,None,2,3,19:50,High,0,0,1,0,1,7.0,Recent,0,0,0,5.779999999999999,Medium
+P0653,30,Female,Minor cut or scrape,4,50.6,Gradual,68,122,76,98.7,97,0,None,Diabetes,1,4,22:12,Low,0,0,0,0,0,4.0,Chronic,1,0,0,3.0999999999999996,Low
+P0654,65,Male,Possible broken bone,5,22.1,Sudden,83,123,87,100.6,96,0,None,None,2,3,22:00,High,0,0,1,0,1,7.5,Recent,0,0,0,5.45,Medium
+P0655,23,Female,Mild rash,3,48.0,Gradual,75,123,83,98.2,98,0,None,None,2,4,20:18,Low,0,0,0,0,0,3.0,Chronic,0,0,0,1.5899999999999999,Low
+P0656,43,Female,Chest pain,7,5.7,Sudden,98,136,73,98.2,91,1,chest_pain,None,0,2,20:58,Moderate,0,0,0,1,1,10.5,Acute,0,0,0,10.39,High
+P0657,53,Female,Ear pain,4,56.9,Gradual,70,128,85,99.5,97,0,None,None,1,4,21:39,Moderate,0,0,0,0,0,4.0,Chronic,0,0,0,2.79,Low
+P0658,44,Male,Severe asthma attack,8,2.5,Sudden,94,148,84,100.2,91,0,None,Asthma,3,2,19:29,Moderate,0,1,0,1,2,12.0,Acute,1,0,0,8.72,Medium
+P0659,78,Female,High fever (over 103°F),7,16.6,Gradual,84,135,91,99.3,98,0,None,Hypertension,4,3,22:43,High,0,1,0,0,1,7.0,Recent,1,0,1,7.4399999999999995,Medium
+P0660,66,Female,Deep cut requiring stitches,5,15.5,Gradual,85,140,80,100.3,97,0,None,None,0,3,21:28,High,0,0,0,0,0,5.0,Recent,0,0,0,3.48,Low
+P0661,23,Male,Deep cut requiring stitches,7,13.4,Sudden,83,110,77,99.9,94,0,None,None,2,3,21:49,Low,0,0,0,1,1,10.5,Recent,0,0,0,4.79,Low
+P0662,36,Female,Severe asthma attack,7,4.5,Gradual,88,139,99,98.8,89,0,None,Diabetes,4,2,20:38,Moderate,0,1,0,1,2,7.0,Acute,1,0,1,8.18,Medium
+P0663,45,Female,Follow-up visit,5,40.3,Gradual,70,129,89,98.7,97,0,None,Hypertension,2,5,22:48,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,3.85,Low
+P0664,40,Male,Ear pain,5,23.0,Gradual,73,118,80,98.1,98,0,None,Hypertension,0,4,21:29,Moderate,0,0,0,0,0,5.0,Recent,1,0,0,3.7,Low
+P0665,35,Female,Moderate abdominal pain,7,18.8,Sudden,85,138,88,98.6,94,0,None,None,4,3,19:55,Low,0,0,0,1,1,10.5,Recent,0,0,1,5.1499999999999995,Medium
+P0666,78,Female,Possible broken bone,5,17.3,Gradual,89,136,86,99.6,94,0,None,Hypertension,3,3,20:54,High,0,0,0,1,1,5.0,Recent,1,0,0,6.84,Medium
+P0667,76,Female,Deep cut requiring stitches,6,20.7,Gradual,81,146,79,99.4,96,0,None,None,3,3,21:29,High,0,1,0,0,1,6.0,Recent,0,0,0,6.08,Medium
+P0668,51,Female,Moderate abdominal pain,6,5.1,Gradual,85,118,81,98.6,98,0,None,None,1,3,19:17,Moderate,0,0,0,0,0,6.0,Acute,0,0,0,3.33,Low
+P0669,29,Male,Ear pain,2,18.2,Gradual,75,122,81,98.3,97,0,None,None,2,4,23:11,Low,0,0,0,0,0,2.0,Recent,0,0,0,1.4699999999999998,Low
+P0670,68,Female,Chest pain with difficulty breathing,10,0.0,Sudden,116,154,87,98.3,85,1,"chest_pain,difficulty_breathing",None,1,1,20:42,High,1,1,0,1,3,15.0,,0,0,0,16.04,Critical
+P0671,36,Male,Cold or flu symptoms,3,65.9,Gradual,79,116,85,99.2,98,0,None,None,3,4,23:01,Moderate,0,0,0,0,0,3.0,Chronic,0,0,0,1.98,Low
+P0672,27,Female,Severe back pain,7,10.6,Gradual,87,137,82,99.6,98,0,None,Asthma,2,3,22:20,Low,0,0,0,0,0,7.0,Recent,1,0,0,3.91,Low
+P0673,34,Female,High fever (over 103°F),7,6.7,Gradual,84,117,82,99.8,95,0,None,None,3,3,22:14,Low,0,0,0,0,0,7.0,Recent,0,0,0,3.12,Low
+P0674,31,Male,Severe bleeding that won't stop,9,1.2,Sudden,108,153,104,98.9,82,1,severe_bleeding,None,3,1,20:57,Low,1,1,0,1,3,13.5,Acute,0,0,0,14.629999999999999,High
+P0675,40,Female,Possible broken bone,5,22.3,Gradual,87,121,84,99.6,97,0,None,Asthma,0,3,20:06,Moderate,0,0,0,0,0,5.0,Recent,1,0,0,3.7,Low
+P0676,59,Female,Chest pain with difficulty breathing,9,1.3,Sudden,109,154,98,97.7,84,1,"chest_pain,difficulty_breathing",Diabetes,4,1,19:53,High,1,1,0,1,3,13.5,Acute,1,0,1,16.47,Critical
+P0677,36,Female,Severe back pain,7,6.3,Gradual,77,112,79,100.0,96,0,None,Asthma,1,3,20:51,Moderate,0,0,0,0,0,7.0,Recent,1,0,0,4.18,Low
+P0678,50,Male,Severe asthma attack,7,2.8,Sudden,97,140,83,98.9,89,0,None,Diabetes,5,2,21:06,Moderate,0,0,0,1,1,10.5,Acute,1,0,1,6.6,Medium
+P0679,54,Female,Medication refill,2,63.4,Gradual,66,124,88,99.2,97,0,None,None,1,5,19:38,Moderate,0,0,0,0,0,2.0,Chronic,0,0,0,2.22,Low
+P0680,49,Female,Cold or flu symptoms,5,61.0,Gradual,65,121,83,99.1,98,0,None,None,1,4,22:36,Moderate,0,0,0,0,0,5.0,Chronic,0,0,0,2.9699999999999998,Low
+P0681,33,Female,Severe back pain,6,23.2,Sudden,79,112,93,100.3,96,0,None,Diabetes,2,3,21:36,Low,0,1,0,0,1,9.0,Recent,1,0,0,5.79,Medium
+P0682,56,Male,Ankle sprain,5,43.9,Gradual,77,111,88,99.4,98,0,None,None,1,4,23:03,High,0,0,0,0,0,5.0,Chronic,0,0,0,3.18,Low
+P0683,64,Female,Ear pain,5,67.8,Gradual,75,123,79,98.3,97,0,None,None,1,4,22:27,High,0,0,0,0,0,5.0,Chronic,0,0,0,3.42,Low
+P0684,29,Male,Moderate abdominal pain,7,3.5,Gradual,86,123,89,100.0,97,0,None,None,5,3,20:03,Low,0,0,0,0,0,7.0,Acute,0,0,1,2.9699999999999998,Low
+P0685,36,Female,Cold or flu symptoms,4,70.0,Gradual,68,122,84,98.5,97,0,None,COPD,5,4,20:16,Moderate,0,0,0,0,0,4.0,Chronic,1,1,1,3.2800000000000002,Low
+P0686,53,Female,Severe back pain,7,18.6,Gradual,88,111,78,99.9,94,0,None,COPD,1,3,22:52,Moderate,0,0,0,1,1,7.0,Recent,1,1,0,6.6899999999999995,Medium
+P0687,51,Male,Severe abdominal pain,8,4.8,Sudden,88,131,92,100.6,90,0,None,None,3,2,21:30,Moderate,0,1,1,1,3,12.0,Acute,0,0,0,9.93,Medium
+P0688,39,Female,Deep cut requiring stitches,7,13.9,Gradual,78,134,83,100.3,96,0,None,Hypertension,3,3,21:24,Moderate,0,0,0,0,0,7.0,Recent,1,0,0,4.27,Low
+P0689,37,Female,Chest pain,7,3.6,Sudden,97,121,79,99.7,89,1,chest_pain,Heart disease,0,2,22:48,Moderate,0,0,0,1,1,10.5,Acute,1,1,0,11.209999999999999,High
+P0690,54,Male,Head injury with loss of consciousness,8,4.5,Sudden,86,103,65,99.7,93,0,None,None,0,2,20:54,Moderate,0,0,0,1,1,12.0,Acute,0,0,0,6.0200000000000005,Medium
+P0691,48,Female,High fever with severe headache,8,3.5,Gradual,96,126,98,99.7,93,0,None,None,4,2,21:36,Moderate,0,1,0,1,2,8.0,Acute,0,0,1,7.84,Medium
+P0692,42,Male,Moderate abdominal pain,7,4.9,Sudden,81,126,80,100.0,94,0,None,None,2,3,22:52,Moderate,0,0,0,1,1,10.5,Acute,0,0,0,5.359999999999999,Medium
+P0693,48,Male,High fever (over 103°F),7,9.9,Sudden,83,116,87,100.2,95,0,None,Hypertension,4,3,21:49,Moderate,0,0,0,0,0,10.5,Recent,1,0,1,4.54,Low
+P0694,46,Male,Mild headache,4,71.4,Gradual,67,129,88,99.3,98,0,None,None,4,5,22:23,Moderate,0,0,0,0,0,4.0,Chronic,0,0,1,2.58,Low
+P0695,52,Male,Moderate abdominal pain,5,20.1,Gradual,75,113,77,99.5,98,0,None,COPD,1,3,23:03,Moderate,0,0,0,0,0,5.0,Recent,1,1,0,4.0600000000000005,Low
+P0696,40,Male,High fever (over 103°F),6,17.3,Gradual,80,110,76,99.2,96,0,None,None,6,3,22:18,Moderate,0,0,0,0,0,6.0,Recent,0,0,1,3.0,Low
+P0697,36,Female,Unresponsive or confused,9,1.7,Sudden,106,110,75,100.6,87,1,altered_mental_status,None,2,1,21:55,Moderate,1,0,1,1,3,13.5,Acute,0,0,0,14.78,High
+P0698,32,Female,High fever (over 103°F),7,13.2,Sudden,80,131,88,98.7,94,0,None,Heart disease,7,3,19:21,Low,0,0,0,1,1,10.5,Recent,1,1,1,6.06,Medium
+P0699,38,Male,Minor cut or scrape,3,29.0,Gradual,72,117,77,98.2,98,0,None,Hypertension,1,4,20:03,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.04,Low
+P0700,69,Male,Mild rash,2,48.4,Gradual,71,134,76,98.4,97,0,None,Asthma,4,4,20:45,High,0,0,0,0,0,2.0,Chronic,1,0,1,3.67,Low
+P0701,47,Female,Severe asthma attack,8,4.8,Gradual,92,130,67,98.3,92,0,None,Diabetes,3,2,20:59,Moderate,0,0,0,1,1,8.0,Acute,1,0,0,6.8100000000000005,Medium
+P0702,61,Female,Ear pain,3,39.7,Gradual,72,134,79,98.9,97,0,None,None,2,4,20:56,High,0,0,0,0,0,3.0,Chronic,0,0,0,2.73,Low
+P0703,45,Male,High fever with severe headache,7,5.5,Sudden,90,137,75,100.6,89,0,None,Kidney disease,0,2,20:44,Moderate,0,0,1,1,2,10.5,Acute,1,1,0,8.45,Medium
+P0704,53,Female,Follow-up visit,2,24.3,Gradual,71,124,78,99.4,97,0,None,COPD,1,5,19:35,Moderate,0,0,0,0,0,2.0,Chronic,1,1,0,3.19,Low
+P0705,33,Male,Ear pain,5,65.6,Gradual,71,127,88,98.3,98,0,None,Hypertension,1,4,21:41,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.49,Low
+P0706,75,Male,Severe bleeding that won't stop,9,0.7,Sudden,113,108,108,99.1,83,1,severe_bleeding,None,0,1,22:07,High,1,1,0,1,3,13.5,Acute,0,0,0,15.95,Critical
+P0707,79,Male,Mild rash,4,29.8,Gradual,84,133,79,99.3,98,0,None,None,1,4,22:09,High,0,0,0,0,0,4.0,Chronic,0,0,0,3.5700000000000003,Low
+P0708,56,Male,Mild rash,4,20.9,Gradual,69,118,83,99.2,97,0,None,Asthma,0,4,22:32,High,0,0,0,0,0,4.0,Recent,1,0,0,3.88,Low
+P0709,33,Female,Severe back pain,6,20.9,Gradual,82,111,92,100.3,96,0,None,Asthma,2,3,20:58,Low,0,1,0,0,1,6.0,Recent,1,0,0,5.79,Medium
+P0710,22,Male,Cold or flu symptoms,4,67.3,Gradual,67,117,86,98.3,97,0,None,Asthma,4,4,20:12,Low,0,0,0,0,0,4.0,Chronic,1,0,1,2.86,Low
+P0711,18,Male,Cold or flu symptoms,3,20.1,Gradual,72,127,80,98.2,97,0,None,None,2,4,22:42,Low,0,0,0,0,0,3.0,Recent,0,0,0,1.44,Low
+P0712,34,Female,Possible broken bone,7,15.9,Sudden,75,133,78,99.8,97,0,None,Kidney disease,2,3,22:09,Low,0,0,0,0,0,10.5,Recent,1,1,0,4.12,Low
+P0713,79,Male,Moderate abdominal pain,5,13.3,Gradual,88,125,78,100.3,97,0,None,Heart disease,2,3,22:31,High,0,0,0,0,0,5.0,Recent,1,1,0,4.87,Low
+P0714,41,Female,Cold or flu symptoms,3,38.8,Gradual,69,112,89,99.2,97,0,None,Hypertension,0,4,21:36,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.13,Low
+P0715,74,Male,Mild rash,3,31.9,Gradual,70,120,80,99.4,97,0,None,COPD,0,4,19:41,High,0,0,0,0,0,3.0,Chronic,1,1,0,4.119999999999999,Low
+P0716,37,Female,Possible broken bone,5,8.6,Sudden,87,116,77,99.4,97,0,None,Diabetes,2,3,20:09,Moderate,0,0,0,0,0,7.5,Recent,1,0,0,3.61,Low
+P0717,35,Male,High fever (over 103°F),7,16.5,Gradual,83,137,91,100.0,94,0,None,Diabetes,1,3,22:31,Low,0,1,0,1,2,7.0,Recent,1,0,0,8.149999999999999,Medium
+P0718,54,Female,Severe back pain,7,14.7,Gradual,80,122,91,99.8,95,0,None,None,2,3,22:16,Moderate,0,1,0,0,1,7.0,Recent,0,0,0,5.72,Medium
+P0719,45,Female,Severe back pain,5,23.9,Sudden,77,110,92,99.1,94,0,None,Diabetes,2,3,23:01,Moderate,0,1,0,1,2,7.5,Recent,1,0,0,7.85,Medium
+P0720,45,Female,High fever (over 103°F),7,19.9,Gradual,77,138,94,98.9,96,0,None,COPD,3,3,22:04,Moderate,0,1,0,0,1,7.0,Recent,1,1,0,6.449999999999999,Medium
+P0721,45,Female,Deep cut requiring stitches,6,10.4,Sudden,75,121,84,98.8,94,0,None,None,3,3,21:02,Moderate,0,0,0,1,1,9.0,Recent,0,0,0,5.15,Medium
+P0722,46,Female,Chest pain,7,1.9,Gradual,89,118,68,100.0,93,1,chest_pain,Heart disease,5,2,22:37,Moderate,0,0,0,1,1,7.0,Acute,1,1,1,11.48,High
+P0723,23,Male,High fever (over 103°F),7,12.3,Sudden,86,132,89,100.4,97,0,None,None,1,3,21:49,Low,0,0,0,0,0,10.5,Recent,0,0,0,2.79,Low
+P0724,37,Female,Minor skin irritation,2,59.1,Gradual,66,124,89,98.7,97,0,None,Hypertension,3,5,22:43,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,2.71,Low
+P0725,27,Female,Minor cut or scrape,4,34.7,Gradual,79,117,83,99.5,98,0,None,Asthma,1,4,19:21,Low,0,0,0,0,0,4.0,Chronic,1,0,0,3.01,Low
+P0726,59,Male,High fever (over 103°F),7,9.2,Gradual,80,133,81,99.2,97,0,None,None,3,3,20:20,High,0,0,0,0,0,7.0,Recent,0,0,0,3.87,Low
+P0727,33,Male,Possible broken bone,5,15.9,Gradual,82,120,80,99.2,94,0,None,Diabetes,4,3,20:18,Low,0,0,0,1,1,5.0,Recent,1,0,1,5.49,Medium
+P0728,44,Male,High fever with severe headache,7,5.4,Gradual,93,109,83,100.1,92,0,None,Kidney disease,2,2,22:39,Moderate,0,0,0,1,1,7.0,Acute,1,1,0,6.42,Medium
+P0729,26,Male,Minor skin irritation,3,32.2,Gradual,68,129,75,99.1,97,0,None,None,2,5,20:06,Low,0,0,0,0,0,3.0,Chronic,0,0,0,1.68,Low
+P0730,37,Male,Deep cut requiring stitches,5,20.1,Sudden,76,135,83,100.1,94,0,None,Asthma,0,3,21:01,Moderate,0,0,0,1,1,7.5,Recent,1,0,0,5.609999999999999,Medium
+P0731,59,Female,Cold or flu symptoms,4,66.1,Gradual,73,116,87,98.8,98,0,None,None,0,4,21:12,High,0,0,0,0,0,4.0,Chronic,0,0,0,2.9699999999999998,Low
+P0732,67,Female,Head injury with loss of consciousness,7,3.7,Sudden,96,142,98,98.8,91,0,None,None,2,2,21:18,High,0,1,0,1,2,10.5,Acute,0,0,0,8.11,Medium
+P0733,37,Female,Cold or flu symptoms,4,24.5,Gradual,79,119,75,98.3,98,0,None,None,3,4,21:48,Moderate,0,0,0,0,0,4.0,Chronic,0,0,0,2.3099999999999996,Low
+P0734,60,Female,Ear pain,5,54.9,Gradual,65,124,76,98.2,97,0,None,None,5,4,19:34,High,0,0,0,0,0,5.0,Chronic,0,0,1,3.3,Low
+P0735,21,Female,Medication refill,2,54.4,Gradual,67,117,81,98.8,97,0,None,Heart disease,4,5,19:18,Low,0,0,0,0,0,2.0,Chronic,1,1,1,2.23,Low
+P0736,22,Male,Follow-up visit,5,54.7,Gradual,71,122,83,99.6,98,0,None,None,3,5,20:55,Low,0,0,0,0,0,5.0,Chronic,0,0,0,2.16,Low
+P0737,21,Male,Minor cut or scrape,2,35.7,Gradual,76,124,85,98.8,98,0,None,None,2,4,23:12,Low,0,0,0,0,0,2.0,Chronic,0,0,0,1.23,Low
+P0738,74,Male,Chest pain,8,2.7,Gradual,103,153,72,101.0,89,1,chest_pain,Hypertension,0,2,20:57,High,1,1,1,1,4,8.0,Acute,1,0,0,18.62,Critical
+P0739,33,Male,Minor cut or scrape,3,60.1,Gradual,78,116,80,98.2,98,0,None,Asthma,2,4,21:35,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.8899999999999997,Low
+P0740,42,Male,Mild rash,4,66.2,Gradual,79,124,83,99.6,98,0,None,Heart disease,2,4,22:47,Moderate,0,0,0,0,0,4.0,Chronic,1,1,0,3.46,Low
+P0741,52,Female,Mild headache,2,12.9,Gradual,75,115,88,99.2,97,0,None,Heart disease,2,5,19:33,Moderate,0,0,0,0,0,2.0,Recent,1,1,0,3.16,Low
+P0742,54,Male,Suspected stroke symptoms,9,0.9,Sudden,107,133,84,98.8,88,1,stroke_symptoms,Hypertension,2,1,19:54,Moderate,1,0,0,1,2,13.5,Acute,1,0,0,14.32,High
+P0743,55,Male,Severe difficulty breathing,10,0.1,Sudden,109,123,86,101.0,86,1,difficulty_breathing,Asthma,1,1,21:09,Moderate,1,0,1,1,3,15.0,Acute,1,0,0,16.65,Critical
+P0744,45,Female,Mild rash,4,58.8,Gradual,77,121,84,99.2,97,0,None,Diabetes,1,4,22:56,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.55,Low
+P0745,72,Female,Mild rash,3,25.9,Gradual,84,131,81,99.4,97,0,None,None,3,4,19:18,High,0,0,0,0,0,3.0,Chronic,0,0,0,3.06,Low
+P0746,51,Male,High fever (over 103°F),5,5.0,Gradual,85,125,79,100.2,97,0,None,None,0,3,20:11,Moderate,0,0,0,0,0,5.0,Acute,0,0,0,3.0300000000000002,Low
+P0747,24,Male,Medication refill,4,62.7,Gradual,72,127,87,98.1,98,0,None,Heart disease,1,5,22:03,Low,0,0,0,0,0,4.0,Chronic,1,1,0,2.92,Low
+P0748,29,Female,Moderate abdominal pain,5,18.8,Sudden,85,130,86,100.4,98,0,None,None,2,3,22:40,Low,0,0,0,0,0,7.5,Recent,0,0,0,2.37,Low
+P0749,22,Male,Deep cut requiring stitches,7,8.8,Sudden,82,129,82,99.4,94,0,None,Asthma,1,3,19:51,Low,0,0,0,1,1,10.5,Recent,1,0,0,5.76,Medium
+P0750,30,Female,Routine check-up,3,65.5,Gradual,71,127,88,98.2,98,0,None,Hypertension,1,5,19:39,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.8,Low
+P0751,36,Female,Severe abdominal pain,8,5.4,Sudden,95,100,86,101.0,92,0,None,None,3,2,22:03,Moderate,0,0,1,1,2,12.0,Acute,0,0,0,7.48,Medium
+P0752,29,Female,Minor cut or scrape,2,32.3,Gradual,79,120,80,98.6,97,0,None,Asthma,3,4,22:38,Low,0,0,0,0,0,2.0,Chronic,1,0,0,2.4699999999999998,Low
+P0753,41,Male,Cold or flu symptoms,4,35.8,Gradual,75,120,88,99.2,98,0,None,Kidney disease,1,4,20:20,Moderate,0,0,0,0,0,4.0,Chronic,1,1,0,3.4299999999999997,Low
+P0754,74,Female,Severe back pain,6,15.1,Sudden,90,147,75,99.1,96,0,None,None,0,3,19:59,High,0,1,0,0,1,9.0,Recent,0,0,0,6.02,Medium
+P0755,57,Female,Unresponsive or confused,9,0.5,Sudden,100,95,77,97.9,83,1,altered_mental_status,Diabetes,4,1,19:21,High,0,0,0,1,1,13.5,Acute,1,0,1,12.41,High
+P0756,34,Male,Mild rash,3,56.7,Gradual,67,110,79,98.8,97,0,None,Hypertension,4,4,20:35,Low,0,0,0,0,0,3.0,Chronic,1,0,1,2.92,Low
+P0757,48,Female,Follow-up visit,3,23.2,Gradual,66,113,88,98.5,97,0,None,None,4,5,21:07,Moderate,0,0,0,0,0,3.0,Recent,0,0,1,2.34,Low
+P0758,48,Male,Ear pain,4,25.6,Gradual,78,110,77,98.6,98,0,None,Hypertension,1,4,22:24,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.6399999999999997,Low
+P0759,62,Female,Cold or flu symptoms,2,48.1,Gradual,80,129,87,98.3,97,0,None,Kidney disease,1,4,21:07,High,0,0,0,0,0,2.0,Chronic,1,1,0,3.46,Low
+P0760,71,Female,Mild rash,4,24.9,Gradual,77,126,81,98.2,98,0,None,None,4,4,23:01,High,0,0,0,0,0,4.0,Chronic,0,0,1,3.33,Low
+P0761,38,Male,Severe back pain,6,6.9,Gradual,78,134,80,99.3,98,0,None,None,4,3,21:38,Moderate,0,0,0,0,0,6.0,Recent,0,0,1,2.94,Low
+P0762,55,Female,Deep cut requiring stitches,6,22.8,Gradual,78,118,79,99.8,97,0,None,None,2,3,20:24,Moderate,0,0,0,0,0,6.0,Recent,0,0,0,3.45,Low
+P0763,25,Female,Cold or flu symptoms,2,46.9,Gradual,69,117,75,98.1,97,0,None,None,2,4,23:11,Low,0,0,0,0,0,2.0,Chronic,0,0,0,1.35,Low
+P0764,44,Female,Mild headache,3,18.0,Gradual,65,115,88,98.4,98,0,None,None,2,5,20:15,Moderate,0,0,0,0,0,3.0,Recent,0,0,0,2.2199999999999998,Low
+P0765,26,Male,Minor skin irritation,3,43.8,Gradual,73,120,86,99.0,98,0,None,Asthma,0,5,22:58,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.6799999999999997,Low
+P0766,58,Female,High fever with severe headache,7,4.9,Gradual,85,138,65,98.1,93,0,None,Diabetes,3,2,21:21,High,0,0,0,1,1,7.0,Acute,1,0,0,6.84,Medium
+P0767,29,Male,Cold or flu symptoms,3,33.8,Gradual,68,129,87,98.7,97,0,None,Hypertension,0,4,22:55,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.7699999999999996,Low
+P0768,78,Female,Severe asthma attack,7,4.6,Gradual,98,120,87,100.4,92,0,None,Kidney disease,1,2,22:21,High,0,0,0,1,1,7.0,Acute,1,1,0,7.4399999999999995,Medium
+P0769,37,Male,Moderate abdominal pain,7,13.3,Gradual,79,119,84,99.1,97,0,None,None,3,3,21:44,Moderate,0,0,0,0,0,7.0,Recent,0,0,0,3.21,Low
+P0770,54,Female,Routine check-up,3,30.8,Gradual,74,117,80,99.1,98,0,None,Hypertension,1,5,19:59,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.52,Low
+P0771,79,Female,Unresponsive or confused,10,1.3,Sudden,112,167,89,100.5,82,1,altered_mental_status,None,0,1,19:44,High,1,1,1,1,4,15.0,Acute,0,0,0,18.37,Critical
+P0772,18,Male,Chest pain,8,2.6,Sudden,91,133,83,98.6,93,1,chest_pain,Hypertension,2,2,22:23,Low,0,0,0,1,1,12.0,Acute,1,0,0,10.940000000000001,High
+P0773,77,Male,Head injury with loss of consciousness,8,5.1,Gradual,98,151,98,100.0,90,0,None,None,2,2,21:45,High,0,1,0,1,2,8.0,Acute,0,0,0,8.71,Medium
+P0774,56,Male,Severe asthma attack,7,2.9,Sudden,97,139,91,98.3,89,0,None,COPD,1,2,22:05,High,0,1,0,1,2,10.5,Acute,1,1,0,8.78,Medium
+P0775,61,Male,Possible broken bone,5,20.3,Gradual,94,125,76,99.5,98,0,None,Hypertension,2,3,22:10,High,0,0,0,0,0,5.0,Recent,1,0,0,4.33,Low
+P0776,29,Female,Severe asthma attack,7,2.3,Gradual,86,147,81,99.9,93,0,None,None,0,2,20:05,Low,0,1,0,1,2,7.0,Acute,0,0,0,6.97,Medium
+P0777,54,Male,Mild headache,4,63.2,Gradual,78,121,76,98.4,98,0,None,Asthma,5,5,21:30,Moderate,0,0,0,0,0,4.0,Chronic,1,0,1,3.8200000000000003,Low
+P0778,78,Male,Deep cut requiring stitches,7,13.2,Sudden,83,140,84,98.6,95,0,None,None,2,3,22:53,High,0,0,0,0,0,10.5,Recent,0,0,0,4.4399999999999995,Low
+P0779,55,Male,Severe back pain,5,19.6,Gradual,82,127,94,100.4,95,0,None,None,0,3,22:09,Moderate,0,1,0,0,1,5.0,Recent,0,0,0,5.15,Medium
+P0780,39,Female,Follow-up visit,4,45.1,Gradual,71,115,84,98.4,97,0,None,Hypertension,3,5,21:57,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.37,Low
+P0781,26,Male,Severe back pain,7,7.4,Sudden,76,116,92,99.0,95,0,None,None,3,3,20:34,Low,0,1,0,0,1,10.5,Recent,0,0,0,4.88,Low
+P0782,66,Male,High fever with severe headache,7,2.3,Sudden,101,157,69,100.4,91,0,None,Diabetes,1,2,20:25,High,1,1,0,1,3,10.5,Acute,1,0,0,11.08,High
+P0783,48,Female,Moderate abdominal pain,7,12.8,Gradual,81,132,78,100.4,94,0,None,None,4,3,20:33,Moderate,0,0,0,1,1,7.0,Recent,0,0,1,5.539999999999999,Medium
+P0784,44,Male,Routine check-up,5,65.4,Gradual,77,117,89,99.4,98,0,None,Hypertension,2,5,20:53,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,3.8200000000000003,Low
+P0785,22,Female,Cold or flu symptoms,5,48.8,Gradual,76,118,79,98.5,97,0,None,Diabetes,5,4,21:56,Low,0,0,0,0,0,5.0,Chronic,1,0,1,3.16,Low
+P0786,31,Female,Routine check-up,5,30.7,Gradual,78,123,83,98.9,98,0,None,Diabetes,1,5,19:37,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.4299999999999997,Low
+P0787,50,Female,Cold or flu symptoms,3,57.9,Gradual,70,112,77,98.5,98,0,None,COPD,4,4,19:31,Moderate,0,0,0,0,0,3.0,Chronic,1,1,1,3.4,Low
+P0788,70,Female,Severe difficulty breathing,10,0.8,Sudden,105,102,97,99.5,85,1,difficulty_breathing,Diabetes,3,1,19:55,High,1,1,0,1,3,15.0,Acute,1,0,0,17.1,Critical
+P0789,27,Male,High fever with severe headache,7,5.7,Sudden,91,123,73,100.6,92,0,None,None,1,2,22:53,Low,0,0,1,1,2,10.5,Acute,0,0,0,6.91,Medium
+P0790,53,Female,Ankle sprain,3,55.3,Gradual,68,113,85,99.2,98,0,None,Heart disease,2,4,21:56,Moderate,0,0,0,0,0,3.0,Chronic,1,1,0,3.49,Low
+P0791,51,Male,Ear pain,2,14.9,Gradual,66,122,82,99.0,98,0,None,None,5,4,20:50,Moderate,0,0,0,0,0,2.0,Recent,0,0,1,2.13,Low
+P0792,42,Male,Minor cut or scrape,2,25.1,Gradual,77,120,75,98.3,98,0,None,Hypertension,3,4,22:06,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,2.86,Low
+P0793,57,Male,High fever with severe headache,8,4.8,Sudden,97,105,81,101.3,91,0,None,Asthma,2,2,22:00,High,0,0,1,1,2,12.0,Acute,1,0,0,9.11,Medium
+P0794,47,Male,Chest pain,8,2.0,Gradual,87,115,75,100.7,93,1,chest_pain,Asthma,1,2,21:40,Moderate,0,0,1,1,2,8.0,Acute,1,0,0,13.81,High
+P0795,48,Female,Moderate abdominal pain,5,14.0,Sudden,84,131,91,100.2,94,0,None,Heart disease,1,3,19:18,Moderate,0,1,0,1,2,7.5,Recent,1,1,0,7.9399999999999995,Medium
+P0796,20,Male,Suspected stroke symptoms,10,1.9,Sudden,110,113,94,100.4,82,1,stroke_symptoms,COPD,3,1,19:15,Low,1,1,0,1,3,15.0,Acute,1,1,0,15.6,Critical
+P0797,71,Male,Unresponsive or confused,9,0.2,Sudden,112,139,105,99.2,85,1,altered_mental_status,Heart disease,6,1,21:17,High,1,1,0,1,3,13.5,Acute,1,1,1,16.83,Critical
+P0798,53,Female,Possible broken bone,7,9.3,Sudden,86,129,93,99.9,98,0,None,Asthma,1,3,20:44,Moderate,0,1,0,0,1,10.5,Recent,1,0,0,6.6899999999999995,Medium
+P0799,27,Male,High fever (over 103°F),5,11.2,Gradual,80,124,94,98.6,94,0,None,Hypertension,4,3,21:38,Low,0,1,0,1,2,5.0,Recent,1,0,1,7.3100000000000005,Medium
+P0800,76,Female,Moderate abdominal pain,5,17.6,Sudden,86,139,77,99.1,98,0,None,Heart disease,2,3,21:09,High,0,0,0,0,0,7.5,Recent,1,1,0,4.78,Low
+P0801,25,Male,Ankle sprain,3,69.7,Gradual,77,114,77,98.3,97,0,None,Diabetes,1,4,21:26,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.65,Low
+P0802,29,Female,Head injury with loss of consciousness,7,1.4,Gradual,86,105,68,98.5,90,0,None,Diabetes,1,2,21:58,Low,0,0,0,1,1,7.0,Acute,1,0,0,5.97,Medium
+P0803,69,Female,Minor skin irritation,4,65.0,Gradual,72,135,82,98.5,97,0,None,None,1,5,20:52,High,0,0,0,0,0,4.0,Chronic,0,0,0,3.2699999999999996,Low
+P0804,20,Female,Mild headache,5,70.4,Gradual,75,126,81,99.4,97,0,None,Asthma,1,5,20:49,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.1,Low
+P0805,48,Male,Mild rash,5,52.0,Gradual,76,121,85,98.8,97,0,None,Diabetes,2,4,21:26,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,3.94,Low
+P0806,19,Female,High fever (over 103°F),6,6.5,Gradual,88,128,91,99.9,97,0,None,None,0,3,21:12,Low,0,1,0,0,1,6.0,Recent,0,0,0,4.37,Low
+P0807,54,Male,Minor skin irritation,4,47.8,Gradual,78,124,84,99.4,98,0,None,Hypertension,6,5,22:37,Moderate,0,0,0,0,0,4.0,Chronic,1,0,1,3.8200000000000003,Low
+P0808,40,Female,Possible broken bone,6,12.3,Gradual,80,114,88,100.4,95,0,None,Hypertension,4,3,21:51,Moderate,0,0,0,0,0,6.0,Recent,1,0,1,4.0,Low
+P0809,46,Female,Ankle sprain,5,27.9,Gradual,73,124,86,98.1,98,0,None,None,1,4,22:46,Moderate,0,0,0,0,0,5.0,Chronic,0,0,0,2.88,Low
+P0810,21,Male,High fever with severe headache,8,3.8,Sudden,85,106,90,98.5,93,0,None,Diabetes,1,2,19:57,Low,0,0,0,1,1,12.0,Acute,1,0,0,6.03,Medium
+P0811,37,Male,Mild rash,5,50.0,Gradual,65,118,80,99.4,98,0,None,Asthma,1,4,19:26,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,3.61,Low
+P0812,19,Male,Moderate abdominal pain,6,3.1,Gradual,88,134,89,100.4,95,0,None,None,2,3,19:40,Low,0,0,0,0,0,6.0,Acute,0,0,0,2.37,Low
+P0813,19,Female,Moderate abdominal pain,6,7.1,Sudden,84,118,81,99.8,96,0,None,Heart disease,4,3,22:37,Low,0,0,0,0,0,9.0,Recent,1,1,1,3.37,Low
+P0814,79,Female,High fever (over 103°F),6,23.0,Gradual,85,139,79,99.8,97,0,None,Diabetes,0,3,19:23,High,0,0,0,0,0,6.0,Recent,1,0,0,5.17,Medium
+P0815,35,Male,High fever (over 103°F),7,14.3,Gradual,80,116,91,99.2,98,0,None,Hypertension,5,3,21:48,Low,0,1,0,0,1,7.0,Recent,1,0,1,6.1499999999999995,Medium
+P0816,23,Female,Chest pain,8,2.4,Sudden,92,102,86,98.2,90,1,chest_pain,Heart disease,2,2,20:00,Low,0,0,0,1,1,12.0,Acute,1,1,0,11.09,High
+P0817,49,Female,Follow-up visit,3,44.7,Gradual,77,126,82,99.4,98,0,None,Kidney disease,5,5,19:54,Moderate,0,0,0,0,0,3.0,Chronic,1,1,1,3.37,Low
+P0818,70,Male,Moderate abdominal pain,6,10.5,Sudden,81,148,80,99.4,95,0,None,None,3,3,20:32,High,0,1,0,0,1,9.0,Recent,0,0,0,5.8999999999999995,Medium
+P0819,56,Female,Possible broken bone,7,23.4,Sudden,75,138,84,100.3,96,0,None,None,1,3,20:58,High,0,0,0,0,0,10.5,Recent,0,0,0,3.7800000000000002,Low
+P0820,30,Female,Minor cut or scrape,4,16.0,Gradual,71,112,81,99.1,98,0,None,Hypertension,0,4,19:19,Low,0,0,0,0,0,4.0,Recent,1,0,0,3.0999999999999996,Low
+P0821,42,Female,Head injury with loss of consciousness,8,2.2,Sudden,90,103,70,99.3,91,0,None,Diabetes,3,2,21:16,Moderate,0,0,0,1,1,12.0,Acute,1,0,0,6.66,Medium
+P0822,33,Male,High fever with severe headache,7,1.9,Sudden,89,116,95,98.4,92,0,None,COPD,1,2,21:36,Low,0,1,0,1,2,10.5,Acute,1,1,0,8.09,Medium
+P0823,47,Male,Moderate abdominal pain,5,11.1,Gradual,86,119,87,99.7,96,0,None,None,3,3,21:06,Moderate,0,0,0,0,0,5.0,Recent,0,0,0,2.91,Low
+P0824,26,Female,Severe asthma attack,7,2.8,Sudden,97,121,67,99.5,91,0,None,Hypertension,4,2,19:58,Low,0,0,0,1,1,10.5,Acute,1,0,1,5.88,Medium
+P0825,54,Female,Chest pain with difficulty breathing,10,0.4,Sudden,114,108,89,100.9,85,1,"chest_pain,difficulty_breathing",Heart disease,1,1,21:10,Moderate,1,0,1,1,3,15.0,Acute,1,1,0,16.62,Critical
+P0826,60,Male,Severe back pain,6,3.1,Sudden,86,130,82,98.8,97,0,None,None,2,3,22:37,High,0,0,0,0,0,9.0,Acute,0,0,0,3.5999999999999996,Low
+P0827,27,Male,Mild rash,5,69.7,Gradual,72,126,75,99.1,98,0,None,None,0,4,19:49,Low,0,0,0,0,0,5.0,Chronic,0,0,0,2.31,Low
+P0828,39,Male,Ear pain,5,37.9,Gradual,65,116,78,98.6,97,0,None,Heart disease,2,4,23:01,Moderate,0,0,0,0,0,5.0,Chronic,1,1,0,3.67,Low
+P0829,42,Female,Head injury with loss of consciousness,7,1.9,Sudden,93,103,95,99.0,91,0,None,Kidney disease,3,2,20:54,Moderate,0,1,0,1,2,10.5,Acute,1,1,0,8.36,Medium
+P0830,44,Male,Follow-up visit,3,38.8,Gradual,77,115,85,98.6,97,0,None,Asthma,2,5,21:29,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.2199999999999998,Low
+P0831,19,Female,Minor cut or scrape,2,34.8,Gradual,74,123,84,99.1,98,0,None,Heart disease,2,4,21:56,Low,0,0,0,0,0,2.0,Chronic,1,1,0,2.17,Low
+P0832,49,Female,Follow-up visit,5,39.6,Gradual,66,120,88,98.9,97,0,None,None,2,5,20:01,Moderate,0,0,0,0,0,5.0,Chronic,0,0,0,2.9699999999999998,Low
+P0833,52,Male,High fever (over 103°F),7,9.2,Sudden,85,134,78,99.3,96,0,None,Kidney disease,1,3,21:16,Moderate,0,0,0,0,0,10.5,Recent,1,1,0,4.66,Low
+P0834,78,Female,Mild headache,5,30.5,Gradual,75,124,76,99.3,98,0,None,Hypertension,2,5,20:01,High,0,0,0,0,0,5.0,Chronic,1,0,0,4.84,Low
+P0835,67,Female,High fever (over 103°F),7,9.2,Sudden,80,134,94,99.1,97,0,None,None,1,3,20:30,High,0,1,0,0,1,10.5,Recent,0,0,0,6.109999999999999,Medium
+P0836,40,Female,Cold or flu symptoms,2,39.5,Gradual,74,113,76,98.1,98,0,None,Hypertension,4,4,19:52,Moderate,0,0,0,0,0,2.0,Chronic,1,0,1,2.8000000000000003,Low
+P0837,46,Female,Ear pain,3,45.2,Gradual,74,111,76,98.6,97,0,None,COPD,3,4,22:09,Moderate,0,0,0,0,0,3.0,Chronic,1,1,0,3.2800000000000002,Low
+P0838,38,Male,High fever (over 103°F),7,20.6,Sudden,83,111,89,100.1,95,0,None,None,0,3,19:47,Moderate,0,0,0,0,0,10.5,Recent,0,0,0,3.24,Low
+P0839,63,Female,Minor skin irritation,4,35.0,Gradual,81,124,76,98.5,97,0,None,Asthma,1,5,21:58,High,0,0,0,0,0,4.0,Chronic,1,0,0,4.09,Low
+P0840,25,Male,Ear pain,3,63.3,Gradual,78,110,87,98.6,98,0,None,Diabetes,4,4,22:47,Low,0,0,0,0,0,3.0,Chronic,1,0,1,2.65,Low
+P0841,64,Female,Severe back pain,7,4.4,Gradual,86,147,81,99.6,94,0,None,Diabetes,2,3,19:20,High,0,1,0,1,2,7.0,Acute,1,0,0,9.02,Medium
+P0842,48,Female,Chest pain,8,3.6,Sudden,86,111,80,98.3,92,1,chest_pain,Kidney disease,2,2,19:59,Moderate,0,0,0,1,1,12.0,Acute,1,1,0,11.84,High
+P0843,57,Male,Follow-up visit,2,71.5,Gradual,67,127,80,98.2,98,0,None,Diabetes,2,5,22:39,High,0,0,0,0,0,2.0,Chronic,1,0,0,3.31,Low
+P0844,26,Male,Chest pain,8,2.2,Sudden,90,117,85,101.3,91,1,chest_pain,None,5,2,20:01,Low,0,0,1,1,2,12.0,Acute,0,0,1,12.18,High
+P0845,30,Female,Routine check-up,5,28.2,Gradual,75,111,82,99.5,98,0,None,Diabetes,1,5,22:39,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.4,Low
+P0846,21,Female,Minor cut or scrape,4,30.2,Gradual,76,122,83,98.7,98,0,None,Diabetes,1,4,22:25,Low,0,0,0,0,0,4.0,Chronic,1,0,0,2.83,Low
+P0847,23,Female,Cold or flu symptoms,2,63.6,Gradual,78,120,78,99.0,97,0,None,None,3,4,22:26,Low,0,0,0,0,0,2.0,Chronic,0,0,0,1.29,Low
+P0848,53,Female,Moderate abdominal pain,6,7.8,Sudden,88,131,86,99.4,98,0,None,COPD,3,3,21:50,Moderate,0,0,0,0,0,9.0,Recent,1,1,0,4.39,Low
+P0849,57,Male,Minor cut or scrape,3,29.7,Gradual,68,124,88,98.4,98,0,None,None,2,4,20:10,High,0,0,0,0,0,3.0,Chronic,0,0,0,2.61,Low
+P0850,29,Female,Possible broken bone,5,22.1,Sudden,77,113,84,100.5,98,0,None,Asthma,2,3,20:28,Low,0,0,1,0,1,7.5,Recent,1,0,0,5.37,Medium
+P0851,30,Female,Routine check-up,5,27.1,Gradual,76,110,78,99.6,97,0,None,None,1,5,21:35,Low,0,0,0,0,0,5.0,Chronic,0,0,0,2.4,Low
+P0852,24,Female,Follow-up visit,2,68.2,Gradual,79,117,80,98.9,98,0,None,COPD,3,5,20:07,Low,0,0,0,0,0,2.0,Chronic,1,1,0,2.32,Low
+P0853,49,Female,Ankle sprain,2,52.9,Gradual,66,111,86,99.1,98,0,None,Diabetes,1,4,21:28,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,3.07,Low
+P0854,21,Female,Minor cut or scrape,3,64.6,Gradual,65,122,78,99.1,98,0,None,Diabetes,3,4,19:20,Low,0,0,0,0,0,3.0,Chronic,1,0,0,2.53,Low
+P0855,52,Male,Chest pain,8,5.7,Gradual,96,144,78,99.7,92,1,chest_pain,Heart disease,2,2,21:31,Moderate,0,1,0,1,2,8.0,Acute,1,1,0,13.96,High
+P0856,42,Male,Mild headache,4,41.8,Gradual,78,124,88,99.0,98,0,None,Heart disease,1,5,22:15,Moderate,0,0,0,0,0,4.0,Chronic,1,1,0,3.46,Low
+P0857,45,Female,Severe abdominal pain,8,5.5,Sudden,86,114,87,101.5,91,0,None,None,1,2,20:05,Moderate,0,0,1,1,2,12.0,Acute,0,0,0,7.75,Medium
+P0858,34,Female,Follow-up visit,2,32.4,Gradual,78,114,88,98.4,98,0,None,None,3,5,22:52,Low,0,0,0,0,0,2.0,Chronic,0,0,0,1.62,Low
+P0859,56,Female,Mild rash,3,71.6,Gradual,77,110,81,98.2,98,0,None,Hypertension,2,4,20:20,High,0,0,0,0,0,3.0,Chronic,1,0,0,3.58,Low
+P0860,18,Female,Deep cut requiring stitches,5,13.1,Sudden,86,110,93,99.0,94,0,None,Kidney disease,2,3,21:36,Low,0,1,0,1,2,7.5,Recent,1,1,0,7.04,Medium
+P0861,47,Female,Ankle sprain,2,36.3,Gradual,67,121,75,99.4,98,0,None,Hypertension,3,4,20:39,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,3.01,Low
+P0862,55,Female,Possible broken bone,5,16.2,Gradual,85,110,91,99.1,95,0,None,Heart disease,6,3,23:05,Moderate,0,1,0,0,1,5.0,Recent,1,1,1,6.15,Medium
+P0863,48,Female,Deep cut requiring stitches,6,20.8,Sudden,86,117,90,98.6,96,0,None,Heart disease,0,3,19:57,Moderate,0,0,0,0,0,9.0,Recent,1,1,0,4.24,Low
+P0864,58,Male,Minor skin irritation,3,65.5,Gradual,79,111,86,98.3,97,0,None,None,4,5,19:41,High,0,0,0,0,0,3.0,Chronic,0,0,1,2.6399999999999997,Low
+P0865,57,Male,Severe abdominal pain,8,3.3,Sudden,91,118,71,98.6,92,0,None,None,1,2,23:10,High,0,0,0,1,1,12.0,Acute,0,0,0,6.11,Medium
+P0866,26,Female,Chest pain,7,5.6,Gradual,98,135,91,101.0,89,1,chest_pain,None,2,2,22:50,Low,0,1,1,1,3,7.0,Acute,0,0,0,13.879999999999999,High
+P0867,42,Female,Severe difficulty breathing,10,0.8,Sudden,110,142,60,102.1,81,1,difficulty_breathing,None,4,1,21:03,Moderate,1,1,1,1,4,15.0,Acute,0,0,1,17.26,Critical
+P0868,48,Female,Unresponsive or confused,10,0.8,Sudden,103,122,62,100.6,79,1,altered_mental_status,None,0,1,21:18,Moderate,1,0,1,1,3,15.0,Acute,0,0,0,15.44,Critical
+P0869,37,Female,Ear pain,2,46.8,Gradual,66,128,75,99.4,98,0,None,Heart disease,5,4,19:55,Moderate,0,0,0,0,0,2.0,Chronic,1,1,1,2.71,Low
+P0870,49,Male,Severe difficulty breathing,10,0.7,Sudden,115,120,96,97.9,83,1,difficulty_breathing,Heart disease,0,1,23:09,Moderate,1,1,0,1,3,15.0,Acute,1,1,0,16.47,Critical
+P0871,25,Female,Mild rash,2,51.1,Gradual,77,114,85,99.5,97,0,None,Asthma,0,4,23:03,Low,0,0,0,0,0,2.0,Chronic,1,0,0,2.35,Low
+P0872,65,Male,Moderate abdominal pain,7,11.4,Gradual,80,140,82,100.0,98,0,None,None,3,3,22:18,High,0,0,0,0,0,7.0,Recent,0,0,0,4.050000000000001,Low
+P0873,49,Female,Ear pain,5,57.6,Gradual,66,112,85,98.6,97,0,None,Hypertension,2,4,22:16,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,3.9699999999999998,Low
+P0874,42,Female,Severe asthma attack,7,1.4,Sudden,91,146,72,98.5,89,0,None,None,2,2,22:53,Moderate,0,1,0,1,2,10.5,Acute,0,0,0,7.359999999999999,Medium
+P0875,66,Female,Possible broken bone,5,22.2,Sudden,82,146,92,99.6,97,0,None,Hypertension,4,3,22:19,High,0,1,0,0,1,7.5,Recent,1,0,1,6.48,Medium
+P0876,26,Female,Deep cut requiring stitches,5,15.4,Gradual,88,111,88,99.7,94,0,None,Diabetes,1,3,21:05,Low,0,0,0,1,1,5.0,Recent,1,0,0,5.28,Medium
+P0877,59,Female,Minor cut or scrape,2,36.5,Gradual,74,125,75,99.3,98,0,None,Diabetes,0,4,19:20,High,0,0,0,0,0,2.0,Chronic,1,0,0,3.37,Low
+P0878,69,Male,Chest pain,7,3.9,Sudden,90,132,72,99.0,89,1,chest_pain,Heart disease,4,2,23:05,High,0,0,0,1,1,10.5,Acute,1,1,1,12.17,High
+P0879,67,Female,Moderate abdominal pain,7,10.3,Gradual,88,142,75,99.0,94,0,None,None,2,3,20:32,High,0,1,0,1,2,7.0,Recent,0,0,0,8.11,Medium
+P0880,25,Female,Minor cut or scrape,2,28.9,Gradual,74,119,86,98.8,97,0,None,None,3,4,23:06,Low,0,0,0,0,0,2.0,Chronic,0,0,0,1.35,Low
+P0881,67,Female,Cold or flu symptoms,5,21.4,Gradual,81,121,88,98.7,98,0,None,None,1,4,20:23,High,0,0,0,0,0,5.0,Recent,0,0,0,3.5100000000000002,Low
+P0882,31,Female,Ear pain,4,71.2,Gradual,65,128,87,98.6,97,0,None,None,3,4,21:55,Low,0,0,0,0,0,4.0,Chronic,0,0,0,2.13,Low
+P0883,49,Female,Ear pain,3,54.3,Gradual,70,126,88,98.8,98,0,None,None,1,4,21:58,Moderate,0,0,0,0,0,3.0,Chronic,0,0,0,2.37,Low
+P0884,38,Male,Cold or flu symptoms,4,29.3,Gradual,73,120,80,99.1,97,0,None,None,1,4,22:43,Moderate,0,0,0,0,0,4.0,Chronic,0,0,0,2.34,Low
+P0885,64,Female,High fever (over 103°F),7,17.1,Sudden,82,121,84,99.9,98,0,None,Hypertension,3,3,20:37,High,0,0,0,0,0,10.5,Recent,1,0,0,5.02,Medium
+P0886,77,Female,Chest pain,8,1.2,Gradual,99,124,80,99.2,89,1,chest_pain,Hypertension,3,2,22:24,High,0,0,0,1,1,8.0,Acute,1,0,0,12.71,High
+P0887,47,Male,High fever (over 103°F),7,4.5,Sudden,75,135,78,100.2,96,0,None,Asthma,4,3,22:28,Moderate,0,0,0,0,0,10.5,Acute,1,0,1,4.51,Low
+P0888,29,Male,Cold or flu symptoms,5,65.7,Gradual,77,127,85,98.2,97,0,None,Diabetes,1,4,21:44,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.37,Low
+P0889,51,Female,Mild headache,2,54.3,Gradual,73,128,77,99.1,97,0,None,None,2,5,20:37,Moderate,0,0,0,0,0,2.0,Chronic,0,0,0,2.13,Low
+P0890,64,Female,Cold or flu symptoms,3,38.0,Gradual,76,126,78,99.4,98,0,None,Asthma,0,4,19:23,High,0,0,0,0,0,3.0,Chronic,1,0,0,3.82,Low
+P0891,44,Female,Ear pain,5,60.0,Gradual,74,121,77,98.5,98,0,None,None,1,4,19:40,Moderate,0,0,0,0,0,5.0,Chronic,0,0,0,2.8200000000000003,Low
+P0892,21,Male,Follow-up visit,2,35.2,Gradual,71,122,77,98.8,98,0,None,Asthma,4,5,22:12,Low,0,0,0,0,0,2.0,Chronic,1,0,1,2.23,Low
+P0893,38,Female,High fever (over 103°F),6,10.5,Gradual,87,133,76,100.1,96,0,None,Asthma,1,3,20:10,Moderate,0,0,0,0,0,6.0,Recent,1,0,0,3.94,Low
+P0894,18,Female,High fever (over 103°F),7,16.6,Sudden,77,126,92,100.0,96,0,None,None,2,3,19:58,Low,0,1,0,0,1,10.5,Recent,0,0,0,4.64,Low
+P0895,46,Female,Moderate abdominal pain,6,3.8,Sudden,88,117,85,100.0,96,0,None,Heart disease,4,3,22:36,Moderate,0,0,0,0,0,9.0,Acute,1,1,1,4.18,Low
+P0896,69,Female,Severe back pain,7,9.8,Sudden,85,120,94,99.3,97,0,None,None,2,3,19:49,High,0,1,0,0,1,10.5,Recent,0,0,0,6.17,Medium
+P0897,32,Male,Moderate abdominal pain,7,23.6,Sudden,80,120,93,98.8,98,0,None,Heart disease,5,3,21:04,Low,0,1,0,0,1,10.5,Recent,1,1,1,6.06,Medium
+P0898,65,Female,Mild headache,5,41.5,Gradual,83,132,76,99.3,97,0,None,None,2,5,20:35,High,0,0,0,0,0,5.0,Chronic,0,0,0,3.45,Low
+P0899,45,Male,Cold or flu symptoms,4,12.6,Gradual,70,117,77,99.3,98,0,None,Asthma,0,4,19:41,Moderate,0,0,0,0,0,4.0,Recent,1,0,0,3.55,Low
+P0900,41,Male,Ear pain,4,13.7,Gradual,78,126,76,99.3,98,0,None,None,3,4,22:25,Moderate,0,0,0,0,0,4.0,Recent,0,0,0,2.4299999999999997,Low
+P0901,70,Female,Cold or flu symptoms,3,29.2,Gradual,75,138,84,98.9,97,0,None,Diabetes,1,4,19:15,High,0,0,0,0,0,3.0,Chronic,1,0,0,3.9999999999999996,Low
+P0902,23,Female,Moderate abdominal pain,6,6.6,Gradual,80,116,86,99.3,98,0,None,None,3,3,22:34,Low,0,0,0,0,0,6.0,Recent,0,0,0,2.4899999999999998,Low
+P0903,70,Female,Moderate abdominal pain,5,12.9,Gradual,82,133,89,100.4,94,0,None,None,1,3,19:41,High,0,0,0,1,1,5.0,Recent,0,0,0,5.6,Medium
+P0904,25,Male,Minor cut or scrape,4,67.3,Gradual,75,125,79,99.4,97,0,None,None,2,4,21:24,Low,0,0,0,0,0,4.0,Chronic,0,0,0,1.95,Low
+P0905,67,Female,Severe back pain,7,11.6,Sudden,94,147,91,99.7,97,0,None,Diabetes,0,3,22:34,High,0,1,0,0,1,10.5,Recent,1,0,0,7.109999999999999,Medium
+P0906,25,Male,Severe back pain,7,12.4,Sudden,85,118,79,99.4,97,0,None,Diabetes,2,3,21:19,Low,0,0,0,0,0,10.5,Recent,1,0,0,3.85,Low
+P0907,35,Female,Chest pain with difficulty breathing,10,0.8,Sudden,110,138,70,98.5,87,1,"chest_pain,difficulty_breathing",None,3,1,22:22,Low,1,0,0,1,2,15.0,Acute,0,0,0,13.05,High
+P0908,46,Male,Minor skin irritation,4,55.1,Gradual,68,112,87,98.8,97,0,None,Diabetes,1,5,22:19,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.58,Low
+P0909,18,Female,Ear pain,3,40.4,Gradual,73,122,79,99.1,97,0,None,Heart disease,2,4,22:14,Low,0,0,0,0,0,3.0,Chronic,1,1,0,2.44,Low
+P0910,55,Female,Chest pain,8,4.6,Sudden,96,109,74,99.5,93,1,chest_pain,Diabetes,2,2,23:10,Moderate,0,0,0,1,1,12.0,Acute,1,0,0,12.05,High
+P0911,25,Female,Routine check-up,4,71.1,Gradual,68,115,89,98.6,98,0,None,Diabetes,1,5,21:09,Low,0,0,0,0,0,4.0,Chronic,1,0,0,2.95,Low
+P0912,72,Female,Severe bleeding that won't stop,10,1.7,Sudden,123,113,101,101.9,83,1,severe_bleeding,Hypertension,4,1,19:41,High,1,1,1,1,4,15.0,Acute,1,0,1,19.16,Critical
+P0913,25,Male,Severe back pain,6,13.2,Gradual,89,126,90,99.0,97,0,None,None,1,3,23:08,Low,0,0,0,0,0,6.0,Recent,0,0,0,2.55,Low
+P0914,67,Male,Severe abdominal pain,7,4.0,Sudden,90,117,96,98.8,89,0,None,None,3,2,22:18,High,0,1,0,1,2,10.5,Acute,0,0,0,8.11,Medium
+P0915,44,Female,Cold or flu symptoms,5,44.5,Gradual,74,122,88,98.9,98,0,None,None,4,4,20:05,Moderate,0,0,0,0,0,5.0,Chronic,0,0,1,2.8200000000000003,Low
+P0916,35,Female,Routine check-up,5,67.1,Gradual,70,119,84,98.4,97,0,None,Heart disease,2,5,21:44,Low,0,0,0,0,0,5.0,Chronic,1,1,0,3.55,Low
+P0917,69,Male,Head injury with loss of consciousness,7,2.5,Sudden,96,132,90,98.2,92,0,None,COPD,1,2,21:55,High,0,0,0,1,1,10.5,Acute,1,1,0,7.17,Medium
+P0918,24,Female,Mild rash,5,35.0,Gradual,67,124,79,98.6,97,0,None,None,2,4,21:23,Low,0,0,0,0,0,5.0,Chronic,0,0,0,2.2199999999999998,Low
+P0919,35,Male,Mild rash,2,58.9,Gradual,75,121,77,99.5,97,0,None,Diabetes,3,4,23:03,Low,0,0,0,0,0,2.0,Chronic,1,0,0,2.65,Low
+P0920,50,Male,Ankle sprain,3,18.5,Gradual,69,117,87,99.1,97,0,None,Diabetes,1,4,23:05,Moderate,0,0,0,0,0,3.0,Recent,1,0,0,3.4,Low
+P0921,68,Female,Mild rash,2,47.6,Gradual,75,137,80,98.6,97,0,None,Heart disease,1,4,20:57,High,0,0,0,0,0,2.0,Chronic,1,1,0,3.64,Low
+P0922,32,Male,Deep cut requiring stitches,6,6.0,Gradual,75,117,86,99.2,95,0,None,Asthma,2,3,19:23,Low,0,0,0,0,0,6.0,Acute,1,0,0,3.76,Low
+P0923,53,Female,Mild rash,2,64.1,Gradual,79,122,76,98.2,97,0,None,Diabetes,3,4,19:17,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,3.19,Low
+P0924,72,Female,Deep cut requiring stitches,6,21.7,Gradual,88,143,82,99.5,98,0,None,Diabetes,2,3,20:50,High,0,1,0,0,1,6.0,Recent,1,0,0,6.96,Medium
+P0925,21,Male,High fever with severe headache,7,1.7,Sudden,91,130,69,100.9,93,0,None,Hypertension,4,2,21:10,Low,0,0,1,1,2,10.5,Acute,1,0,1,7.7299999999999995,Medium
+P0926,42,Male,Moderate abdominal pain,5,8.9,Sudden,76,128,78,99.3,95,0,None,None,4,3,21:18,Moderate,0,0,0,0,0,7.5,Recent,0,0,1,2.76,Low
+P0927,47,Male,Minor cut or scrape,5,51.9,Gradual,74,112,85,98.9,97,0,None,Hypertension,1,4,21:57,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,3.91,Low
+P0928,39,Male,Minor skin irritation,3,42.1,Gradual,75,128,76,98.6,98,0,None,Hypertension,1,5,22:40,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.07,Low
+P0929,25,Male,High fever (over 103°F),7,11.8,Sudden,77,121,90,100.0,96,0,None,Diabetes,3,3,19:19,Low,0,0,0,0,0,10.5,Recent,1,0,0,3.85,Low
+P0930,35,Male,Mild headache,3,38.2,Gradual,68,118,89,98.7,97,0,None,None,4,5,22:23,Low,0,0,0,0,0,3.0,Chronic,0,0,1,1.9499999999999997,Low
+P0931,46,Female,High fever with severe headache,8,1.4,Sudden,92,137,76,98.6,89,0,None,Asthma,3,2,19:30,Moderate,0,0,0,1,1,12.0,Acute,1,0,0,6.78,Medium
+P0932,61,Male,High fever (over 103°F),5,13.7,Gradual,83,134,75,100.2,95,0,None,Hypertension,1,3,20:13,High,0,0,0,0,0,5.0,Recent,1,0,0,4.33,Low
+P0933,31,Male,Ear pain,4,68.6,Gradual,75,123,88,98.6,97,0,None,Asthma,3,4,20:02,Low,0,0,0,0,0,4.0,Chronic,1,0,0,3.13,Low
+P0934,76,Female,Chest pain,8,4.9,Sudden,94,114,77,99.6,93,1,chest_pain,Hypertension,4,2,21:14,High,0,0,0,1,1,12.0,Acute,1,0,1,12.68,High
+P0935,53,Female,Mild rash,2,27.0,Gradual,71,112,79,99.1,98,0,None,Heart disease,4,4,22:38,Moderate,0,0,0,0,0,2.0,Chronic,1,1,1,3.19,Low
+P0936,58,Male,Moderate abdominal pain,5,13.0,Gradual,85,114,81,99.7,98,0,None,None,3,3,22:24,High,0,0,0,0,0,5.0,Recent,0,0,0,3.2399999999999998,Low
+P0937,67,Male,Deep cut requiring stitches,5,7.3,Sudden,86,133,77,99.1,98,0,None,None,5,3,20:00,High,0,0,0,0,0,7.5,Recent,0,0,1,3.5100000000000002,Low
+P0938,56,Male,Cold or flu symptoms,5,25.9,Gradual,72,110,89,98.5,98,0,None,COPD,4,4,20:09,High,0,0,0,0,0,5.0,Chronic,1,1,1,4.18,Low
+P0939,35,Female,High fever with severe headache,8,4.4,Sudden,95,134,81,98.1,91,0,None,Diabetes,4,2,19:26,Low,0,0,0,1,1,12.0,Acute,1,0,1,6.45,Medium
+P0940,25,Female,Ankle sprain,4,17.5,Gradual,66,110,84,98.1,97,0,None,None,0,4,21:59,Low,0,0,0,0,0,4.0,Recent,0,0,0,1.95,Low
+P0941,43,Male,Severe bleeding that won't stop,10,0.7,Sudden,111,144,69,100.2,85,1,severe_bleeding,None,2,1,20:45,Moderate,1,1,0,1,3,15.0,Acute,0,0,0,15.29,Critical
+P0942,21,Female,Head injury with loss of consciousness,8,3.4,Sudden,92,117,87,100.3,92,0,None,COPD,3,2,23:12,Low,0,0,0,1,1,12.0,Acute,1,1,0,6.03,Medium
+P0943,47,Male,Moderate abdominal pain,5,22.0,Sudden,81,113,91,98.9,97,0,None,None,3,3,21:37,Moderate,0,1,0,0,1,7.5,Recent,0,0,0,4.91,Low
+P0944,45,Male,Ear pain,4,63.5,Gradual,79,126,78,99.1,97,0,None,None,3,4,22:18,Moderate,0,0,0,0,0,4.0,Chronic,0,0,0,2.55,Low
+P0945,68,Female,Severe abdominal pain,8,6.0,Gradual,101,156,81,101.3,91,0,None,Asthma,1,2,22:02,High,1,1,1,1,4,8.0,Acute,1,0,0,13.440000000000001,High
+P0946,53,Male,Mild headache,2,38.5,Gradual,65,110,81,98.5,98,0,None,Diabetes,2,5,19:51,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,3.19,Low
+P0947,53,Male,Chest pain with difficulty breathing,10,1.4,Sudden,103,157,98,99.1,82,1,"chest_pain,difficulty_breathing",None,2,1,19:42,Moderate,1,1,0,1,3,15.0,Acute,0,0,0,15.59,Critical
+P0948,24,Male,Severe asthma attack,8,3.8,Sudden,99,117,65,100.0,89,0,None,Heart disease,4,2,19:35,Low,0,0,0,1,1,12.0,Acute,1,1,1,6.12,Medium
+P0949,45,Female,Suspected stroke symptoms,9,1.8,Sudden,118,156,84,98.0,85,1,stroke_symptoms,None,2,1,20:00,Moderate,1,1,0,1,3,13.5,Acute,0,0,0,15.049999999999999,Critical
+P0950,69,Male,Deep cut requiring stitches,7,11.9,Gradual,91,147,94,98.9,94,0,None,Hypertension,8,3,22:22,High,0,1,0,1,2,7.0,Recent,1,0,1,9.17,Medium
+P0951,32,Female,Follow-up visit,5,31.6,Gradual,74,125,75,98.6,98,0,None,Hypertension,3,5,20:40,Low,0,0,0,0,0,5.0,Chronic,1,0,0,3.46,Low
+P0952,38,Female,Mild headache,3,16.4,Gradual,69,119,89,98.6,97,0,None,Asthma,2,5,23:02,Moderate,0,0,0,0,0,3.0,Recent,1,0,0,3.04,Low
+P0953,40,Female,Mild headache,4,34.5,Gradual,71,118,84,98.5,98,0,None,None,1,5,22:11,Moderate,0,0,0,0,0,4.0,Chronic,0,0,0,2.4000000000000004,Low
+P0954,75,Female,Moderate abdominal pain,6,23.2,Sudden,82,129,89,100.2,94,0,None,Heart disease,4,3,21:25,High,0,0,0,1,1,9.0,Recent,1,1,1,7.05,Medium
+P0955,52,Female,Possible broken bone,5,18.5,Sudden,77,124,85,99.2,95,0,None,None,2,3,20:42,Moderate,0,0,0,0,0,7.5,Recent,0,0,0,3.06,Low
+P0956,40,Male,Deep cut requiring stitches,6,14.0,Gradual,76,111,91,99.0,98,0,None,None,1,3,19:32,Moderate,0,1,0,0,1,6.0,Recent,0,0,0,5.0,Low
+P0957,23,Male,Ear pain,4,49.7,Gradual,69,124,81,98.4,98,0,None,Diabetes,0,4,21:54,Low,0,0,0,0,0,4.0,Chronic,1,0,0,2.89,Low
+P0958,23,Female,Severe asthma attack,7,3.9,Gradual,93,145,79,101.2,90,0,None,Heart disease,2,2,22:21,Low,0,1,1,1,3,7.0,Acute,1,1,0,9.79,Medium
+P0959,52,Female,High fever with severe headache,8,5.1,Sudden,99,115,97,101.0,89,0,None,Heart disease,1,2,22:36,Moderate,0,1,1,1,3,12.0,Acute,1,1,0,10.96,High
+P0960,46,Female,Mild headache,3,45.2,Gradual,65,126,82,98.6,98,0,None,None,1,5,22:22,Moderate,0,0,0,0,0,3.0,Chronic,0,0,0,2.2800000000000002,Low
+P0961,56,Male,High fever (over 103°F),7,9.7,Sudden,81,137,75,99.5,97,0,None,Asthma,3,3,22:14,High,0,0,0,0,0,10.5,Recent,1,0,0,4.78,Low
+P0962,21,Male,Chest pain,8,3.8,Gradual,90,118,94,100.6,90,1,chest_pain,None,4,2,22:07,Low,0,1,1,1,3,8.0,Acute,0,0,1,14.030000000000001,High
+P0963,50,Female,Moderate abdominal pain,6,15.5,Gradual,83,123,94,100.0,95,0,None,None,2,3,20:39,Moderate,0,1,0,0,1,6.0,Recent,0,0,0,5.3,Medium
+P0964,42,Male,Ear pain,4,52.8,Gradual,71,124,76,99.4,97,0,None,Diabetes,2,4,20:24,Moderate,0,0,0,0,0,4.0,Chronic,1,0,0,3.46,Low
+P0965,55,Female,Minor cut or scrape,3,42.5,Gradual,68,119,84,99.0,97,0,None,None,3,4,21:39,Moderate,0,0,0,0,0,3.0,Chronic,0,0,0,2.55,Low
+P0966,19,Male,Possible broken bone,5,10.5,Gradual,76,117,93,99.7,94,0,None,Hypertension,1,3,20:26,Low,0,1,0,1,2,5.0,Recent,1,0,0,7.07,Medium
+P0967,51,Male,Cold or flu symptoms,5,34.7,Gradual,78,119,75,99.4,98,0,None,Diabetes,1,4,22:20,Moderate,0,0,0,0,0,5.0,Chronic,1,0,0,4.03,Low
+P0968,46,Female,Follow-up visit,2,61.0,Gradual,74,124,78,98.5,97,0,None,Asthma,0,5,22:50,Moderate,0,0,0,0,0,2.0,Chronic,1,0,0,2.98,Low
+P0969,76,Female,Ankle sprain,3,21.1,Gradual,78,139,79,98.4,98,0,None,Diabetes,4,4,21:11,High,0,0,0,0,0,3.0,Recent,1,0,1,4.18,Low
+P0970,63,Female,Ear pain,4,15.8,Gradual,77,125,81,98.6,97,0,None,None,6,4,22:25,High,0,0,0,0,0,4.0,Recent,0,0,1,3.09,Low
+P0971,31,Female,High fever (over 103°F),7,7.1,Sudden,88,138,80,100.3,94,0,None,Hypertension,5,3,20:03,Low,0,0,0,1,1,10.5,Recent,1,0,1,6.029999999999999,Medium
+P0972,35,Male,Ankle sprain,2,12.2,Gradual,74,121,85,98.2,98,0,None,Hypertension,1,4,20:24,Low,0,0,0,0,0,2.0,Recent,1,0,0,2.65,Low
+P0973,19,Male,Minor cut or scrape,2,40.6,Gradual,66,117,82,98.3,97,0,None,Kidney disease,6,4,21:04,Low,0,0,0,0,0,2.0,Chronic,1,1,1,2.17,Low
+P0974,44,Female,Moderate abdominal pain,6,5.3,Gradual,78,122,85,99.3,96,0,None,Diabetes,3,3,21:29,Moderate,0,0,0,0,0,6.0,Acute,1,0,0,4.12,Low
+P0975,77,Male,Severe abdominal pain,7,3.9,Gradual,93,150,82,99.6,93,0,None,Hypertension,1,2,19:22,High,0,1,0,1,2,7.0,Acute,1,0,0,9.41,Medium
+P0976,65,Male,Ankle sprain,5,30.1,Gradual,74,123,86,98.5,98,0,None,None,2,4,22:30,High,0,0,0,0,0,5.0,Chronic,0,0,0,3.45,Low
+P0977,51,Female,Possible broken bone,5,22.1,Gradual,78,136,83,99.0,98,0,None,None,4,3,19:14,Moderate,0,0,0,0,0,5.0,Recent,0,0,1,3.0300000000000002,Low
+P0978,67,Male,Mild rash,3,43.8,Gradual,78,122,80,98.4,97,0,None,None,2,4,22:03,High,0,0,0,0,0,3.0,Chronic,0,0,0,2.91,Low
+P0979,26,Female,Cold or flu symptoms,4,18.6,Gradual,70,127,77,98.3,98,0,None,Diabetes,2,4,22:24,Low,0,0,0,0,0,4.0,Recent,1,0,0,2.98,Low
+P0980,71,Male,Ear pain,2,64.8,Gradual,71,130,84,99.2,97,0,None,Diabetes,3,4,19:25,High,0,0,0,0,0,2.0,Chronic,1,0,0,3.73,Low
+P0981,68,Male,Deep cut requiring stitches,6,18.8,Gradual,88,137,89,99.7,94,0,None,None,1,3,22:03,High,0,0,0,1,1,6.0,Recent,0,0,0,5.84,Medium
+P0982,26,Male,Mild rash,4,69.8,Gradual,73,125,78,99.0,98,0,None,None,5,4,22:46,Low,0,0,0,0,0,4.0,Chronic,0,0,1,1.98,Low
+P0983,41,Female,Mild rash,3,25.6,Gradual,69,129,80,98.7,97,0,None,Heart disease,4,4,23:13,Moderate,0,0,0,0,0,3.0,Chronic,1,1,1,3.13,Low
+P0984,64,Male,Severe abdominal pain,7,5.8,Gradual,101,118,71,100.9,92,0,None,Diabetes,2,2,20:04,High,1,0,1,1,3,7.0,Acute,1,0,0,11.02,High
+P0985,39,Male,Possible broken bone,7,6.7,Sudden,80,115,85,99.5,95,0,None,Hypertension,4,3,22:04,Moderate,0,0,0,0,0,10.5,Recent,1,0,1,4.27,Low
+P0986,18,Male,High fever (over 103°F),6,15.3,Gradual,82,115,79,100.2,95,0,None,None,2,3,20:12,Low,0,0,0,0,0,6.0,Recent,0,0,0,2.34,Low
+P0987,49,Female,Ear pain,4,48.3,Gradual,75,128,78,98.4,97,0,None,None,1,4,19:21,Moderate,0,0,0,0,0,4.0,Chronic,0,0,0,2.67,Low
+P0988,48,Male,Possible broken bone,5,12.6,Sudden,82,113,76,99.2,94,0,None,Diabetes,0,3,23:10,Moderate,0,0,0,1,1,7.5,Recent,1,0,0,5.9399999999999995,Medium
+P0989,33,Female,Mild rash,4,31.5,Gradual,66,116,79,99.4,98,0,None,None,4,4,19:16,Low,0,0,0,0,0,4.0,Chronic,0,0,1,2.19,Low
+P0990,53,Male,Severe asthma attack,8,2.7,Sudden,88,128,78,98.8,89,0,None,COPD,0,2,21:13,Moderate,0,0,0,1,1,12.0,Acute,1,1,0,6.99,Medium
+P0991,39,Female,Follow-up visit,3,27.9,Gradual,78,118,85,98.6,98,0,None,None,1,5,22:57,Moderate,0,0,0,0,0,3.0,Chronic,0,0,0,2.07,Low
+P0992,72,Female,Head injury with loss of consciousness,8,2.3,Sudden,93,145,95,101.0,91,0,None,Heart disease,4,2,19:17,High,0,1,1,1,3,12.0,Acute,1,1,1,11.56,High
+P0993,77,Male,Routine check-up,2,36.4,Gradual,80,131,78,99.4,97,0,None,None,1,5,20:14,High,0,0,0,0,0,2.0,Chronic,0,0,0,2.91,Low
+P0994,37,Male,Medication refill,3,68.1,Gradual,70,127,80,98.3,98,0,None,COPD,0,5,19:55,Moderate,0,0,0,0,0,3.0,Chronic,1,1,0,3.01,Low
+P0995,18,Male,High fever with severe headache,7,5.0,Sudden,88,149,92,98.3,92,0,None,None,2,2,21:10,Low,0,1,0,1,2,10.5,Acute,0,0,0,6.64,Medium
+P0996,50,Male,High fever (over 103°F),6,6.7,Sudden,86,132,84,100.3,94,0,None,Hypertension,4,3,23:09,Moderate,0,0,0,1,1,9.0,Recent,1,0,1,6.3,Medium
+P0997,48,Male,Deep cut requiring stitches,5,18.1,Gradual,76,139,84,98.8,96,0,None,COPD,0,3,19:13,Moderate,0,0,0,0,0,5.0,Recent,1,1,0,3.94,Low
+P0998,31,Male,Severe back pain,7,10.0,Sudden,85,131,84,99.4,98,0,None,Kidney disease,1,3,23:10,Low,0,0,0,0,0,10.5,Recent,1,1,0,4.03,Low
+P0999,47,Female,Cold or flu symptoms,3,51.6,Gradual,74,117,82,98.1,97,0,None,Hypertension,1,4,20:13,Moderate,0,0,0,0,0,3.0,Chronic,1,0,0,3.3099999999999996,Low
+P1000,41,Female,Medication refill,3,35.4,Gradual,65,111,78,99.3,98,0,None,None,1,5,22:41,Moderate,0,0,0,0,0,3.0,Chronic,0,0,0,2.13,Low
