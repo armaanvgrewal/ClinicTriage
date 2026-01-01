@@ -243,3 +243,4 @@ For questions, partnerships, or deployment assistance:
 ---
 
 **ClinicFlow** - *Technology serving the underserved* 🏥✨# Test
+# Setup complete on Intel Mac
