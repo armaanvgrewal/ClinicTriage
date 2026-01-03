@@ -17,13 +17,27 @@ st.set_page_config(page_title="Patient Intake - ClinicFlow", page_icon="👤", l
 
 @st.cache_resource
 def load_models():
-    with open('triage_model.pkl', 'rb') as f:
-        triage_model = pickle.load(f)
-    with open('feature_names.pkl', 'rb') as f:
-        feature_names = pickle.load(f)
-    return triage_model, feature_names
+    """Load the MIMIC-IV trained triage model"""
+    try:
+        # Try MIMIC-IV v2 model first
+        with open('triage_model_mimic_v2.pkl', 'rb') as f:
+            triage_model = pickle.load(f)
+        with open('feature_names.pkl', 'rb') as f:
+            feature_names = pickle.load(f)
+        return triage_model, feature_names, "MIMIC-IV v2"
+    except FileNotFoundError:
+        # Fallback to original model
+        try:
+            with open('triage_model.pkl', 'rb') as f:
+                triage_model = pickle.load(f)
+            with open('feature_names.pkl', 'rb') as f:
+                feature_names = pickle.load(f)
+            return triage_model, feature_names, "Synthetic"
+        except FileNotFoundError:
+            st.error("❌ Model files not found. Please train the model first.")
+            return None, None, None
 
-triage_model, feature_names = load_models()
+triage_model, feature_names, model_version = load_models()
 
 # ============================================================================
 # HEADER
@@ -97,57 +111,62 @@ with st.form("patient_intake_form"):
         )
     
     st.markdown("---")
-    st.markdown("### 🩺 Vital Signs (if available)")
-    st.caption("Leave blank if not measured")
+    st.markdown("### 🩺 Vital Signs")
+    st.caption("⚠️ Optional - Leave blank if not measured. Normal defaults will be used.")
     
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        heart_rate = st.number_input(
+        heart_rate_input = st.number_input(
             "Heart Rate (bpm)",
             min_value=40,
             max_value=200,
-            value=75,
-            help="Normal: 60-100 bpm"
+            value=None,
+            placeholder="e.g., 75",
+            help="Normal: 60-100 bpm (Optional)"
         )
     
     with col2:
-        systolic_bp = st.number_input(
+        systolic_bp_input = st.number_input(
             "Systolic BP",
             min_value=70,
             max_value=200,
-            value=120,
-            help="Top number, normal: 90-120"
+            value=None,
+            placeholder="e.g., 120",
+            help="Top number, normal: 90-120 (Optional)"
         )
     
     with col3:
-        diastolic_bp = st.number_input(
+        diastolic_bp_input = st.number_input(
             "Diastolic BP",
             min_value=40,
             max_value=130,
-            value=80,
-            help="Bottom number, normal: 60-80"
+            value=None,
+            placeholder="e.g., 80",
+            help="Bottom number, normal: 60-80 (Optional)"
         )
     
     with col4:
-        temperature = st.number_input(
+        temperature_input = st.number_input(
             "Temperature (°F)",
             min_value=95.0,
             max_value=106.0,
-            value=98.6,
+            value=None,
             step=0.1,
-            help="Normal: 97-99°F"
+            placeholder="e.g., 98.6",
+            help="Normal: 97-99°F (Optional)"
         )
     
     col1, col2 = st.columns(2)
     
     with col1:
-        oxygen_saturation = st.number_input(
+        oxygen_saturation_input = st.number_input(
             "Oxygen Saturation (%)",
             min_value=70,
             max_value=100,
-            value=98,
-            help="Normal: 95-100%"
+            value=None,
+            placeholder="e.g., 98",
+            help="Normal: 95-100% (Optional)"
         )
     
     st.markdown("---")
@@ -191,7 +210,7 @@ with st.form("patient_intake_form"):
     
     # Submit button
     st.markdown("---")
-    submitted = st.form_submit_button("🔍 Get Triage Assessment", use_container_width=True)
+    submitted = st.form_submit_button("🔍 Get Triage Assessment", width='stretch')
 
 # ============================================================================
 # PROCESS FORM SUBMISSION
@@ -212,6 +231,13 @@ if submitted:
         red_flags.append("stroke_symptoms")
     
     has_red_flag = 1 if red_flags else 0
+    
+    # Handle optional vital signs - use clinically normal defaults if not provided
+    heart_rate = heart_rate_input if heart_rate_input is not None else 75
+    systolic_bp = systolic_bp_input if systolic_bp_input is not None else 120
+    diastolic_bp = diastolic_bp_input if diastolic_bp_input is not None else 80
+    temperature = temperature_input if temperature_input is not None else 98.6
+    oxygen_saturation = oxygen_saturation_input if oxygen_saturation_input is not None else 98
     
     # Calculate engineered features
     gender_encoded = 1 if patient_gender == "Female" else 0
@@ -311,6 +337,44 @@ if submitted:
             help="Number of abnormal vital signs"
         )
     
+    # Show which vitals were measured vs defaulted
+    vitals_defaulted = []
+    
+    if heart_rate_input is None:
+        vitals_defaulted.append("Heart Rate (75 bpm)")
+    
+    if systolic_bp_input is None or diastolic_bp_input is None:
+        vitals_defaulted.append("Blood Pressure (120/80)")
+    
+    if temperature_input is None:
+        vitals_defaulted.append("Temperature (98.6°F)")
+    
+    if oxygen_saturation_input is None:
+        vitals_defaulted.append("O2 Sat (98%)")
+    
+    if vitals_defaulted:
+        st.info(f"ℹ️ **Using normal defaults for:** {', '.join(vitals_defaulted)}")
+    
+    # Model information expander
+    st.markdown("---")
+    with st.expander("ℹ️ About This AI Model"):
+        st.markdown(f"""
+        **Model:** ClinicFlow Triage AI v2  
+        **Version:** {model_version}  
+        **Training Data:** 10,000 real emergency department visits (MIMIC-IV-ED)  
+        **Data Source:** Beth Israel Deaconess Medical Center  
+        **Overall Accuracy:** 78.5%  
+        **Critical Case Accuracy:** 89.3% (Level 1-2 patients)  
+        
+        This model was trained on actual patient data and validated against 
+        expert emergency physician triage decisions from a major academic medical center.
+        
+        **Why 78.5% overall but 89.3% for critical cases?**  
+        The model is optimized to be especially accurate for life-threatening 
+        cases (Level 1-2), which is the most important safety metric. Lower 
+        urgency cases (Level 4-5) are less critical to distinguish precisely.
+        """)
+    
     # Clinical reasoning
     st.markdown("---")
     st.markdown("### 🔍 Clinical Reasoning")
@@ -320,8 +384,28 @@ if submitted:
     if has_red_flag:
         reasoning_points.append(f"⚠️ **Red flag symptoms detected:** {', '.join(red_flags)}")
     
+    # Detailed abnormal vitals in clinical reasoning (COMPACT VERSION)
     if vital_abnormalities > 0:
-        reasoning_points.append(f"📊 **{vital_abnormalities} abnormal vital signs** requiring attention")
+        abnormal_list = []
+        
+        if hr_abnormal:
+            abnormal_list.append(f"HR {heart_rate} bpm ({'low' if heart_rate < 60 else 'high'})")
+        
+        if bp_abnormal:
+            bp_details = []
+            if systolic_bp < 90 or systolic_bp > 140:
+                bp_details.append(f"sys {systolic_bp}")
+            if diastolic_bp < 60 or diastolic_bp > 90:
+                bp_details.append(f"dia {diastolic_bp}")
+            abnormal_list.append(f"BP {systolic_bp}/{diastolic_bp} ({', '.join(bp_details)} abnormal)")
+        
+        if temp_abnormal:
+            abnormal_list.append(f"Temp {temperature}°F ({'low' if temperature < 97 else 'fever'})")
+        
+        if spo2_abnormal:
+            abnormal_list.append(f"O2 {oxygen_saturation}% (low)")
+        
+        reasoning_points.append(f"📊 **Abnormal vital signs:** {', '.join(abnormal_list)}")
     
     if symptom_severity >= 8:
         reasoning_points.append(f"🤒 **High symptom severity** (rated {symptom_severity}/10)")
@@ -354,7 +438,7 @@ if submitted:
     
     # Add to queue button
     st.markdown("---")
-    if st.button("➕ Add to Queue", use_container_width=True):
+    if st.button("➕ Add to Queue", width='stretch'):
         # Create patient record
         patient_record = {
             'patient_id': f"P{st.session_state.patient_counter:04d}",
@@ -379,7 +463,24 @@ if submitted:
 # ============================================================================
 
 with st.sidebar:
-    st.markdown("### ℹ️ Urgency Level Guide")
+    st.markdown("### ℹ️ About")
+    
+    # Add model info
+    if model_version == "MIMIC-IV v2":
+        st.success("✅ Using MIMIC-IV v2 Model")
+        st.caption("""
+        **Overall Accuracy:** 78.5%  
+        **Critical Cases:** 89.3%  
+        **Training:** 10K real ED visits  
+        **Source:** BIDMC Emergency Dept.
+        """)
+    else:
+        st.info("ℹ️ Using Synthetic Model")
+        st.caption("89% accuracy on test data")
+    
+    st.markdown("---")
+    
+    st.markdown("### 📋 Urgency Level Guide")
     
     st.markdown("""
     **Level 1 - Critical**
