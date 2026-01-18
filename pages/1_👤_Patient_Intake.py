@@ -11,6 +11,12 @@ import pickle
 
 st.set_page_config(page_title="Patient Intake - ClinicFlow", page_icon="👤", layout="wide")
 
+# Initialize session state
+if 'queue' not in st.session_state:
+    st.session_state.queue = []
+if 'patient_counter' not in st.session_state:
+    st.session_state.patient_counter = 1
+
 # ============================================================================
 # LOAD MODELS
 # ============================================================================
@@ -210,7 +216,7 @@ with st.form("patient_intake_form"):
     
     # Submit button
     st.markdown("---")
-    submitted = st.form_submit_button("🔍 Get Triage Assessment", width='stretch')
+    submitted = st.form_submit_button("🔍 Get Triage Assessment & Add to Queue", use_container_width=True)
 
 # ============================================================================
 # PROCESS FORM SUBMISSION
@@ -239,24 +245,27 @@ if submitted:
     temperature = temperature_input if temperature_input is not None else 98.6
     oxygen_saturation = oxygen_saturation_input if oxygen_saturation_input is not None else 98
     
-    # Calculate engineered features
+    # Encode gender (0 = Male, 1 = Female)
     gender_encoded = 1 if patient_gender == "Female" else 0
+    
+    # Encode onset (0 = Gradual, 1 = Sudden)
     onset_encoded = 1 if symptom_onset == "Sudden" else 0
     
-    hr_abnormal = 1 if (heart_rate < 60 or heart_rate > 100) else 0
-    bp_abnormal = 1 if (systolic_bp < 90 or systolic_bp > 140 or 
-                       diastolic_bp < 60 or diastolic_bp > 90) else 0
-    temp_abnormal = 1 if (temperature < 97.0 or temperature > 100.4) else 0
-    spo2_abnormal = 1 if oxygen_saturation < 95 else 0
-    
-    vital_abnormalities = hr_abnormal + bp_abnormal + temp_abnormal + spo2_abnormal
-    
-    symptom_acuity = symptom_severity * (1.5 if symptom_onset == "Sudden" else 1.0)
-    
+    # Encode chronic conditions
     has_chronic_condition = 0 if chronic_condition == "None" else 1
     high_risk_chronic = 1 if chronic_condition in ["Heart disease", "COPD", "Kidney disease"] else 0
     
-    # Create feature dictionary
+    # Calculate vital abnormalities
+    hr_abnormal = 1 if heart_rate < 60 or heart_rate > 100 else 0
+    bp_abnormal = 1 if systolic_bp < 90 or systolic_bp > 140 or diastolic_bp < 60 or diastolic_bp > 90 else 0
+    temp_abnormal = 1 if temperature < 97 or temperature > 99.5 else 0
+    spo2_abnormal = 1 if oxygen_saturation < 95 else 0
+    vital_abnormalities = hr_abnormal + bp_abnormal + temp_abnormal + spo2_abnormal
+    
+    # Calculate symptom acuity (severity / duration relationship)
+    symptom_acuity = symptom_severity / max(symptom_duration, 0.5)
+    
+    # Prepare patient features dictionary
     patient_features = {
         'age': patient_age,
         'symptom_severity': symptom_severity,
@@ -355,25 +364,6 @@ if submitted:
     if vitals_defaulted:
         st.info(f"ℹ️ **Using normal defaults for:** {', '.join(vitals_defaulted)}")
     
-    # Model information expander
-    st.markdown("---")
-    with st.expander("ℹ️ About This AI Model"):
-        st.markdown(f"""
-        **Model:** ClinicFlow Triage AI v2  
-        **Version:** {model_version}  
-        **Training Data:** 10,000 real emergency department visits (MIMIC-IV-ED)  
-        **Data Source:** Beth Israel Deaconess Medical Center  
-        **Overall Accuracy:** 78.5%  
-        **Critical Case Accuracy:** 89.3% (Level 1-2 patients)  
-        
-        This model was trained on actual patient data and validated against 
-        expert emergency physician triage decisions from a major academic medical center.
-        
-        **Why 78.5% overall but 89.3% for critical cases?**  
-        The model is optimized to be especially accurate for life-threatening 
-        cases (Level 1-2), which is the most important safety metric. Lower 
-        urgency cases (Level 4-5) are less critical to distinguish precisely.
-        """)
     
     # Clinical reasoning
     st.markdown("---")
@@ -436,27 +426,26 @@ if submitted:
     
     st.bar_chart(prob_df.set_index('Urgency Level'))
     
-    # Add to queue button
+    # Add to queue automatically
     st.markdown("---")
-    if st.button("➕ Add to Queue", width='stretch'):
-        # Create patient record
-        patient_record = {
-            'patient_id': f"P{st.session_state.patient_counter:04d}",
-            'name': f"Patient {st.session_state.patient_counter}",
-            'age': patient_age,
-            'gender': patient_gender,
-            'chief_complaint': chief_complaint if chief_complaint else "Not specified",
-            'urgency_level': int(urgency_prediction),
-            'arrival_time': datetime.now(),
-            **patient_features
-        }
-        
-        # Add to session state queue
-        st.session_state.queue.append(patient_record)
-        st.session_state.patient_counter += 1
-        
-        st.success(f"✅ Patient added to queue! ID: {patient_record['patient_id']}")
-        st.info("👉 Go to **Queue Dashboard** to see optimized patient order")
+    # Create patient record
+    patient_record = {
+        'patient_id': f"P{st.session_state.patient_counter:04d}",
+        'name': f"Patient {st.session_state.patient_counter}",
+        'age': patient_age,
+        'gender': patient_gender,
+        'chief_complaint': chief_complaint if chief_complaint else "Not specified",
+        'urgency_level': int(urgency_prediction),
+        'arrival_time': datetime.now(),
+        **patient_features
+    }
+    
+    # Add to session state queue
+    st.session_state.queue.append(patient_record)
+    st.session_state.patient_counter += 1
+    
+    st.success(f"✅ Patient added to queue! ID: {patient_record['patient_id']}")
+    st.info("👉 Go to **Queue Dashboard** to see optimized patient order")
 
 # ============================================================================
 # INFORMATION SIDEBAR

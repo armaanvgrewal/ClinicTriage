@@ -1,6 +1,6 @@
 """
-ClinicFlow - Simulation Comparison
-Compare First-Come-First-Served vs ClinicFlow Optimization
+ClinicTriage - Simulation Comparison
+Compare First-Come-First-Served vs ClinicTriage Optimization
 """
 
 import streamlit as st
@@ -14,7 +14,7 @@ from queue_optimizer import QueueOptimizer
 import pickle
 import time
 
-st.set_page_config(page_title="Simulation - ClinicFlow", page_icon="📈", layout="wide")
+st.set_page_config(page_title="Simulation - ClinicTriage", page_icon="📈", layout="wide")
 
 # ============================================================================
 # LOAD DATA AND MODELS
@@ -119,7 +119,7 @@ def simulate_fcfs(patients, avg_consult=15, num_providers=2):
     }
 
 def simulate_clinicflow(patients, avg_consult=15, num_providers=2):
-    """Simulate ClinicFlow optimization"""
+    """Simulate ClinicTriage optimization"""
     start_time = min(p['arrival_time'] for p in patients)
     
     wait_times = []
@@ -173,8 +173,8 @@ def simulate_clinicflow(patients, avg_consult=15, num_providers=2):
 # HEADER
 # ============================================================================
 
-st.title("📈 FCFS vs ClinicFlow Simulation")
-st.markdown("Compare traditional first-come-first-served with ClinicFlow's AI optimization")
+st.title("📈 FCFS vs ClinicTriage Simulation")
+st.markdown("Compare traditional first-come-first-served with ClinicTriage's AI optimization")
 
 st.markdown("---")
 
@@ -189,20 +189,20 @@ col1, col2, col3, col4 = st.columns(4)
 with col1:
     num_patients = st.slider(
         "Patients per Session",
-        min_value=10,
-        max_value=60,
+        min_value=30,
+        max_value=50,
         value=40,
-        step=5,
+        step=1,
         help="Number of patients in simulated clinic session"
     )
 
 with col2:
     num_simulations = st.slider(
         "Number of Simulations",
-        min_value=1,
-        max_value=100,
-        value=10,
-        step=1,
+        min_value=50,
+        max_value=200,
+        value=50,
+        step=10,
         help="How many times to run the simulation"
     )
 
@@ -236,7 +236,7 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
     
     # Model info banner
     st.info(f"""
-    🤖 **Simulation Model:** ClinicFlow {model_version}  
+    🤖 **Simulation Model:** ClinicTriage {model_version}  
     📊 **Model Accuracy:** {model_accuracy} on {'real emergency department data' if model_version == 'MIMIC-IV v2' else 'test data'}  
     🚨 **Critical Case Accuracy:** {critical_accuracy}  
     {'🏥 **Training Data:** 10,000 MIMIC-IV-ED visits from Beth Israel Deaconess Medical Center' if model_version == 'MIMIC-IV v2' else ''}
@@ -318,7 +318,7 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
             delta_color="inverse",
             help="Overall improvement in wait times"
         )
-        st.caption(f"FCFS: {fcfs_avg:.1f} min → ClinicFlow: {cf_avg:.1f} min")
+        st.caption(f"FCFS: {fcfs_avg:.1f} min → ClinicTriage: {cf_avg:.1f} min")
     
     with col2:
         st.metric(
@@ -328,7 +328,7 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
             delta_color="inverse",
             help="Critical patients (Level 1-2) wait reduction"
         )
-        st.caption(f"FCFS: {fcfs_urgent:.1f} min → ClinicFlow: {cf_urgent:.1f} min")
+        st.caption(f"FCFS: {fcfs_urgent:.1f} min → ClinicTriage: {cf_urgent:.1f} min")
     
     with col3:
         st.metric(
@@ -338,7 +338,7 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
             delta_color="inverse",
             help="Reduction in excessive wait times"
         )
-        st.caption(f"FCFS: {fcfs_over90:.1f} → ClinicFlow: {cf_over90:.1f}")
+        st.caption(f"FCFS: {fcfs_over90:.1f} → ClinicTriage: {cf_over90:.1f}")
     
     # ========================================================================
     # VISUALIZATION - WAIT TIME DISTRIBUTION
@@ -350,7 +350,7 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
     # Create comparison chart
     fig = make_subplots(
         rows=1, cols=2,
-        subplot_titles=('First-Come-First-Served', 'ClinicFlow Optimized'),
+        subplot_titles=('First-Come-First-Served', 'ClinicTriage Optimized'),
         specs=[[{'type': 'box'}, {'type': 'box'}]]
     )
     
@@ -364,7 +364,7 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
         row=1, col=1
     )
     
-    # ClinicFlow box plot
+    # ClinicTriage box plot
     fig.add_trace(
         go.Box(y=cf_df['avg_wait'], name='CF Average', marker_color='#88cc88'),
         row=1, col=2
@@ -404,7 +404,7 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
             f"{fcfs_df['urgent_max'].mean():.1f} min",
             f"{fcfs_df['over_90'].mean():.1f}"
         ],
-        'ClinicFlow': [
+        'ClinicTriage': [
             f"{cf_df['avg_wait'].mean():.1f} min",
             f"{cf_df['median_wait'].mean():.1f} min",
             f"{cf_df['max_wait'].mean():.1f} min",
@@ -508,7 +508,7 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
     config = st.session_state.sim_config
     
     st.success(f"""
-    ### ✅ ClinicFlow Demonstrates Superior Performance
+    ### ✅ ClinicTriage Demonstrates Superior Performance
     
     **Across {config['num_simulations']} simulated clinic sessions:**
     
@@ -542,13 +542,13 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
                 'Model Accuracy',
                 'Critical Accuracy',
                 'Average Wait (FCFS)',
-                'Average Wait (ClinicFlow)',
+                'Average Wait (ClinicTriage)',
                 'Improvement (%)',
                 'Urgent Wait (FCFS)',
-                'Urgent Wait (ClinicFlow)',
+                'Urgent Wait (ClinicTriage)',
                 'Urgent Improvement (%)',
                 'Over 90 min (FCFS)',
-                'Over 90 min (ClinicFlow)',
+                'Over 90 min (ClinicTriage)',
                 'Reduction',
                 'p-value (average)',
                 'p-value (urgent)',
@@ -580,7 +580,7 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
         st.download_button(
             label="📥 Download Summary Report (CSV)",
             data=csv_summary,
-            file_name="clinicflow_simulation_summary.csv",
+            file_name="ClinicTriage_simulation_summary.csv",
             mime="text/csv",
             width='stretch'
         )
@@ -602,7 +602,7 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
         st.download_button(
             label="📥 Download Raw Data (CSV)",
             data=csv_raw,
-            file_name="clinicflow_simulation_raw.csv",
+            file_name="ClinicTriage_simulation_raw.csv",
             mime="text/csv",
             width='stretch'
         )
@@ -634,7 +634,7 @@ else:
     
     with col2:
         st.markdown("""
-        #### ClinicFlow Optimization
+        #### ClinicTriage Optimization
         
         **How it works:**
         - AI predicts medical urgency

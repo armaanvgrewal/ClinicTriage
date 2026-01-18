@@ -1,5 +1,5 @@
 """
-ClinicFlow - AI-Powered Triage System for Free Clinics
+ClinicTriage - AI-Powered Triage System for Free Clinics
 Main Streamlit Application
 """
 
@@ -15,7 +15,7 @@ from queue_optimizer import QueueOptimizer
 # ============================================================================
 
 st.set_page_config(
-    page_title="ClinicFlow - AI Triage System",
+    page_title="ClinicTriage - AI Triage System",
     page_icon="🏥",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -95,7 +95,7 @@ def load_models():
     try:
         with open('triage_model_mimic_v2.pkl', 'rb') as f:
             triage_model = pickle.load(f)
-        model_version = "MIMIC-IV v2 (78.5% accuracy)"
+        model_version = "MIMIC-IV v2 (74.2% accuracy, 83.5% critical detection)"
     except FileNotFoundError:
         # Fallback to synthetic model
         with open('triage_model.pkl', 'rb') as f:
@@ -136,22 +136,8 @@ if 'patient_counter' not in st.session_state:
 # ============================================================================
 
 with st.sidebar:
-    st.image("https://via.placeholder.com/300x100/1f77b4/ffffff?text=ClinicFlow", 
-             width='stretch')
-    
-    st.markdown("---")
-    
-    st.markdown("### 🏥 Navigation")
-    st.markdown("""
-    **📋 Pages:**
-    - 🏠 Home (this page)
-    - 👤 Patient Intake
-    - 📊 Queue Dashboard  
-    - 📈 Simulation
-    
-    Use the sidebar to navigate between pages.
-    """)
-    
+    st.image("https://placehold.co/300x100/1f77b4/ffffff?text=ClinicTriage", 
+             use_container_width=True)
     st.markdown("---")
     
     st.markdown("### 📊 System Status")
@@ -164,12 +150,12 @@ with st.sidebar:
     st.markdown("---")
     
     # Quick stats
-    st.markdown("### 🎯 ClinicFlow Impact")
+    st.markdown("### 🎯 ClinicTriage Impact")
     st.markdown("""
-    - **78.5%** accuracy on real clinical data
-    - **89.3%** critical case accuracy
+    - **83.5%** critical detection rate on real clinical data
+    - **77.7%** critical case accuracy
     - **66%** reduction in urgent wait times
-    - Trained on **10K** real ED visits
+    - Trained on **10K** real ED visits (MIMIC-IV dataset)
     """)
     
     st.caption(f"Model: {st.session_state.get('model_version', 'Loading...')}")
@@ -178,7 +164,7 @@ with st.sidebar:
 # MAIN PAGE - HOME
 # ============================================================================
 
-st.markdown('<p class="main-header">🏥 ClinicFlow</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-size: 24px; font-weight: bold; text-align: center;">🏥 ClinicTriage</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-header">AI-Powered Triage & Queue Optimization for Free Clinics</p>', 
             unsafe_allow_html=True)
 
@@ -186,7 +172,7 @@ st.markdown('<p class="sub-header">AI-Powered Triage & Queue Optimization for Fr
 st.markdown("""
 <div style='text-align: center; margin-bottom: 1rem;'>
     <span style='background-color: #1f77b4; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; font-weight: bold;'>
-        ✅ Trained on MIMIC-IV-ED | 10,000 Real ED Visits | 78.5% Accuracy
+        ✅ Trained on MIMIC-IV-ED | 10,000 Real ED Visits | 83.5% Critical Detection
     </span>
 </div>
 """, unsafe_allow_html=True)
@@ -204,24 +190,28 @@ with col1:
     - ⚠️ **First-come-first-served** → Critical patients wait dangerously long
     - 👥 **No trained triage nurses** → Volunteer staff lack medical expertise
     - 📋 **Walk-in model** → No appointment system to manage flow
-    - 💰 **Zero budget** → Can't afford commercial triage systems ($10K-$50K)
+    - 💰 **Zero budget** → Cannot afford commercial triage systems ($10K-$50K)
     
     **Result:** A 62-year-old with chest pain waits 90+ minutes behind medication refills.
     """)
     
-    st.markdown("### 💡 The ClinicFlow Solution")
+    st.markdown("### 💡 The ClinicTriage Solution")
     st.markdown("""
     **Three-Component AI System:**
     
-    1. **🤖 Intelligent Triage** - ML trained on 10,000 real ED visits (78.5% accuracy, 89.3% for critical cases)
+    1. **🤖 Intelligent Triage** - ML trained on 10,000 real ED visits (83.5% critical detection)
     2. **⚖️ Smart Queue Optimization** - Balances urgency, fairness, and efficiency  
     3. **📱 Simple Interface** - Works on tablets, requires no medical training
     
     **Validated on Real Clinical Data:**
     - Trained on **MIMIC-IV-ED** dataset from Beth Israel Deaconess Medical Center
-    - **78.5%** overall accuracy on actual triage decisions
-    - **89.3%** accuracy for critical cases (Level 1-2) - the most important metric
+    - **83.5%** critical detection rate (Level 1-2) - the most important metric
+    - **77.7%** critical exact accuracy
+    - **74.2%** overall accuracy on actual triage decisions
     - Tested against expert emergency physician assessments
+    
+    **Why 74.2% overall accuracy but 83.5% critical detection rate?**  
+    ✅ The model is optimized to prioritize patient safety by maximizing detection of life-threatening cases (Level 1-2). This is the most important clinical metric.
     
     **Operational Impact:**
     - Critical patients seen **66% faster**
@@ -235,17 +225,17 @@ with col2:
     
     # Create simple metrics display
     st.metric(
-        label="🎯 Overall Accuracy",
-        value="78.5%",
-        delta="On real clinical data",
-        help="Validated on 10,000 MIMIC-IV emergency department visits"
+        label="🚨 Critical Detection Rate",
+        value="83.5%",
+        delta="Level 1-2 patients",
+        help="Correctly detects 83.5 out of 100 life-threatening cases as critical"
     )
     
     st.metric(
-        label="🚨 Critical Case Accuracy",
-        value="89.3%",
-        delta="Level 1-2 patients",
-        help="Correctly identifies 89 out of 100 life-threatening cases"
+        label="🎯 Critical Accuracy",
+        value="77.7%",
+        delta="On real clinical data",
+        help="Validated on 10,000 MIMIC-IV emergency department visits"
     )
     
     st.metric(
@@ -265,7 +255,7 @@ with col2:
 st.markdown("---")
 
 # How it works
-st.markdown("### 🔄 How ClinicFlow Works")
+st.markdown("### 🔄 How ClinicTriage Works")
 
 col1, col2, col3 = st.columns(3)
 
@@ -293,8 +283,7 @@ with col2:
     - Chronic conditions
     
     ⚡ Predicts urgency in <1 second
-    🎯 78.5% accuracy on real data
-    🚨 89.3% critical case accuracy
+    🚨 83.5% critical detection rate
     """)
 
 with col3:
@@ -318,17 +307,17 @@ col1, col2, col3 = st.columns(3)
 
 with col1:
     st.info("👤 **Try Patient Intake**\n\nExperience the triage form and see AI predictions in real-time.")
-    if st.button("Go to Patient Intake", width='stretch'):
+    if st.button("Go to Patient Intake", use_container_width=True):
         st.switch_page("pages/1_👤_Patient_Intake.py")
 
 with col2:
-    st.success("📊 **View Queue Dashboard**\n\nSee how ClinicFlow optimizes patient order for providers.")
-    if st.button("Go to Queue Dashboard", width='stretch'):
+    st.success("📊 **View Queue Dashboard**\n\nSee how ClinicTriage optimizes patient order for providers.")
+    if st.button("Go to Queue Dashboard", use_container_width=True):
         st.switch_page("pages/2_📊_Queue_Dashboard.py")
 
 with col3:
-    st.warning("📈 **Run Simulation**\n\nCompare FCFS vs ClinicFlow with real clinic data.")
-    if st.button("Go to Simulation", width='stretch'):
+    st.warning("📈 **Run Simulation**\n\nCompare FCFS vs ClinicTriage with real clinic data.")
+    if st.button("Go to Simulation", use_container_width=True):
         st.switch_page("pages/3_📈_Simulation.py")
 
 st.markdown("---")
@@ -336,8 +325,8 @@ st.markdown("---")
 # Footer
 st.markdown("""
 <div style='text-align: center; color: #888; padding: 2rem;'>
-    <p><strong>ClinicFlow</strong> | AI for Healthcare Equity</p>
-    <p>Built for the Illinois AI Challenge 2025</p>
+    <p><strong>ClinicTriage</strong> | AI for Healthcare Equity</p>
     <p>Trained on MIMIC-IV-ED (10,000 real emergency department visits)</p>
+    <p>Model: 83.5% Critical Detection Rate | 77.7% Critical Accuracy</p>
 </div>
 """, unsafe_allow_html=True)

@@ -1,5 +1,5 @@
 """
-ClinicFlow - Queue Dashboard
+ClinicTriage - Queue Dashboard
 Provider view of optimized patient queue
 """
 
@@ -11,7 +11,17 @@ import plotly.express as px
 import plotly.graph_objects as go
 from queue_optimizer import QueueOptimizer
 
-st.set_page_config(page_title="Queue Dashboard - ClinicFlow", page_icon="📊", layout="wide")
+st.set_page_config(page_title="Queue Dashboard - ClinicTriage", page_icon="📊", layout="wide")
+
+# ============================================================================
+# INITIALIZE SESSION STATE
+# ============================================================================
+
+if 'queue' not in st.session_state:
+    st.session_state.queue = []
+
+if 'patient_counter' not in st.session_state:
+    st.session_state.patient_counter = 1
 
 # ============================================================================
 # LOAD OPTIMIZER
@@ -253,14 +263,14 @@ if st.session_state.queue:
         col1, col2, col3, col4 = st.columns(4)
         
         with col1:
-            if st.button("👁️ See Next Patient", width='stretch', type="primary"):
+            if st.button("👁️ See Next Patient", use_container_width=True, type="primary"):
                 if display_queue:
                     next_patient = display_queue[0]
                     st.success(f"✅ Next: {next_patient['patient_id']} - {next_patient['chief_complaint']}")
                     st.info(f"Urgency Level {next_patient['urgency_level']}")
         
         with col2:
-            if st.button("✅ Mark Patient Seen", width='stretch'):
+            if st.button("✅ Mark Patient Seen", use_container_width=True):
                 if display_queue:
                     seen_patient = display_queue[0]
                     # Remove from queue
@@ -270,11 +280,11 @@ if st.session_state.queue:
                     st.rerun()
         
         with col3:
-            if st.button("🔄 Refresh Queue", width='stretch'):
+            if st.button("🔄 Refresh Queue", use_container_width=True):
                 st.rerun()
         
         with col4:
-            if st.button("🗑️ Clear All Patients", width='stretch', type="secondary"):
+            if st.button("🗑️ Clear All Patients", use_container_width=True, type="secondary"):
                 st.session_state.queue = []
                 st.success("✅ Queue cleared")
                 st.rerun()
@@ -285,7 +295,7 @@ if st.session_state.queue:
         
         if False:  # HIDDEN: Remove this line to show comparison
             st.markdown("---")
-            st.markdown("### 🔄 FCFS vs ClinicFlow Comparison")
+            st.markdown("### 🔄 FCFS vs ClinicTriage Comparison")
             
             with st.expander("📊 Show Comparison Analysis"):
                 # FCFS order
@@ -314,6 +324,7 @@ if st.session_state.queue:
                         total_wait = already_waited + time_to_service
                         
                         wait_times.append(total_wait)
+                        
                         if p['urgency_level'] <= 2:
                             urgent_waits.append(total_wait)
                         
@@ -345,7 +356,7 @@ if st.session_state.queue:
                     st.metric("Patients >90 min", fcfs_metrics['over_90'])
                 
                 with col2:
-                    st.markdown("#### ClinicFlow Optimized")
+                    st.markdown("#### ClinicTriage Optimized")
                     improvement_avg = ((fcfs_metrics['avg_wait'] - cf_metrics['avg_wait']) / 
                                       max(fcfs_metrics['avg_wait'], 1)) * 100
                     improvement_urgent = ((fcfs_metrics['urgent_avg'] - cf_metrics['urgent_avg']) / 
@@ -390,7 +401,7 @@ else:
         4. Return here to see optimized queue
         """)
         
-        if st.button("Go to Patient Intake", width='stretch'):
+        if st.button("Go to Patient Intake", use_container_width=True):
             st.switch_page("pages/1_👤_Patient_Intake.py")
     
     with col2:
@@ -400,7 +411,7 @@ else:
         Automatically add 25-30 sample patients to test the queue optimization.
         """)
         
-        if st.button("Load Sample Patients", width='stretch'):
+        if st.button("Load Sample Patients", use_container_width=True):
             # Load sample patients from synthetic data with proper error handling
             try:
                 patients_df = pd.read_csv('synthetic_patients.csv')
@@ -468,15 +479,15 @@ else:
 
 with st.sidebar:
     st.markdown("### ℹ️ System Info")
-    st.write("**ClinicFlow v2.0**")
+    st.write("**ClinicTriage v2.0**")
     st.write("AI-Powered Triage System")
     
     st.divider()
     
     st.write("**🤖 Model Information**")
     st.metric("Model", "MIMIC-IV v2")
-    st.metric("Overall Accuracy", "78.5%")
-    st.metric("Critical Accuracy", "89.3%")
+    st.metric("Overall Accuracy", "74.2%")
+    st.metric("Critical Detection", "83.5%")
     st.caption("Trained on 10K real ED visits")
     
     st.divider()
@@ -485,7 +496,7 @@ with st.sidebar:
     
     st.markdown("""
     **View Modes:**
-    - **Optimized Order**: ClinicFlow's smart queue
+    - **Optimized Order**: ClinicTriage's smart queue
     - **Arrival Order**: Traditional FCFS
     - **Urgency Only**: Sorted by urgency level
     

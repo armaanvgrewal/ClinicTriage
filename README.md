@@ -1,14 +1,14 @@
-# 🏥 ClinicFlow
+# 🏥 ClinicTriage
 
 **AI-Powered Triage & Queue Optimization for Free Clinics**
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://clinicflow-demo.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://clinictriage-demo.streamlit.app/)
 
 ---
 
 ## 🎯 Overview
 
-ClinicFlow is an AI-powered system that revolutionizes patient triage and queue management for free clinics serving underserved communities. By combining machine learning with multi-objective optimization, ClinicFlow reduces critical patient wait times by 66% while ensuring no patient waits more than 90 minutes.
+ClinicFlow is an AI-powered system that revolutionizes patient triage and queue management for free clinics serving underserved communities. By combining machine learning with multi-objective optimization, ClinicFlow reduces critical patient wait times by 66% while keeping max wait times below 90 minutes.
 
 ### The Problem
 
@@ -25,7 +25,7 @@ Free clinics serve **1.8 million uninsured patients** annually but face critical
 
 1. **🤖 Intelligent Triage** - ML model predicts urgency with 89% accuracy
 2. **⚖️ Smart Queue Optimization** - Balances urgency, fairness, and efficiency
-3. **📱 Simple Interface** - Works on tablets, requires no medical training
+3. **📱 Simple Interface** - Works on tablets, vitals optional, and requires no medical training 
 
 ---
 
