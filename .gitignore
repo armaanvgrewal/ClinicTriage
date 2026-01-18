@@ -39,16 +39,21 @@ cat >> .gitignore << 'EOF'
 mimic_data/
 
 # Alternative model versions (experiments)
+triage_model.pkl
 triage_model_mimic.pkl
 triage_model_mimic_v2_enhanced.pkl
+triage_model_mimic_v2_original.pkl
 triage_model_mimic_v2_jan.pkl
+triage_model_mimic_v2_OLD.pkl
 model_metadata_mimic.pkl
 model_metadata_mimic_v2_enhanced.pkl
 
 # Alternative training scripts (experiments)
+train_model.py
 train_model_mimic.py
 train_model_mimic_v3.py
 train_model_mimic_v2_enhanced.py
+train_model_mimic_v2_jan.py
 extract_enhanced_features.py
 
 # Check/comparison scripts (development)
@@ -59,5 +64,4 @@ compare_all_models.py
 # Enhanced dataset variant
 mimic_patients_10k_enhanced.csv
 EOF
-triage_model_mimic_v2_jan.pkl
-*.pkl
+

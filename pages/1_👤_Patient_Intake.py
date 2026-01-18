@@ -16,6 +16,8 @@ if 'queue' not in st.session_state:
     st.session_state.queue = []
 if 'patient_counter' not in st.session_state:
     st.session_state.patient_counter = 1
+if 'form_submitted' not in st.session_state:
+    st.session_state.form_submitted = False
 
 # ============================================================================
 # LOAD MODELS
@@ -50,7 +52,7 @@ triage_model, feature_names, model_version = load_models()
 # ============================================================================
 
 st.title("👤 Patient Intake & Triage")
-st.markdown("Complete the form below to receive your urgency level and estimated wait time.")
+st.markdown("Complete the form below to receive your urgency level and estimated wait time. Refresh Page to Add Next Patient.")
 
 st.markdown("---")
 
@@ -237,6 +239,8 @@ if submitted:
         red_flags.append("stroke_symptoms")
     
     has_red_flag = 1 if red_flags else 0
+    # Mark form as submitted
+    st.session_state.form_submitted = True
     
     # Handle optional vital signs - use clinically normal defaults if not provided
     heart_rate = heart_rate_input if heart_rate_input is not None else 75
@@ -446,6 +450,10 @@ if submitted:
     
     st.success(f"✅ Patient added to queue! ID: {patient_record['patient_id']}")
     st.info("👉 Go to **Queue Dashboard** to see optimized patient order")
+    # Show "Add Next Patient" button at bottom
+    if st.button("➕ Add Next Patient", key="bottom_new_patient", use_container_width=True):
+        st.session_state.form_submitted = False
+        st.rerun()
 
 # ============================================================================
 # INFORMATION SIDEBAR
@@ -456,10 +464,10 @@ with st.sidebar:
     
     # Add model info
     if model_version == "MIMIC-IV v2":
-        st.success("✅ Using MIMIC-IV v2 Model")
+        st.success("✅ Using MIMIC-IV-ED Data Model")
         st.caption("""
-        **Overall Accuracy:** 78.5%  
-        **Critical Cases:** 89.3%  
+        **Critical Detection:** 83.5%  
+        **Critical Accuracy:** 77.7%  
         **Training:** 10K real ED visits  
         **Source:** BIDMC Emergency Dept.
         """)

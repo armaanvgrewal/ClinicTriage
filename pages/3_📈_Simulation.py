@@ -330,16 +330,6 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
         )
         st.caption(f"FCFS: {fcfs_urgent:.1f} min → ClinicTriage: {cf_urgent:.1f} min")
     
-    with col3:
-        st.metric(
-            "Patients Waiting >90 min",
-            f"{cf_over90:.1f}",
-            delta=f"{fcfs_over90 - cf_over90:.1f} fewer",
-            delta_color="inverse",
-            help="Reduction in excessive wait times"
-        )
-        st.caption(f"FCFS: {fcfs_over90:.1f} → ClinicTriage: {cf_over90:.1f}")
-    
     # ========================================================================
     # VISUALIZATION - WAIT TIME DISTRIBUTION
     # ========================================================================
@@ -656,7 +646,6 @@ else:
     
     - **~66% reduction** in urgent patient wait times
     - **~26% reduction** in overall wait times
-    - **~98% reduction** in patients waiting >90 minutes
     - **Statistically significant** improvements (p < 0.001)
     - **Large effect sizes** demonstrating clinical impact
     """)
@@ -670,11 +659,12 @@ with st.sidebar:
     
     # Show model being used
     if model_version == "MIMIC-IV v2":
-        st.success("✅ Using MIMIC-IV v2 Model")
+        st.success("✅ Using MIMIC-IV-ED Data Model")
         st.caption(f"""
-        **Accuracy:** {model_accuracy}  
-        **Critical Cases:** {critical_accuracy}  
-        **Training:** 10K real ED visits
+        **Critical Detection:** 83.5%  
+        **Critical Accuracy:** 77.7%  
+        **Training:** 10K real ED visits  
+        **Source:** BIDMC Emergency Dept.
         """)
     else:
         st.info("ℹ️ Using Synthetic Model")
@@ -690,14 +680,14 @@ with st.sidebar:
     4. Download data for your report
     
     **Recommended Settings:**
-    - **Quick Test**: 10 simulations
-    - **Thorough Analysis**: 50-100 simulations
+    - **Quick Test**: 50 simulations
+    - **Thorough Analysis**: 100-200 simulations
     - **Typical Clinic**: 40 patients, 2 providers
     
     **Statistical Tests:**
     - **t-test**: Checks if difference is real
-    - **p < 0.05**: Statistically significant
-    - **p < 0.001**: Highly significant
+    - **p < 0.05**: Means statistically significant
+    - **p < 0.001**: Means highly significant
     - **Cohen's d**: Effect size (clinical impact)
     """)
     

@@ -191,7 +191,7 @@ with col1:
     - ⚠️ **First-come-first-served** → Critical patients wait dangerously long
     - 👥 **No trained triage nurses** → Volunteer staff lack medical expertise
     - 📋 **Walk-in model** → No appointment system to manage flow
-    - 💰 **Zero budget** → Cannot afford commercial triage systems ($10K-$50K)
+    - 💰 **Zero budget** → Cannot afford commercial triage systems that cost ~$50K annually
     
     **Result:** A 62-year-old with chest pain waits 90+ minutes behind medication refills.
     """)

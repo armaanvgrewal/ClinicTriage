@@ -478,16 +478,10 @@ else:
 # ============================================================================
 
 with st.sidebar:
-    st.markdown("### ℹ️ System Info")
-    st.write("**ClinicTriage v2.0**")
-    st.write("AI-Powered Triage System")
-    
-    st.divider()
-    
     st.write("**🤖 Model Information**")
-    st.metric("Model", "MIMIC-IV v2")
-    st.metric("Overall Accuracy", "74.2%")
+    st.metric("Model", "MIMIC-IV-ED")
     st.metric("Critical Detection", "83.5%")
+    st.metric("Critical Accuracy", "77.7%")
     st.caption("Trained on 10K real ED visits")
     
     st.divider()
@@ -505,11 +499,6 @@ with st.sidebar:
     - 🟠 Level 2: High Risk
     - 🟡 Level 3: Moderate
     - 🟢 Level 4-5: Low/Minimal
-    
-    **Alerts:**
-    - Wait >80 min: Yellow warning
-    - Wait >90 min: Red alert
-    - Critical in queue: Urgent notification
     """)
     
     st.markdown("---")
@@ -520,5 +509,5 @@ with st.sidebar:
     **Current Configuration:**
     - Urgency weight: {optimizer.urgency_weight}
     - Wait time weight: {optimizer.wait_time_weight}
-    - Max wait cap: {optimizer.max_wait_minutes} min
+    - Age risk weight: {optimizer.age_risk_weight}
     """)
