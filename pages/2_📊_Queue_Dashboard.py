@@ -480,14 +480,6 @@ else:
 # ============================================================================
 
 with st.sidebar:
-    st.write("**🤖 Model Information**")
-    st.metric("Model", "MIMIC-IV-ED")
-    st.metric("Critical Detection", "83.5%")
-    st.metric("Critical Accuracy", "77.7%")
-    st.caption("Trained on 10K real ED visits")
-    
-    st.divider()
-    
     st.markdown("### 📊 Dashboard Guide")
     
     st.markdown("""
