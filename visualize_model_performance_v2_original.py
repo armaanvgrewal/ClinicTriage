@@ -49,7 +49,7 @@ print("=" * 70)
 print("\n📂 Loading model and data...")
 
 # Load the RETRAINED model
-model_file = 'triage_model_mimic_v2_original.pkl'
+model_file = 'triage_model_mimic_v2.pkl'
 try:
     with open(model_file, 'rb') as f:
         model = pickle.load(f)

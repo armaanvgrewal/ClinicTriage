@@ -397,7 +397,7 @@ else:
         **Add Patients:**
         1. Go to **Patient Intake** page
         2. Fill out the triage form
-        3. Click "Add to Queue"
+        3. Click "Get Triage Assessment & Add to Queue"
         4. Return here to see optimized queue
         """)
         
@@ -407,8 +407,10 @@ else:
     with col2:
         st.markdown("""
         **Or Load Sample Patients:**
-        
-        Automatically add 25-30 sample patients to test the queue optimization.
+        1. For quick queue comparison
+        2. Click Load Samples below
+        3. 25-30 sample patients will load
+        4. See optimized queue
         """)
         
         if st.button("Load Sample Patients", use_container_width=True):

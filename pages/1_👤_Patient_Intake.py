@@ -492,7 +492,7 @@ with st.sidebar:
     
     **Level 3 - Moderate**
     - Needs timely care
-    - Not immediately dangerous
+    - See As Soon As Possible
     - Examples: Possible fracture, high fever
     
     **Level 4 - Low Risk**

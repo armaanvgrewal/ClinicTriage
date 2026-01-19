@@ -96,7 +96,7 @@ def load_models():
     try:
         with open('triage_model_mimic_v2.pkl', 'rb') as f:
             triage_model = pickle.load(f)
-        model_version = "MIMIC-IV v2 (74.2% accuracy, 83.5% critical detection)"
+        model_version = "MIMIC-IV v2 (83.5% critical detection, 77.7% critical accuracy)"
     except FileNotFoundError:
         # Fallback to synthetic model
         with open('triage_model.pkl', 'rb') as f:
@@ -137,9 +137,6 @@ if 'patient_counter' not in st.session_state:
 # ============================================================================
 
 with st.sidebar:
-    st.image("https://placehold.co/300x100/1f77b4/ffffff?text=ClinicTriage", 
-             use_container_width=True)
-    st.markdown("---")
     
     st.markdown("### 📊 System Status")
     st.metric("Patients in Queue", len(st.session_state.queue))
@@ -148,24 +145,15 @@ with st.sidebar:
         urgent_count = sum(1 for p in st.session_state.queue if p.get('urgency_level', 5) <= 2)
         st.metric("Urgent Patients (L1-2)", urgent_count)
     
-    st.markdown("---")
     
-    # Quick stats
-    st.markdown("### 🎯 ClinicTriage Impact")
-    st.markdown("""
-    - **83.5%** critical detection rate on real clinical data
-    - **77.7%** critical case accuracy
-    - **66%** reduction in urgent wait times
-    - Trained on **10K** real ED visits (MIMIC-IV dataset)
-    """)
     
-    st.caption(f"Model: {st.session_state.get('model_version', 'Loading...')}")
+
 
 # ============================================================================
 # MAIN PAGE - HOME
 # ============================================================================
 
-st.markdown('<p style="font-size: 24px; font-weight: bold; text-align: center;">🏥 ClinicTriage</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-size: 36px; font-weight: bold; text-align: center;">🏥 ClinicTriage</p>', unsafe_allow_html=True)
 st.markdown('<p class="sub-header">AI-Powered Triage & Queue Optimization for Free Clinics</p>', 
             unsafe_allow_html=True)
 
@@ -209,15 +197,13 @@ with col1:
     - **83.5%** critical detection rate (Level 1-2) - the most important metric
     - **77.7%** critical exact accuracy
     - **74.2%** overall accuracy on actual triage decisions
-    - Tested against expert emergency physician assessments
     
     **Why 74.2% overall accuracy but 83.5% critical detection rate?**  
     ✅ The model is optimized to prioritize patient safety by maximizing detection of life-threatening cases (Level 1-2). This is the most important clinical metric.
     
     **Operational Impact:**
-    - Critical patients seen **66% faster**
-    - Overall wait times reduced **26%**
-    - **98%** reduction in patients waiting >90 minutes
+    - Critical patients seen **~66% faster**
+    - Overall wait times reduced **~26%**
     - **Free** and open-source
     """)
 
