@@ -34,7 +34,7 @@ def load_models():
             triage_model = pickle.load(f)
         with open('feature_names.pkl', 'rb') as f:
             feature_names = pickle.load(f)
-        return triage_model, feature_names, "MIMIC-IV v2"
+        return triage_model, feature_names, "MIMIC-IV v3"
     except FileNotFoundError:
         # Fallback to original model
         try:
@@ -241,8 +241,6 @@ if submitted:
         red_flags.append("stroke_symptoms")
     
     has_red_flag = 1 if red_flags else 0
-    # Mark form as submitted
-    st.session_state.form_submitted = True
     
     # Handle optional vital signs - use clinically normal defaults if not provided
     heart_rate = heart_rate_input if heart_rate_input is not None else 75
@@ -251,25 +249,22 @@ if submitted:
     temperature = temperature_input if temperature_input is not None else 98.6
     oxygen_saturation = oxygen_saturation_input if oxygen_saturation_input is not None else 98
     
-    # Encode gender (0 = Male, 1 = Female)
+    # Calculate engineered features
     gender_encoded = 1 if patient_gender == "Female" else 0
-    
-    # Encode onset (0 = Gradual, 1 = Sudden)
     onset_encoded = 1 if symptom_onset == "Sudden" else 0
     
-    # Encode chronic conditions
-    has_chronic_condition = 0 if chronic_condition == "None" else 1
-    high_risk_chronic = 1 if chronic_condition in ["Heart disease", "COPD", "Kidney disease"] else 0
-    
-    # Calculate vital abnormalities
-    hr_abnormal = 1 if heart_rate < 60 or heart_rate > 100 else 0
-    bp_abnormal = 1 if systolic_bp < 90 or systolic_bp > 140 or diastolic_bp < 60 or diastolic_bp > 90 else 0
-    temp_abnormal = 1 if temperature < 97 or temperature > 99.5 else 0
+    hr_abnormal = 1 if (heart_rate < 60 or heart_rate > 100) else 0
+    bp_abnormal = 1 if (systolic_bp < 90 or systolic_bp > 140 or 
+                       diastolic_bp < 60 or diastolic_bp > 90) else 0
+    temp_abnormal = 1 if (temperature < 97.0 or temperature > 100.4) else 0
     spo2_abnormal = 1 if oxygen_saturation < 95 else 0
+    
     vital_abnormalities = hr_abnormal + bp_abnormal + temp_abnormal + spo2_abnormal
     
-    # Calculate symptom acuity (severity / duration relationship)
-    symptom_acuity = symptom_severity / max(symptom_duration, 0.5)
+    symptom_acuity = symptom_severity * (1.5 if symptom_onset == "Sudden" else 1.0)
+    
+    has_chronic_condition = 0 if chronic_condition == "None" else 1
+    high_risk_chronic = 1 if chronic_condition in ["Heart disease", "COPD", "Kidney disease"] else 0
     
     # Prepare patient features dictionary
     patient_features = {
@@ -332,20 +327,6 @@ if submitted:
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.metric(
-            "Estimated Wait Time",
-            f"{(urgency_prediction - 1) * 20} minutes",
-            help="Based on current queue and urgency level"
-        )
-    
-    with col2:
-        st.metric(
-            "Queue Position",
-            f"#{6 - urgency_prediction}",
-            help="Approximate position (updates as patients arrive)"
-        )
-    
-    with col3:
         st.metric(
             "Vital Abnormalities",
             f"{vital_abnormalities} / 4",
@@ -465,8 +446,8 @@ with st.sidebar:
     st.markdown("### ℹ️ About")
     
     # Add model info
-    if model_version == "MIMIC-IV v2":
-        st.success("✅ Using MIMIC-IV-ED Data Model")
+    if model_version == "MIMIC-IV v3":
+        st.success("✅ Using MIMIC-IV Data Model")
         st.caption("""
         **Critical Detection:** 83.5%  
         **Critical Accuracy:** 77.7%  

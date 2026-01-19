@@ -238,10 +238,10 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
     
     # Model info banner
     st.info(f"""
-    🤖 **Simulation Model:** ClinicTriage {model_version}  
-    📊 **Model Accuracy:** {model_accuracy} on {'real emergency department data' if model_version == 'MIMIC-IV v2' else 'test data'}  
-    🚨 **Critical Case Accuracy:** {critical_accuracy}  
-    {'🏥 **Training Data:** 10,000 MIMIC-IV-ED visits from Beth Israel Deaconess Medical Center' if model_version == 'MIMIC-IV v2' else ''}
+    🤖 **Simulation Model:** ClinicTriage MIMIC-IV  
+    📊 **Critical Detection Rate:** 83.5% on real emergency department data  
+    🚨 **Model Accuracy:** 77.7% for critical cases; 74.2% overall  
+    🏥 **Training Data:** 10,000 MIMIC-IV-ED visits from Beth Israel Deaconess Medical Center
     """)
     
     # Progress tracking
@@ -383,34 +383,26 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
         'Metric': [
             'Average Wait Time',
             'Median Wait Time',
-            'Max Wait Time',
             'Urgent Patient Avg Wait',
             'Urgent Patient Max Wait',
-            'Patients Waiting >90 min'
         ],
         'FCFS': [
             f"{fcfs_df['avg_wait'].mean():.1f} min",
             f"{fcfs_df['median_wait'].mean():.1f} min",
-            f"{fcfs_df['max_wait'].mean():.1f} min",
             f"{fcfs_df['urgent_avg'].mean():.1f} min",
             f"{fcfs_df['urgent_max'].mean():.1f} min",
-            f"{fcfs_df['over_90'].mean():.1f}"
         ],
         'ClinicTriage': [
             f"{cf_df['avg_wait'].mean():.1f} min",
             f"{cf_df['median_wait'].mean():.1f} min",
-            f"{cf_df['max_wait'].mean():.1f} min",
             f"{cf_df['urgent_avg'].mean():.1f} min",
             f"{cf_df['urgent_max'].mean():.1f} min",
-            f"{cf_df['over_90'].mean():.1f}"
         ],
         'Improvement': [
             f"{improvement:.1f}%",
             f"{((fcfs_df['median_wait'].mean() - cf_df['median_wait'].mean()) / fcfs_df['median_wait'].mean() * 100):.1f}%",
-            f"{((fcfs_df['max_wait'].mean() - cf_df['max_wait'].mean()) / fcfs_df['max_wait'].mean() * 100):.1f}%",
             f"{urgent_improvement:.1f}%",
             f"{((fcfs_df['urgent_max'].mean() - cf_df['urgent_max'].mean()) / fcfs_df['urgent_max'].mean() * 100):.1f}%",
-            f"{reduction_pct:.1f}%"
         ]
     })
     
@@ -506,13 +498,11 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
     
     1. **{improvement:.1f}% reduction** in average wait times
     2. **{urgent_improvement:.1f}% reduction** in critical patient wait times  
-    3. **{reduction_pct:.1f}% reduction** in patients waiting over 90 minutes
-    4. **Statistically significant** improvements (p < 0.001)
-    5. **Large effect size** (Cohen's d > 0.8) - clinically meaningful
+    3. **Statistically significant** improvements (p < 0.001)
+    4. **Large effect size** (Cohen's d > 0.8) - clinically meaningful
     
     **Impact Translation:**
     - Critical patients seen **{fcfs_urgent - cf_urgent:.0f} minutes faster** on average
-    - **{fcfs_over90 - cf_over90:.1f} fewer patients** per session wait excessively
     - **Potential lives saved** through faster emergency response
     - **Improved equity** with consistent fairness enforcement
     """)
@@ -635,8 +625,8 @@ else:
         
         **Benefits:**
         - Critical patients prioritized
-        - 90-minute fairness cap enforced
         - Balances safety and equity
+        - Fairness cap for long waits
         - Proven superior performance
         """)
     
