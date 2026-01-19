@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 ClinicTriage - Simulation Comparison
 Compare First-Come-First-Served vs ClinicTriage Optimization
@@ -520,36 +521,24 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
         # Create summary report
         summary_report = pd.DataFrame({
             'Metric': [
-                'Model Version',
-                'Model Accuracy',
-                'Critical Accuracy',
                 'Average Wait (FCFS)',
                 'Average Wait (ClinicTriage)',
                 'Improvement (%)',
                 'Urgent Wait (FCFS)',
                 'Urgent Wait (ClinicTriage)',
                 'Urgent Improvement (%)',
-                'Over 90 min (FCFS)',
-                'Over 90 min (ClinicTriage)',
-                'Reduction',
                 'p-value (average)',
                 'p-value (urgent)',
                 'Effect Size (average)',
                 'Effect Size (urgent)'
             ],
             'Value': [
-                model_version,
-                model_accuracy,
-                critical_accuracy,
                 f"{fcfs_avg:.2f} min",
                 f"{cf_avg:.2f} min",
                 f"{improvement:.2f}%",
                 f"{fcfs_urgent:.2f} min",
                 f"{cf_urgent:.2f} min",
                 f"{urgent_improvement:.2f}%",
-                f"{fcfs_over90:.2f}",
-                f"{cf_over90:.2f}",
-                f"{fcfs_over90 - cf_over90:.2f}",
                 f"{p_value_avg:.6f}",
                 f"{p_value_urgent:.6f}",
                 f"{effect_avg:.3f}",
@@ -563,28 +552,6 @@ if st.button("🚀 Run Simulation", width='stretch', type="primary"):
             label="📥 Download Summary Report (CSV)",
             data=csv_summary,
             file_name="ClinicTriage_simulation_summary.csv",
-            mime="text/csv",
-            width='stretch'
-        )
-    
-    with col2:
-        # Raw simulation data
-        combined_data = pd.DataFrame({
-            'Simulation': range(1, len(fcfs_df) + 1),
-            'FCFS_Avg_Wait': fcfs_df['avg_wait'],
-            'CF_Avg_Wait': cf_df['avg_wait'],
-            'FCFS_Urgent_Wait': fcfs_df['urgent_avg'],
-            'CF_Urgent_Wait': cf_df['urgent_avg'],
-            'FCFS_Over_90': fcfs_df['over_90'],
-            'CF_Over_90': cf_df['over_90']
-        })
-        
-        csv_raw = combined_data.to_csv(index=False)
-        
-        st.download_button(
-            label="📥 Download Raw Data (CSV)",
-            data=csv_raw,
-            file_name="ClinicTriage_simulation_raw.csv",
             mime="text/csv",
             width='stretch'
         )

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 ClinicFlow - Patient Intake Page
 Collects patient information and provides AI triage prediction

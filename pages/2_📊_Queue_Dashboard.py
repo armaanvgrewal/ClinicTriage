@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 ClinicTriage - Queue Dashboard
 Provider view of optimized patient queue
