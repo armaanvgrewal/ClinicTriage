@@ -45,6 +45,7 @@ triage_model_mimic_v2_enhanced.pkl
 triage_model_mimic_v2_original.pkl
 triage_model_mimic_v2_jan.pkl
 triage_model_mimic_v2_OLD.pkl
+triage_model_mimic_v3.pkl
 model_metadata_mimic.pkl
 model_metadata_mimic_v2_enhanced.pkl
 
