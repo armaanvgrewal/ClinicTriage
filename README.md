@@ -2,13 +2,11 @@
 
 **AI-Powered Triage & Queue Optimization for Free Clinics**
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://clinictriage-demo.streamlit.app/)
-
 ---
 
 ## 🎯 Overview
 
-ClinicFlow is an AI-powered system that revolutionizes patient triage and queue management for free clinics serving underserved communities. By combining machine learning with multi-objective optimization, ClinicFlow reduces critical patient wait times by 66% while keeping max wait times below 90 minutes.
+ClinicTriage is an AI-powered system that revolutionizes patient triage and queue management for free clinics serving underserved communities. By combining machine learning with multi-objective optimization, ClinicFlow reduces critical patient wait times by 66% while keeping max wait times below 90 minutes.
 
 ### The Problem
 
@@ -34,9 +32,8 @@ Free clinics serve **1.8 million uninsured patients** annually but face critical
 ### Proven Performance (100 Clinic Simulations)
 
 - **66% reduction** in urgent patient wait times (45 → 15 minutes)
-- **26% reduction** in overall average wait times
-- **98% reduction** in patients waiting over 90 minutes
-- **89% accuracy** matching human expert triage
+- **20% reduction** in overall median wait times
+- **83.5% critical accuracy** exceeding human expert triage
 - **p < 0.001** - Statistically significant improvements
 
 ### Clinical Significance
@@ -84,22 +81,21 @@ Our MIMIC-IV v2 model demonstrates strong performance on real clinical data:
 
 | Metric | Performance |
 |--------|------------|
-| Overall Accuracy | **78.5%** |
-| Critical Case Accuracy (ESI 1-2) | **89.3%** ⭐ |
-| F1 Score | 77.8% |
-| Out-of-Bag Score | 79.1% |
+| Overall Accuracy | **74.2%** |
+| Critical Case Accuracy (ESI 1-2) | **83.5%** ⭐ |
+| F1 Score | 74.6% |
+| Out-of-Bag Score | 74.6% |
 
-**Why 78.5% is excellent:**
+**Why 74.2% is excellent:**
 - Published research on ESI prediction typically achieves 70-78% accuracy
 - Real clinical data is inherently noisy and complex
-- 89.3% critical case accuracy exceeds many commercial systems
+- 83.5% critical case accuracy exceeds many commercial systems
 - Optimized for safety: prioritizes accuracy on life-threatening cases
 
 ### Queue Optimization Results
 Simulation across 100 clinic sessions (40 patients each):
 - **66% reduction** in urgent patient wait times
-- **26% reduction** in overall wait times  
-- **98% reduction** in patients waiting >90 minutes
+- **20% reduction** in median wait times  
 - **Statistically significant** improvements (p < 0.001)
 - **Large effect size** (Cohen's d > 0.8)
 
@@ -122,96 +118,6 @@ Simulation across 100 clinic sessions (40 patients each):
 
 ---
 
-## 📦 Installation
-
-### Prerequisites
-- Python 3.11+
-- pip
-
-### Setup
-
-1. **Clone the repository:**
-```bash
-git clone https://github.com/yourusername/ClinicFlow.git
-cd ClinicFlow
-```
-
-2. **Create virtual environment:**
-```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. **Install dependencies:**
-```bash
-pip install -r requirements.txt
-```
-
-4. **Generate training data:**
-```bash
-python generate_data.py
-```
-
-5. **Train the model:**
-```bash
-python train_model.py
-```
-
-6. **Run the app:**
-```bash
-streamlit run app.py
-```
-
-The app will open in your browser at `http://localhost:8501`
-
----
-
-## 📖 Usage
-
-### Quick Start
-
-1. **Patient Intake:** Fill out the triage form with symptoms and vitals
-2. **View Prediction:** See AI urgency assessment and wait time estimate
-3. **Queue Dashboard:** Monitor optimized patient queue in real-time
-4. **Run Simulation:** Compare FCFS vs ClinicFlow performance
-
-### Example Workflow
-```
-Patient arrives → Completes intake form → AI predicts urgency
-    ↓
-Queue optimizes → Provider sees prioritized list → Patient called
-    ↓
-Fairness enforced → No wait >90 minutes → Equitable care
-```
-
----
-
-## 🔬 Model Details
-
-### Triage Model
-
-- **Algorithm:** Random Forest Classifier (200 trees)
-- **Features:** 19 clinical features + engineered variables
-- **Training Data:** 1,000 synthetic free clinic patient scenarios
-- **Performance:**
-  - Overall Accuracy: 89%
-  - Critical Case Sensitivity: 96%
-  - F1 Score: 89%
-
-### Queue Optimizer
-
-- **Objective:** Multi-objective optimization (urgency + fairness + efficiency)
-- **Constraints:**
-  - Hard cap: 90 minutes maximum wait
-  - Safety: Level 1 patients always prioritized
-  - Fairness: 80+ minute waits boosted to top priority
-- **Weights:**
-  - Urgency: 10.0
-  - Wait Time: 0.15
-  - Age Risk: 0.05
-
----
-
 ## 📁 Project Structure
 ```
 ClinicFlow/
@@ -229,24 +135,6 @@ ClinicFlow/
 ├── synthetic_patients.csv          # Training dataset
 └── requirements.txt                # Python dependencies
 ```
-
----
-
-## 🎯 Competition Submission
-
-**Illinois AI Challenge 2025 - Track II (Implementation)**
-
-### Problem Addressed
-Healthcare equity and access for underserved populations
-
-### Innovation
-First AI triage system designed specifically for resource-constrained free clinics, combining machine learning with fairness-aware queue optimization.
-
-### Impact Potential
-- Deployable to 1,400 U.S. free clinics serving 1.8M patients
-- Zero-cost, open-source solution
-- Proven 66% reduction in critical care delays
-- Adaptable to rural clinics, disaster relief, global health settings
 
 ---
 
@@ -273,15 +161,3 @@ This project is open-source and available under the MIT License.
 - Illinois AI Challenge for the opportunity to make an impact
 
 ---
-
-## 📧 Contact
-
-For questions, partnerships, or deployment assistance:
-- Email: [your-email@example.com]
-- GitHub: [@armaanvgrewal](https://github.com/armaanvgrewal)
-- Demo: [ClinicFlow](https://clinicflow-demo.streamlit.app)
-
----
-
-**ClinicFlow** - *Technology serving the underserved* 🏥✨# Test
-# Setup complete on Intel Mac
